@@ -1,6 +1,7 @@
+import { Container } from '@material-ui/core'
 import Layout from '../Layout'
-// import Link from 'next/link'
 import { Content } from '../../interfaces/product'
+import Pagination from '../Pagination'
 
 const Home = (props: any) => {
     const { data } = props.data
@@ -14,13 +15,18 @@ const Home = (props: any) => {
         items.push(<li key={index}>{value.content_title}</li>)
     }
 
+    const pages = { totalPages: data.contents.totalPages, page: 1 }
+
     return (
         <Layout title="Home | Next.js + TypeScript Example">
-            <h1>Hello Next.js 👋</h1>
-            <p>
-                Example data
-            </p>
-            <ul>{items}</ul>
+            <Container maxWidth="md" className="container">
+                <h1>Hello Next.js 👋</h1>
+                <p>
+                    Example data
+                </p>
+                <ul>{items}</ul>
+                <div id="pagination"><Pagination pages={pages} /></div>
+            </Container>
         </Layout>
     )
 }
