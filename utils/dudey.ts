@@ -7,7 +7,7 @@ const getContents = async ({ page, pageSize }: { page: number, pageSize: number 
     const expire = process.env.CACHE_EXPIRE ? parseInt(process.env.CACHE_EXPIRE) : 60
     const key = `kaidee_${process.env.SITEKEY}_p${page}_ps${pageSize}`
     const dataRequest = { "page": page, "pageSize": pageSize }
-    const configRequest: AxiosRequestConfig = { headers: { 'token': 'xxxxxxxx' } }
+    const configRequest: AxiosRequestConfig = { headers: { 'token': process.env.TOKEN } }
 
     const redisClient = redis.createClient({
         retry_strategy: (options) => {
