@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Head from 'next/head'
 
 type Props = {
@@ -8,6 +8,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
+  
   <div>
     <Head>
       <title>{title}</title>
@@ -16,9 +17,10 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <header>
       <nav>
-        <Link href="/">
+        {/* <Link href="/">
           <a>Home</a>
-        </Link>{' '}
+        </Link>{' '} */}
+        <img className="logo1" src="/images/logo1.png"/>
       </nav>
     </header>
     {children}
