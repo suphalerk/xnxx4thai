@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react'
 // import Link from 'next/link'
 import Head from 'next/head'
+import { Button } from '@material-ui/core'
+// import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
 
 type Props = {
   children?: ReactNode
@@ -8,7 +10,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  
+
   <div>
     <Head>
       <title>{title}</title>
@@ -20,8 +22,24 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         {/* <Link href="/">
           <a>Home</a>
         </Link>{' '} */}
-        <img className="logo1" src="/images/logo1.png"/>
+        <img className="logo1" src="/images/logo1.png" />
+        <img className="btn-love" src="/images/ถูกใจ.png" />
+        <img className="btn-chat" src="/images/แชทผู้ซื้อ.png" />
+
+
+        <Button href="#text-buttons" className="btn-login">
+          เข้าวู่ระบบ / สมัครสมาชิก
+        </Button>
+        <Button variant="contained" className="btn-sell">
+          ลองขาย
+        </Button>
       </nav>
+      {/* <AppBar position="static">
+      <Toolbar>
+
+    <Button color="inherit">Login</Button>
+  </Toolbar>
+      </AppBar> */}
     </header>
     {children}
     <footer>

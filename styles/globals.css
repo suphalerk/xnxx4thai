@@ -42,3 +42,31 @@ hr {
 .container{
   padding:0 !important;
 }
+
+
+/*--------------------------- Header------------------------- */
+
+.logo1{
+  width: 220px !important;
+  height: auto !important;
+  margin-left: 5% !important;
+}
+.btn-love{
+  margin-left: 40%;
+  padding: 10px;
+}
+.btn-chat{
+  padding: 4px;
+}
+.btn-login{
+color: #00C900 !important;
+margin-left: 2em !important;
+margin-top: -2% !important;
+}
+.btn-sell{
+  margin-left: 2em !important;
+  margin-top: -40px !important;
+  color: #fff !important;
+  background-color: #00C900 !important;
+}
+
