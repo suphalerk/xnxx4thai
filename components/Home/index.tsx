@@ -19,15 +19,7 @@ const Home = (props: any) => {
 
     return (
         <Layout title="Home | KaideeWa.com">
-            <Container maxWidth="md" className="container">
-                {/* <h1>Hello Next.js 👋</h1>
-                <p>
-                    Example data
-                </p>
-                <ul>{items}</ul> */}
-                {/* <div id="pagination"><Pagination pages={pages} /></div> */}
-                
-
+            <Container maxWidth="md" className="container">       
             </Container>
         </Layout>
     )
