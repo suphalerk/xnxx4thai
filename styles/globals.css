@@ -84,3 +84,22 @@ margin-top: -2% !important;
   width: 1920px !important;
   height: 500px !important;
 }
+.MuiPaper-root{
+  background-color:#fff !important;
+}
+.btn-filter{
+  width: 75px !important;
+  height: auto !important;
+  margin-left: 2em !important;
+  margin-right: 2em !important;
+}
+.text-cat{
+  color:#000 !important;
+}
+.MuiCardMedia-media{
+  max-width: 75px;
+  text-align: center !important;
+}
+.MuiCardMedia-root{
+  display: initial !important;
+}
