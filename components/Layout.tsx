@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react'
-// import Link from 'next/link'
 import Head from 'next/head'
 import { Button } from '@material-ui/core'
-// import { AppBar, Button, IconButton, Toolbar, Typography } from '@material-ui/core'
+
 
 type Props = {
   children?: ReactNode
@@ -34,6 +33,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
           ลองขาย
         </Button>
       </nav>
+      <hr />
       {/* <AppBar position="static">
       <Toolbar>
 
