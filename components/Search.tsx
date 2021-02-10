@@ -3,15 +3,17 @@
 
 
 import React from 'react';
-import { Button } from '@material-ui/core';
+
 
 function searchInput() {
  
   return (
   <div className="bg-search">
-    <h1>test</h1>
+    <h1>Search-Input</h1>
    
-  </div>) 
+  </div>
+  
+  ) 
   
 }
 export default searchInput

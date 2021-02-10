@@ -33,7 +33,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
           ลองขาย
         </Button>
       </nav>
-      <hr />
+      
       {/* <AppBar position="static">
       <Toolbar>
 

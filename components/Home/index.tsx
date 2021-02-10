@@ -3,6 +3,7 @@ import Layout from '../Layout'
 import { Content } from '../../interfaces/product'
 // import Pagination from '../Pagination'
 import Search from '../Search'
+import Searchfilter from '../Searchfilter'
 
 const Home = (props: any) => {
     const { data } = props.data
@@ -31,6 +32,7 @@ const Home = (props: any) => {
                 {/* <div id="pagination"><Pagination pages={pages} /></div> */}
                 {/* <div id="search"></div> */}
                 <Search/>
+                <Searchfilter/>
             </Container>
         </Layout>
         

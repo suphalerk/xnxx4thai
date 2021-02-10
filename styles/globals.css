@@ -72,11 +72,15 @@ margin-top: -2% !important;
 
 .bg-search{
   background-image: url('/images/wp2570965.jpg') !important;
-  width: 1980px !important;
+  width: 1920px !important;
   height: 500px !important;
-
 }
 
 .MuiContainer-maxWidthMd{
-  max-width: 1980px !important;
+  max-width: 1920px !important;
+}
+
+.bg-searchfilter{
+  width: 1920px !important;
+  height: 500px !important;
 }
