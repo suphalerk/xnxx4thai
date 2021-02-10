@@ -2,14 +2,16 @@
 
 html,
 body {
-  color: #fff;
+  color: #111 !important;
   padding: 0;
   margin: 0;
   font-family: 'Kanit', sans-serif !important;
 }
 body {
-  background: #111;
-  padding-top: 47px;
+  background: #fff !important;
+  /* padding-top: 47px; */
+  padding-top: 1em!important;
+  padding-bottom: 1em!important;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -40,3 +42,31 @@ hr {
 .container{
   padding:0 !important;
 }
+
+
+/*--------------------------- Header------------------------- */
+
+.logo1{
+  width: 220px !important;
+  height: auto !important;
+  margin-left: 5% !important;
+}
+.btn-love{
+  margin-left: 40%;
+  padding: 10px;
+}
+.btn-chat{
+  padding: 4px;
+}
+.btn-login{
+color: #00C900 !important;
+margin-left: 2em !important;
+margin-top: -2% !important;
+}
+.btn-sell{
+  margin-left: 2em !important;
+  margin-top: -40px !important;
+  color: #fff !important;
+  background-color: #00C900 !important;
+}
+
