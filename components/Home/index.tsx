@@ -23,6 +23,7 @@ const Home = (props: any) => {
                 <Search/>
                 <Searchfilter/>
                 <Popularsearch/>
+                <ul style={{marginLeft:'15%'}}>{items}</ul>
             </Container>
         </Layout>
 
