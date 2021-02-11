@@ -1,6 +1,5 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 export default function FixedContainer() {
@@ -8,7 +7,8 @@ export default function FixedContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container fixed>
-      <Typography>ผลการค้นหาสูงสุด</Typography>
+      <p>ผลการค้นหาสูงสุด</p>
+
       </Container>
     </React.Fragment>
   );
