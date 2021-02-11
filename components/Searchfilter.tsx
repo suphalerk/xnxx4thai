@@ -3,11 +3,17 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Image from 'next/image'
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+    },
+    root2: {
+      ...theme.typography.button,
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing(1),
     },
     paper: {
       padding: theme.spacing(2),
@@ -191,116 +197,121 @@ export default function FullWidthGrid() {
         <Grid item xs={1}>
           <Paper className={classes.paper}>
             <Image
-            src="/images/Camera2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
+              src="/images/Camera2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
             <a className="text-link">กล้อง</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/Bag2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">กระเป๋า</a></Paper>
+              src="/images/Bag2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">กระเป๋า</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/game2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">เกมส์</a></Paper>
+              src="/images/game2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">เกมส์</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/bait2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-         <a className="text-link">เป็ดตกปลา เหยื่อ</a></Paper>
+              src="/images/bait2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">เป็ดตกปลา เหยื่อ</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/Model2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">โมเดล</a></Paper>
+              src="/images/Model2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">โมเดล</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/Toy2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-         <a className="text-link">แม้และเด็ก</a></Paper>
+              src="/images/Toy2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">แม้และเด็ก</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/plant2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">เกษตร</a></Paper>
+              src="/images/plant2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">เกษตร</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/Travel2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">ท่องเที่ยว</a></Paper>
+              src="/images/Travel2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">ท่องเที่ยว</a></Paper>
         </Grid>
 
       </Grid>
       <Grid container spacing={3}>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/car2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">สุขภาพและความงาน</a></Paper>
+              src="/images/car2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">สุขภาพและความงาน</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/Coffee2.png"
-            alt=""
-            width={500}
-            height={500}
-          />
-          <a className="text-link">ชา กาแฟ</a></Paper>
+              src="/images/Coffee2.png"
+              alt=""
+              width={500}
+              height={500}
+            />
+            <a className="text-link">ชา กาแฟ</a></Paper>
         </Grid>
         <Grid item xs={1}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <Image
-            src="/images/Education2.png"
-            alt=""
-            width={500}
-            height={500}
-          /><a className="text-link">การเรียน</a></Paper>
+              src="/images/Education2.png"
+              alt=""
+              width={500}
+              height={500}
+            /><a className="text-link">การเรียน</a></Paper>
         </Grid>
       </Grid>
+
+      <Typography className="text-green">
+        ดูน้อยลง  <img src="/images/dropdown.png" />
+      </Typography>
+      
     </div>
   );
 }
