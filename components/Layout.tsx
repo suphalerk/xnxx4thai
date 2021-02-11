@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { Button } from '@material-ui/core'
 
-
 type Props = {
   children?: ReactNode
   title?: string

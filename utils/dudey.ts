@@ -2,12 +2,25 @@ import axios, { AxiosRequestConfig } from 'axios'
 import redis from 'redis'
 
 const contentDudeyAPI = 'https://dudey.co/api/content/all'
+interface DataRequest {
+    page: any,
+    pageSize: any,
+    search?: any,
+}
 
-const getContents = async ({ page, pageSize }: { page: number, pageSize: number }) => {
+const getContents = async ({ page, pageSize, search = null }: { page: number, pageSize: number, search: string | null }) => {
     const expire = process.env.CACHE_EXPIRE ? parseInt(process.env.CACHE_EXPIRE) : 60
-    const key = `kaidee_${process.env.SITEKEY}_p${page}_ps${pageSize}`
-    const dataRequest = { "page": page, "pageSize": pageSize }
     const configRequest: AxiosRequestConfig = { headers: { 'token': process.env.TOKEN } }
+
+    let dataRequest: DataRequest = { "page": page, "pageSize": pageSize }
+    let key = `kaidee_${process.env.SITEKEY}_p${page}_ps${pageSize}`
+
+    if (search !== null) {
+        const encodeSearch = encodeURI(search)
+        key = `${key}_s${encodeSearch}`
+
+        dataRequest.search = search
+    }
 
     const redisClient = redis.createClient({
         retry_strategy: (options) => {

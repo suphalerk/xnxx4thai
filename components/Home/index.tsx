@@ -19,12 +19,11 @@ const Home = (props: any) => {
     return (
         <Layout title="Home | KaideeWa.com">
             <Container maxWidth="md" className="container">
-            
                 <Search/>
                 <Searchfilter/>
             </Container>
         </Layout>
-        
+
     )
 }
 
