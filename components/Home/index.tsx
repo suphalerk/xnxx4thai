@@ -3,6 +3,7 @@ import Layout from '../Layout'
 import { Content } from '../../interfaces/product'
 import Search from '../Search'
 import Searchfilter from '../Searchfilter'
+import Searchresult from '../Searchresult'
 
 const Home = (props: any) => {
     const { data } = props.data
@@ -21,6 +22,7 @@ const Home = (props: any) => {
             <Container maxWidth="md" className="container">
                 <Search/>
                 <Searchfilter/>
+                <Searchresult/>
             </Container>
         </Layout>
 
