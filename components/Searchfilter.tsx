@@ -308,9 +308,9 @@ export default function FullWidthGrid() {
       </Grid>
 
       {/* <Typography className="text-green"> */}
-      <p style={{textAlign:'center'}} className="text-link">ดูน้อยลง <img src="/images/dropdown.png" /></p>  
+      <p style={{textAlign:'center'}} className="text-link">ดูน้อยลง <img src="/images/dropdown.png" /></p>
       {/* </Typography> */}
-      
+
     </div>
   );
 }
