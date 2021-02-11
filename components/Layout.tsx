@@ -21,9 +21,8 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         <img className="btn-love" src="/images/love.png" />
         <img className="btn-chat" src="/images/chat2.png" />
 
-
         <Button href="#text-buttons" className="btn-login">
-          เข้าวู่ระบบ / สมัครสมาชิก
+          เข้าสู่ระบบ / สมัครสมาชิก
         </Button>
         <Button variant="contained" className="btn-sell">
           ลองขาย
