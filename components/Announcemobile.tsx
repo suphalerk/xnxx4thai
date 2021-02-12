@@ -31,54 +31,53 @@ export default function MediaCard() {
   const classes = useStyles();
 
   return (
-      
-      <React.Fragment>
-      <p style={{marginLeft:'9%'}}>ประกาศใหม่ ในหมวดหมู่มือถือ แท็บเล็ต <a>ดูทั้งหมด</a></p>
+
+    <React.Fragment>
+      <p style={{ marginLeft: '9%' }}>ประกาศใหม่ ในหมวดหมู่มือถือ แท็บเล็ต <a>ดูทั้งหมด</a></p>
       <CssBaseline />
       <Container maxWidth="sm">
-      <Card style={{marginLeft:'7%'}} className={classes.root3}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          src="/images/car.png"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+        <Card style={{ marginLeft: '7%' }} className={classes.root3}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              src="/images/car.png"
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Lizard
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
           </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button className="btn-chat" size="small" color="primary">
-          แชท
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button className="btn-chat" size="small" color="primary">
+              แชท
         </Button>
-        <Button className="btn-call" size="small" color="primary">
-          โทร
+            <Button className="btn-call" size="small" color="primary">
+              โทร
         </Button>
-      </CardActions>
-    </Card>
+          </CardActions>
+        </Card>
       </Container>
-      <Container maxWidth="sm" className="bg-gray"> 
-      <p className="text-p">ตอบโจทย์การซื้อขายกับเรา <img className="logo2" src="/images/logo1.png"/></p>
-      
-      <div className={classes.root3}>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-      </Grid>
-    </div>
-       
+      <Container maxWidth="sm" className="bg-gray">
+        <p className="text-p">ตอบโจทย์การซื้อขายกับเรา <img className="logo2" src="/images/logo1.png" /></p>
+
+        <div className={classes.root3}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <Paper className={classes.paper}>xs=12 sm=6</Paper>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Paper className={classes.paper}>xs=12 sm=6</Paper>
+            </Grid>
+          </Grid>
+        </div>
       </Container>
     </React.Fragment>
-    
+
   );
 }

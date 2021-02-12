@@ -7,8 +7,7 @@ export default function FixedContainer() {
     <React.Fragment>
       <CssBaseline />
       <Container fixed>
-      <p>ผลการค้นหาสูงสุด</p>
-
+        <p>ผลการค้นหาสูงสุด</p>
       </Container>
     </React.Fragment>
   );
