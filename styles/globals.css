@@ -72,7 +72,7 @@ margin-top: -2% !important;
 
 .bg-search{
   background-image: url('/images/wp2570965.jpg') !important;
-  width: 1900px !important;
+  /* width: 1900px !important; */
   height: 500px !important;
 }
 
@@ -103,6 +103,7 @@ margin-top: -2% !important;
 }
 .text-link{
   color:#111 !important;
+  font-size: 10px;
 }
 
 .MuiGrid-spacing-xs-3{
@@ -121,4 +122,34 @@ margin-top: -2% !important;
 .text-green{
   text-align: center;
   color:#00C900 !important;
+}
+.MuiContainer-maxWidthSm{
+  max-width: none !important;
+}
+.MuiButtonBase-root, .MuiTypography-body2{
+  color:#7B8FA8 !important;
+}
+.MuiButton-label{
+  background-image: url('/images/car.png');
+}
+.logo2{
+  width: 100px;
+    height: auto;
+    display: inline !important;
+    margin: -7px -7px -7px 0px !important;
+}
+.text-p{
+  text-align: center !important;
+  color: #00C900;
+}
+.btn-readmore{
+  margin: -4px 4px !important; 
+}
+.text-readmore{
+  color: #00C900 !important;
+
+}
+.bg-gray{
+  background-color: #F8F8F8 !important;
+  padding: 1%;
 }
