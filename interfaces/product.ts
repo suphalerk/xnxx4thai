@@ -21,3 +21,9 @@ export interface Image {
     image_title: string
     created_date?: string
 }
+
+export interface Keyword {
+    id: number
+    keyword: string
+    title_keyword: string
+}

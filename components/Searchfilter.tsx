@@ -3,6 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Image from 'next/image'
+import { Keyword } from '../interfaces/product'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,8 +23,48 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function FullWidthGrid() {
+const keywordTypes = [
+  { key: "อสังหาริมทรัพย์", data: ["บ้าน", "ที่ดิน"] },
+  { key: "รถยนต์", data: ["รถยนต์", "รถบรรทุก"] },
+  { key: "มอเตอร์ไซค์", data: ["มอเตอร์ไซค์"] },
+  { key: "มือถือ แท๊บเล็ต", data: ["มือถือ แท๊บเล็ต", "samsung", "xiaomi", "oppo", "Huawei", "OnePlus", "Vivo"] },
+  { key: "คอมพิวเตอร์", data: ["คอมพิวเตอร์"] },
+  { key: "เครื่องใช้ไฟฟ้า", data: ["เครื่องใช้ไฟฟ้า"] },
+  { key: "สัตว์เลี้ยง", data: ["สัตว์เลี้ยง"] },
+  { key: "บ้านและสวน", data: ["บ้านและสวน"] },
+  { key: "พระเครื่อง", data: ["พระเครื่อง"] },
+  { key: "อะไหล่ยนต์", data: ["อะไหล่ยนต์"] },
+  { key: "จักรยาน", data: ["จักรยาน"] },
+  { key: "เครื่องดนตรี", data: ["เครื่องดนตรี", "กีตาร์"] },
+  { key: "นาฬิกา", data: ["นาฬิกา"] },
+  { key: "เสื้อผ้าและแฟชั่น", data: ["เสื้อผ้าและแฟชั่น"] },
+  { key: "รองเท้า", data: ["รองเท้า"] },
+  { key: "กีฬา", data: ["กีฬา", "อุปกรณ์กีฬา"] },
+  { key: "กล้อง", data: ["กล้อง"] },
+  { key: "กระเป๋า", data: ["กระเป๋า"] },
+  { key: "เกมส์", data: ["เกมส์"] },
+  { key: "เบ็ดตกปลา เหยื่อ", data: ["เบ็ดตกปลา", "เหยื่อปลอม"] },
+  { key: "โมเดล", data: ["โมเดล"] },
+  { key: "แม่และเด็ก", data: ["แม่และเด็ก"] },
+  { key: "เกษตร", data: ["เกษตร"] },
+  { key: "ท่องเที่ยว", data: ["ท่องเที่ยว"] },
+  { key: "สุขภาพและความงาม", data: ["สุขภาพและความงาม"] },
+  { key: "ชา กาแฟ", data: ["กาแฟ"] },
+  { key: "การเรียน", data: ["การเรียน"] },
+]
+
+const FullWidthGrid = (props: { keywords: Keyword[] }) => {
+
+  const keywords = props.keywords
+
+  // Uniqe keywords
+  const keywordFilter = keywordTypes.map((type) => {
+    if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
+    return undefined
+  }).filter(x => x !== undefined)
+
   const classes = useStyles();
+
   return (
     <div className={classes.root} >
       <Grid container spacing={3}>
@@ -314,3 +355,5 @@ export default function FullWidthGrid() {
     </div>
   );
 }
+
+export default FullWidthGrid
