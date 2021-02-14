@@ -129,9 +129,9 @@ margin-top: -2% !important;
 .MuiButtonBase-root, .MuiTypography-body2{
   color:#7B8FA8 !important;
 }
-.MuiButton-label{
+/* .MuiButton-label{
   background-image: url('/images/car.png');
-}
+} */
 .logo2{
   width: 100px;
     height: auto;
@@ -152,4 +152,34 @@ margin-top: -2% !important;
 .bg-gray{
   background-color: #F8F8F8 !important;
   padding: 1%;
+}
+.MuiButton-contained{
+  background-color: #F8F8F8 !important;
+  color: #000 !important;
+    margin-left: 75% !important;
+}
+.text-sell{
+  color: #fff;
+    text-align: start;
+    padding-left: 15px !important;
+    font-size: 17px !important;
+}
+.makeStyles-paper-11{
+  width: 500px;
+}
+.makeStyles-root5-5{
+  width: 100%;
+     max-width: none !important; 
+    background-color: #E8EEF2 !important;
+}
+.grid-sell{
+  width: 1100px !important;
+}
+/* .MuiGrid-container{
+  margin-left: 69% !important;
+
+} */
+.makeStyles-paper-8{
+  background-color: #00C660 !important;
+
 }

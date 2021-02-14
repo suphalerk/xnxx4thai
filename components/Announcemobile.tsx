@@ -7,28 +7,33 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Container, CssBaseline, Grid, Paper } from '@material-ui/core';
+import { Avatar, Container, CssBaseline, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, Paper } from '@material-ui/core';
 import theme from '../src/theme';
 
 const useStyles = makeStyles({
-  root3: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-  root4: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
+    root3: {
+        maxWidth: 345,
+    },
+    root5: {
+        width: '100%',
+        maxWidth: 360,
+        backgroundColor: theme.palette.background.paper,
+    },
+    media: {
+        height: 140,
+    },
+    root4: {
+        flexGrow: 1,
+    },
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
 });
 
 export default function MediaCard() {
-  const classes = useStyles();
+    const classes = useStyles();
 
   return (
 
