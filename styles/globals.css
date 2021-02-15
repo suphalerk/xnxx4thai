@@ -165,7 +165,14 @@ margin-top: -2% !important;
     font-size: 17px !important;
 }
 .makeStyles-paper-11{
-  width: 500px;
+  max-width: 500px;
+}
+.makeStyles-root-9{
+  max-width: 100% !important;
+  margin-left: -8%;
+}
+.makeStyles-root-15{
+  max-width: 100% !important;
 }
 .makeStyles-root5-5{
   width: 100%;
@@ -179,7 +186,27 @@ margin-top: -2% !important;
   margin-left: 69% !important;
 
 } */
-.makeStyles-root-1 > *{
+.makeStyles-root-19 > *{
 margin-top: 10% !important;
 margin-left: 35% !important;
+}
+.MuiTypography-colorTextSecondary{
+  color:rgb(0 0 0 / 70%) !important;
+}
+.order-title{
+  color:rgb(0 0 0 / 70%) !important;
+}
+
+.MuiGrid-grid-xs-3{
+       max-width: none !important; 
+     flex-basis: auto !important;
+}
+.MuiGrid-container{
+  flex-wrap: inherit !important;
+}
+.text-header{
+  color: rgb(0 0 0 / 70%);
+    padding: 16px;
+    font-size: 1em;
+    margin-left: 16%;
 }
