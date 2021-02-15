@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Avatar, Container, CssBaseline, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, Paper } from '@material-ui/core';
+import { Container, CssBaseline, Grid, Paper } from '@material-ui/core';
 import theme from '../src/theme';
 
 const useStyles = makeStyles({
