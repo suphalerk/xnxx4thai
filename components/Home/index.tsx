@@ -5,6 +5,8 @@ import Search from '../Search'
 import Searchfilter from '../Searchfilter'
 import Popularsearch from '../Popularsearch'
 import Announcemobile from '../Announcemobile'
+import Info from '../Info'
+
 
 const Home = (props: any) => {
     const { data } = props.data
@@ -27,6 +29,7 @@ const Home = (props: any) => {
                 <Popularsearch/>
                 <ul style={{marginLeft:'8%'}}><a href="#">{items}</a></ul>
                 <Announcemobile/>
+                <Info/>
             </Container>
         </Layout>
 
