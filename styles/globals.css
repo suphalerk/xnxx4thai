@@ -126,9 +126,9 @@ margin-top: -2% !important;
 .MuiContainer-maxWidthSm{
   max-width: none !important;
 }
-.MuiButtonBase-root, .MuiTypography-body2{
+/* .MuiButtonBase-root, .MuiTypography-body2{
   color:#7B8FA8 !important;
-}
+} */
 /* .MuiButton-label{
   background-image: url('/images/car.png');
 } */
@@ -153,11 +153,11 @@ margin-top: -2% !important;
   background-color: #F8F8F8 !important;
   padding: 1%;
 }
-.MuiButton-contained{
+/* .MuiButton-contained{
   background-color: #F8F8F8 !important;
   color: #000 !important;
     margin-left: 75% !important;
-}
+} */
 .text-sell{
   color: #fff;
     text-align: start;
@@ -179,7 +179,7 @@ margin-top: -2% !important;
   margin-left: 69% !important;
 
 } */
-.makeStyles-paper-8{
-  background-color: #00C660 !important;
-
+.makeStyles-root-1 > *{
+margin-top: 10% !important;
+margin-left: 35% !important;
 }

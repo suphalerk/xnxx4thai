@@ -1,9 +1,24 @@
+import { createStyles, makeStyles, TextField, Theme } from '@material-ui/core';
 import React from 'react';
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      '& > *': {
+        margin: theme.spacing(1),
+        width: '65ch',
+      },
+    },
+  }),
+);
+
 function searchInput() {
+  const classes = useStyles();
   return (
     <div className="bg-search">
-      <h1>Search-Input</h1>
+      <form className={classes.root} noValidate autoComplete="off">
+      <TextField id="outlined-basic" label="คุณกำลังมองาอะไร?" variant="outlined" />
+    </form>
     </div>
   )
 }
