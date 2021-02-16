@@ -17,7 +17,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+ 
 }
+
+
 
 a {
   color: inherit;
@@ -45,11 +48,21 @@ hr {
 
 
 /*--------------------------- Header------------------------- */
+.MuiTypography-body2{
+  /* font-size: 10px !important; */
+}
+.MuiCardContent-root{
+  padding: 0px !important;
+}
+
+.MuiContainer-maxWidthSm{
+  text-align: center;
+}
 
 .logo1{
-  width: 220px !important;
-  height: auto !important;
-  margin-left: 5% !important;
+  width: 220px ;
+  height: auto ;
+  margin-left: 5% ;
 }
 .btn-love{
   margin-left: 40%;
@@ -69,21 +82,24 @@ margin-top: -2% !important;
   color: #fff !important;
   background-color: #00C900 !important;
 }
-
-.bg-search{
-  background-image: url('/images/wp2570965.jpg') !important;
-  /* width: 1900px !important; */
-  height: 500px !important;
+.MuiOutlinedInput-notchedOutline{
+  border-color: rgb(171 171 171 / 23%) !important;
 }
+
+/* .bg-search{
+  background-image: url('/images/wp2570965.jpg') !important;
+   max-width: 1900px !important;
+  height: 500px !important;
+} */
 
 .MuiContainer-maxWidthMd{
   max-width: 1920px !important;
 }
 
-.bg-searchfilter{
+/* .bg-searchfilter{
   width: 1920px !important;
   height: 500px !important;
-}
+} */
 .MuiPaper-root{
   background-color:#fff !important;
 }
@@ -209,4 +225,35 @@ margin-left: 35% !important;
     padding: 16px;
     font-size: 1em;
     margin-left: 16%;
+}
+
+@media only screen and (width: 375px) {
+  body {
+    background: #fff !important;
+  }
+  .logo1{
+    width: 150px !important;
+    height: auto !important;
+    margin-left: 3% !important;
+  }
+  .bg-search,
+  .makeStyles-root-6{
+    /* max-width: 375px !important;
+    background-color: #00C900; */
+    display: none;
+  }
+  .btn-love,
+  .makeStyles-root7-9{
+    display: none;
+  }
+  .MuiButton-text
+  {
+    display: none !important;
+  }
+  .btn-chat{
+    margin-left: 15%;
+  }
+  .MuiTypography-body2{
+    font-size: 6px !important;
+  }
 }

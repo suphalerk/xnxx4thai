@@ -1,12 +1,19 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
+import { Card, CardActionArea, CardActions, CardContent, Container, CssBaseline, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root3: {
+      maxWidth: '10%',
+      display: 'inline-grid',
+      textAlign: 'center',
+    },
+    media: {
+      height: 140,
+    },
     root: {
       flexGrow: 1,
     },
@@ -58,16 +65,12 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const keywords = props.keywords
 
   // Uniqe keywords
-  const keywordFilter = keywordTypes.map((type) => {
-    if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
-    return undefined
-  }).filter(x => x !== undefined)
 
   const classes = useStyles();
 
   return (
     <div className={classes.root} >
-      <Grid container spacing={3}>
+      {/* <Grid container spacing={3}>
         <Grid item xs={1}>
           <Paper className={classes.paper}>
             <Image
@@ -346,7 +349,485 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
               height={500}
             /><a className="text-link">การเรียน</a></Paper>
         </Grid>
-      </Grid>
+      </Grid> */}
+
+      <React.Fragment>
+        <CssBaseline />
+        <Container maxWidth="sm">
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+              className="img-category"
+                src="/images/car.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  รถยนต์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Motocycle2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  รถมอเตอร์ไซต์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Real-estate2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  อสังหาริมทรัพย์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Mobile-tablet2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  มือถือ แท็บเล็ต
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Computer2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  คอมพิวเตอร์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Electrical2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  เครื่องใช้ไฟฟ้า
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Pet2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  สัตว์เลี้ยง
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Home-garden2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  บ้านและสวน
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+        </Container>
+        <Container maxWidth="sm">
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Amulets2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  พระเครื่อง
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Car-accessories2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  อะไหล่รถยนต์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Bicycle2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  จักรยานต์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Music2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  เครื่องดนตรี
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Wrist-watch2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  นาฬิกา
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Fasion2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  เสื้อผ้าและแฟชั่น
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Shoes2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  รองเท้า
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Sport2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  กีฬา
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          
+        </Container>
+     
+        <Container maxWidth="sm">
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Camera2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  กล้อง
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Bag2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  กระเป๋า
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Game2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  เกมส์
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Bait2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  เบ็ดตกปลา
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Model2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  โมเดล
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Toy2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  แม่และเด็ก
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Plant2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  เกษตร
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Travel2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  ท่องเที่ยว
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+        </Container>
+        <Container maxWidth="sm">
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Beauty.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  สุขภาพ ความงาน
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Coffee2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  ชา กาแฟ
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+          <Card className={classes.root3}>
+            <CardActionArea>
+              <Image
+                src="/images/Education2.png"
+                alt=""
+                width={75}
+                height={75}
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  การเรียน
+          </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+            </CardActions>
+          </Card>
+      
+
+        </Container>
+       
+     
+      </React.Fragment>
 
       {/* <Typography className="text-green"> */}
       <p style={{ textAlign: 'center' }} className="text-readmore">ดูน้อยลง <img className="btn-readmore" src="/images/dropdown.png" /></p>
