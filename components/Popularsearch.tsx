@@ -23,7 +23,7 @@ export default function FixedContainer() {
     <Grid container spacing={3}>
       <Grid item xs={4}>
         <Paper className={classes.paper}>
-          <p className="text-linkgreen">รถยนต์ (19,000)</p>
+          <p className="text-linkgreen">รถยนต์ <a style={{color:'#000 !important'}}>(19,000)</a></p>
           <p className="text-link2">รถมือสอง</p>
           <p className="text-link2">รถเก๋งมือสอง</p>
           <p className="text-link2">รถบ้านมือสอง</p>
@@ -34,7 +34,7 @@ export default function FixedContainer() {
       </Grid>
       <Grid item xs={4}>
         <Paper className={classes.paper}>
-        <p className="text-linkgreen">รถยนต์ (19,000)</p>
+        <p className="text-linkgreen">รถยนต์ <a style={{color:'#000 !important'}}>(19,000)</a></p>
           <p className="text-link2">รถมือสอง</p>
           <p className="text-link2">รถเก๋งมือสอง</p>
           <p className="text-link2">รถบ้านมือสอง</p>
@@ -45,7 +45,7 @@ export default function FixedContainer() {
       </Grid>
       <Grid item xs={4}>
         <Paper className={classes.paper}> 
-        <p className="text-linkgreen">รถยนต์ (19,000)</p>
+        <p className="text-linkgreen">รถยนต์ <a style={{color:'#000 !important'}}>(19,000)</a></p>
           <p className="text-link2">รถมือสอง</p>
           <p className="text-link2">รถเก๋งมือสอง</p>
           <p className="text-link2">รถบ้านมือสอง</p>
@@ -56,7 +56,7 @@ export default function FixedContainer() {
       </Grid>
       <Grid item xs={4}>
         <Paper className={classes.paper}>
-        <p className="text-linkgreen">รถยนต์ (19,000)</p>
+        <p className="text-linkgreen">รถยนต์ <a style={{color:'#000 !important'}}>(19,000)</a></p>
           <p className="text-link2">รถมือสอง</p>
           <p className="text-link2">รถเก๋งมือสอง</p>
           <p className="text-link2">รถบ้านมือสอง</p>
