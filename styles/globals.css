@@ -48,6 +48,11 @@ hr {
 
 
 /*--------------------------- Header------------------------- */
+.MuiGrid-grid-xs-true{
+  flex-grow: 1;
+  max-width: 10% !important;
+  flex-basis: 0;
+}
 .makeStyles-paper-10{
   display: inline-grid !important;
 }
@@ -137,9 +142,9 @@ margin-top: -2% !important;
 .MuiPaper-elevation1{
   box-shadow:none  !important;
 }
-.makeStyles-root-70{
+.makeStyles-root-8{
   max-width: 80% !important;
-  margin-left: 10% !important;
+  margin-left: 20% !important;
 }
 .MuiGrid-spacing-xs-3 > .MuiGrid-item{
   padding: 0px !important;
@@ -299,4 +304,12 @@ margin-left: 35% !important;
     width: 39.9px !important;
     height: auto !important;
   }
+  .MuiGrid-grid-xs-true {
+    flex-grow: 1;
+    max-width: 13% !important;
+    flex-basis: 0;
+}
+.MuiGrid-spacing-xs-1{
+  margin-left: -10% !important;
+}
 }

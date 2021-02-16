@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
-import { Card, CardActionArea, CardActions, CardContent, Container, CssBaseline, Grid, Paper, Typography } from '@material-ui/core';
+import { Grid, Paper} from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -410,7 +410,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
 
 
       {/* <Typography className="text-green"> */}
-      <p style={{ textAlign: 'center' }} className="text-readmore">ดูน้อยลง <img className="btn-readmore" src="/images/dropdown.png" /></p>
+      <p style={{ textAlign: 'center', marginLeft:'-15%' }} className="text-readmore">ดูน้อยลง <img className="btn-readmore" src="/images/dropdown.png" /></p>
       {/* </Typography> */}
 
     </div>
