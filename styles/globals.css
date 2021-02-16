@@ -244,7 +244,16 @@ margin-left: 35% !important;
     height: auto !important;
     margin-left: 3% !important;
   }
-  .bg-search,
+  .bg-search{
+    height: 100px !important;
+    background-color: #F8F8F8;
+  }
+  .MuiOutlinedInput-root {
+    margin-top: 1.25em;
+}
+.MuiInputLabel-outlined{
+  margin-top: 1.25em;
+}
   .makeStyles-root-6{
     /* max-width: 375px !important;
     background-color: #00C900; */
