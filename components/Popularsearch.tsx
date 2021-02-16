@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { createStyles, Grid, makeStyles, Paper, Theme } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -19,6 +19,7 @@ export default function FixedContainer() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <p className="text-header">ผลการค้นหายอดนิยม</p>
     <Grid container spacing={3}>
       <Grid item xs={4}>
         <Paper className={classes.paper}>
@@ -28,7 +29,7 @@ export default function FixedContainer() {
           <p className="text-link2">รถบ้านมือสอง</p>
           <p className="text-link2">รถกระบะมือสอง</p>
           <p className="text-link2">รถขนของ</p>
-          <p className="text-link3">ดูรถยนต์ทั้งหมด</p>
+          <p className="text-link3">ดูรถยนต์ทั้งหมด<ArrowForwardIcon/></p>
         </Paper>
       </Grid>
       <Grid item xs={4}>
@@ -39,7 +40,7 @@ export default function FixedContainer() {
           <p className="text-link2">รถบ้านมือสอง</p>
           <p className="text-link2">รถกระบะมือสอง</p>
           <p className="text-link2">รถขนของ</p>
-          <p className="text-link3">ดูรถยนต์ทั้งหมด</p>
+          <p className="text-link3">ดูรถยนต์ทั้งหมด<ArrowForwardIcon/></p>
         </Paper>
       </Grid>
       <Grid item xs={4}>
@@ -50,7 +51,7 @@ export default function FixedContainer() {
           <p className="text-link2">รถบ้านมือสอง</p>
           <p className="text-link2">รถกระบะมือสอง</p>
           <p className="text-link2">รถขนของ</p>
-          <p className="text-link3">ดูรถยนต์ทั้งหมด</p>
+          <p className="text-link3">ดูรถยนต์ทั้งหมด<ArrowForwardIcon/></p>
           </Paper>
       </Grid>
       <Grid item xs={4}>
@@ -61,7 +62,7 @@ export default function FixedContainer() {
           <p className="text-link2">รถบ้านมือสอง</p>
           <p className="text-link2">รถกระบะมือสอง</p>
           <p className="text-link2">รถขนของ</p>
-          <p className="text-link3">ดูรถยนต์ทั้งหมด</p>
+          <p className="text-link3">ดูรถยนต์ทั้งหมด<ArrowForwardIcon/></p>
         </Paper>
       </Grid>
     </Grid>
