@@ -86,11 +86,12 @@ margin-top: -2% !important;
   border-color: rgb(171 171 171 / 23%) !important;
 }
 
-/* .bg-search{
-  background-image: url('/images/wp2570965.jpg') !important;
-   max-width: 1900px !important;
-  height: 500px !important;
-} */
+.bg-search{
+  /* background-image: url('/images/wp2570965.jpg') !important; */
+   /* max-width: 1900px !important; */
+  height: 350px !important;
+  background-color: #F8F8F8;
+}
 
 .MuiContainer-maxWidthMd{
   max-width: 1920px !important;
@@ -225,6 +226,13 @@ margin-left: 35% !important;
     padding: 16px;
     font-size: 1em;
     margin-left: 16%;
+}
+
+.MuiInputLabel-outlined{
+  margin-top: 9em;
+}
+.MuiOutlinedInput-root{
+  margin-top: 9em;
 }
 
 @media only screen and (width: 375px) {
