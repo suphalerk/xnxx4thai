@@ -265,7 +265,22 @@ margin-left: 35% !important;
 .MuiOutlinedInput-root{
   margin-top: 9em;
 }
+.mobile-detail{
+  font-size: 16px !important;
+  text-align: left !important;
+  color:#222  !important;
+}
+.mobile-location{
+  font-size: 11px !important;
+  text-align: left !important;
+  color: #7e7e7e !important;
+}
+.makeStyles-paper-14{
+  text-align: center !important;
+  border: solid 1px #e1e1e1 !important;
+}
 
+/*------------------------------------------------------ Mobile-Responsive-------------------------------------------------- */
 @media only screen and (width: 375px) {
   body {
     background: #fff !important;
@@ -310,7 +325,7 @@ margin-left: 35% !important;
   }
   .MuiGrid-spacing-xs-3{
     padding: 0px !important;
-    width: calc(100% + -100px) !important;
+    /* width: calc(100% + -100px) !important; */
   }
   .makeStyles-paper-32,
   .makeStyles-paper-10{
