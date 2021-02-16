@@ -29,8 +29,8 @@ const Home = (props: any) => {
                 <Search/>
                 <Searchfilter keywords={keywords}/>
                 <Popularsearch/>
-                <ul style={{marginLeft:'8%'}}><a href="#">{items}</a></ul>
-                {/* <Announcemobile/> */}
+                {/* <ul style={{marginLeft:'8%'}}><a href="#">{items}</a></ul> */}
+                <Announcemobile/>
                 <Info/>
             </Container>
         </Layout>
