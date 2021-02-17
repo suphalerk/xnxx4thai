@@ -10,7 +10,7 @@ import Activity from '../Activity'
 import React from 'react'
 import News from '../News'
 import Description from '../Description'
-
+import Footer from '../Footer'
 
 
 const Home = (props: any) => {
@@ -38,7 +38,9 @@ const Home = (props: any) => {
                 <Activity/>
                 <News/>
                 <Description/>
+                
             </Container>
+            <Footer/>
         </Layout>
 
     )

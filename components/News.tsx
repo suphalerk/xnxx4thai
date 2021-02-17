@@ -69,12 +69,12 @@ export default function ComplexGrid() {
                             <Grid item xs>
                                 <Typography className={classes.Typography} gutterBottom variant="subtitle1">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                </Typography>
+                                </Typography>
                             </Grid>
                             <Grid item>
                                 <Typography className={classes.Readmore} variant="body2" style={{ cursor: 'pointer' }}>
                                     อ่านเพิ่มเติม
-                </Typography>
+                             </Typography>
                             </Grid>
                         </Grid>
                     </Grid>

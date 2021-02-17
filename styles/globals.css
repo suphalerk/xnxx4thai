@@ -154,6 +154,7 @@ margin-top: -2% !important;
   /* padding-left: 25% !important; */
   justify-content: center;
   padding-left: 10%;
+  padding-right: 10%;
 }
 .MuiGrid-spacing-xs-1{
   justify-content: center;
@@ -371,7 +372,6 @@ margin-top: -2% !important;
       background-color: #fff !important;
       color: #000 !important;
     }
-
 /*------------------------------------------------------ Mobile-Responsive-------------------------------------------------- */
 @media only screen and (width: 375px) {
   body {
@@ -487,5 +487,20 @@ padding-left: 5px !important;
   flex-wrap: wrap !important;
   place-content: center;
 }
+.makeStyles-Readmore-64{
+  font-size: 11px !important;
+}
+.makeStyles-textHeader-66{
+  font-size: 16px !important;
+  margin-left: -30% !important;
+}
+.makeStyles-p-34{
+  display:block;
+  width: 250px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
 
 }

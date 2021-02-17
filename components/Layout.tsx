@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
+
 import { Button } from '@material-ui/core'
+
 
 type Props = {
   children?: ReactNode
@@ -30,10 +32,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       </nav>
     </header>
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
+
   </div>
 )
 
