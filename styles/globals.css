@@ -495,11 +495,19 @@ padding-left: 5px !important;
   margin-left: -30% !important;
 }
 .makeStyles-p-34{
-  display:block;
+  /* display:block; */
   width: 250px;
-  overflow:hidden;
-  white-space:nowrap;
-  text-overflow:ellipsis;
+  display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.makeStyles-Typography-30{
+      width: 365px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 
