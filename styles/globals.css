@@ -177,6 +177,8 @@ margin-top: -2% !important;
   padding-left: 5px !important;
   padding-right: 5px !important;
   font-size: 17px;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 .MuiContainer-maxWidthSm{
   max-width: none !important;
@@ -278,6 +280,8 @@ margin-left: 35% !important; */
   color:#222  !important;
   padding-left: 5px !important;
   padding-right: 5px !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .mobile-location{
   font-size: 11px !important;
@@ -285,6 +289,8 @@ margin-left: 35% !important; */
   color: #7e7e7e !important;
   padding-left: 5px !important;
   padding-right: 5px !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .makeStyles-paper-14{
   text-align: center !important;

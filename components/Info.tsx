@@ -22,8 +22,11 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
+        <p className="text-header">ตอบโจทย์ทุกการซื้อขายกับเรา</p>
         <Grid item xs>
-          <Paper className={classes.paper}>xs</Paper>
+          <Paper className={classes.paper}>
+            
+          </Paper>
         </Grid>
         <Grid item xs>
           <Paper className={classes.paper}>xs</Paper>
