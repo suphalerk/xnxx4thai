@@ -194,10 +194,18 @@ margin-top: -2% !important;
   color: #fff;
 }
 .makeStyles-paper-26,
-.makeStyles-paper-18,
-.makeStyles-paper-20,
 .makeStyles-paper-16{
   background-color: #f2f2f2 !important;
+}
+.MuiGrid-wrap-xs-nowrap {
+  flex-wrap: nowrap;
+  place-content: center;
+}
+.MuiBox-root-20,
+.MuiBox-root-22,
+.MuiBox-root-24,
+.MuiBox-root-26{
+  background-color: #f2f2f2;
 }
 /* .makeStyles-paper-22{
   background-image: url('/images/TEXTBOX.png');
@@ -298,7 +306,7 @@ margin-left: 35% !important; */
 }
 .text-header{
   color: rgb(0 0 0 / 70%);
-    padding: 16px;
+    padding: 0px;
     font-size: 1.5em;
     margin-left: 16%;
 }
@@ -321,6 +329,15 @@ margin-left: 35% !important; */
 .mobile-location{
   font-size: 11px !important;
   text-align: left !important;
+  color: #7e7e7e !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.activity-detail{
+  font-size: 11px !important;
+  text-align: center !important;
   color: #7e7e7e !important;
   padding-left: 5px !important;
   padding-right: 5px !important;

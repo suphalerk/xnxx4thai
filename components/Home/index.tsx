@@ -6,7 +6,9 @@ import Searchfilter from '../Searchfilter'
 import Popularsearch from '../Popularsearch'
 import Announcemobile from '../Announcemobile'
 import Info from '../Info'
+import Activity from '../Activity'
 import React from 'react'
+import News from '../News'
 
 
 
@@ -32,6 +34,8 @@ const Home = (props: any) => {
                 {/* <ul style={{marginLeft:'8%'}}><a href="#">{items}</a></ul> */}
                 <Announcemobile/>
                 <Info/>
+                <Activity/>
+                <News/>
             </Container>
         </Layout>
 
