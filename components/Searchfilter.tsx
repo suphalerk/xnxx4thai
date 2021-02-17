@@ -65,13 +65,17 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const keywords = props.keywords
 
   // Uniqe keywords
+  const keywordFilter = keywordTypes.map((type) => {
+    if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
+    return undefined
+  }).filter(x => x !== undefined)
 
   const classes = useStyles();
 
   return (
     <div className={classes.root} >
       <Grid container spacing={1}>
-        <Grid item xs>
+        <Grid item xs={12}>
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -402,10 +406,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
           </Paper>
         </Grid>
       </Grid>
-      
-     
 
-    
+
+
+
 
 
 
