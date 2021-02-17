@@ -22,6 +22,7 @@ export default function MediaCard() {
 
   return (
     <div className={classes.root}>
+      <p className="text-header">ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต</p>
       <Grid container spacing={4}>
         <Grid item xs>
           <Paper className={classes.paper}>
@@ -34,17 +35,21 @@ export default function MediaCard() {
               />
               <p className="mobile-detail">IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย</p>
               <p className="mobile-location">ลาดกระบัง</p>
-              <Image       
+              <p className="text-cost">฿ 9200</p>
+              <Image  
+                className="img-chat"     
                 src="/images/Chat.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
+                
               />
               <Image
+              className="img-call"
                 src="/images/Call.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
               />
           </Paper>
         </Grid>
@@ -59,17 +64,21 @@ export default function MediaCard() {
               />
               <p className="mobile-detail">IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย</p>
               <p className="mobile-location">ลาดกระบัง</p>
-              <Image       
+              <p className="text-cost">฿ 9200</p>
+              <Image  
+                className="img-chat"     
                 src="/images/Chat.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
+                
               />
               <Image
+              className="img-call"
                 src="/images/Call.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
               />
           </Paper>
         </Grid>
@@ -84,17 +93,21 @@ export default function MediaCard() {
               />
               <p className="mobile-detail">IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย</p>
               <p className="mobile-location">ลาดกระบัง</p>
-              <Image       
+              <p className="text-cost">฿ 9200</p>
+              <Image  
+                className="img-chat"     
                 src="/images/Chat.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
+                
               />
               <Image
+              className="img-call"
                 src="/images/Call.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
               />
           </Paper>
         </Grid>
@@ -109,17 +122,21 @@ export default function MediaCard() {
               />
               <p className="mobile-detail">IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย</p>
               <p className="mobile-location">ลาดกระบัง</p>
-              <Image       
+              <p className="text-cost">฿ 9200</p>
+              <Image  
+                className="img-chat"     
                 src="/images/Chat.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
+                
               />
               <Image
+              className="img-call"
                 src="/images/Call.png"
                 alt=""
-                width={'50'}
-                height={'25'}
+                width={'100'}
+                height={'30'}
               />
           </Paper>
         </Grid>
