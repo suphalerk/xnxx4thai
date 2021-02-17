@@ -155,6 +155,10 @@ margin-top: -2% !important;
   justify-content: center;
   padding-left: 10%;
 }
+.MuiGrid-spacing-xs-1{
+  justify-content: center;
+}
+
 .MuiPaper-elevation1{
   box-shadow:none  !important;
 }
