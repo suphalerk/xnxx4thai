@@ -171,6 +171,38 @@ margin-top: -2% !important;
   text-align: center;
   color:#00C900 !important;
 }
+.text-green2{
+  color:#00C900 !important;
+  font-size: 1.5em !important;
+  padding: 0px;
+}
+.small-logo{
+  width: 115px;
+  margin: -6px;
+  padding-left: 5px;
+}
+.MuiTypography-colorPrimary {
+  color: #000000;
+  text-align: left;
+}
+.text-header2{
+  font-size: 18px;
+  text-align: left;
+  padding: 5px;
+  background-color: #00C660;
+}
+.makeStyles-paper-26,
+.makeStyles-paper-18,
+.makeStyles-paper-20{
+  background-color: #f2f2f2 !important;
+}
+/* .makeStyles-paper-22{
+  background-image: url('/images/TEXTBOX.png');
+} */
+.MuiButton-text{
+  padding: 6px 8px;
+    float: right;
+}
 .text-cost{
   text-align: left;
   color:#00C900 !important;
