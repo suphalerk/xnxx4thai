@@ -9,6 +9,7 @@ import Info from '../Info'
 import Activity from '../Activity'
 import React from 'react'
 import News from '../News'
+import Description from '../Description'
 
 
 
@@ -36,6 +37,7 @@ const Home = (props: any) => {
                 <Info/>
                 <Activity/>
                 <News/>
+                <Description/>
             </Container>
         </Layout>
 

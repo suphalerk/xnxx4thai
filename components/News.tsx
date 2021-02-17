@@ -1,92 +1,132 @@
 import React from 'react';
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Skeleton from '@material-ui/lab/Skeleton';
-import { Button } from '@material-ui/core';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 
-const data = [
-    {
-        src:
-            'https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ',
-        title: 'Don Diablo @ Tomorrowland Main Stage 2019 | Official…',
-        channel: 'Don Diablo',
-        views: '396 k views',
-        createdAt: 'a week ago',
-    },
-    {
-        src:
-            'https://i.ytimg.com/vi/_Uu12zY01ts/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCpX6Jan2rxrCAZxJYDXppTP4MoQA',
-        title: 'Queen - Greatest Hits',
-        channel: 'Queen Official',
-        views: '40 M views',
-        createdAt: '3 years ago',
-    },
-    {
-        src:
-            'https://i.ytimg.com/vi/kkLk2XWMBf8/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLB4GZTFu1Ju2EPPPXnhMZtFVvYBaw',
-        title: 'Calvin Harris, Sam Smith - Promises (Official Video)',
-        channel: 'Calvin Harris',
-        views: '130 M views',
-        createdAt: '10 months ago',
-    },
-    {
-        src:
-            'https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ',
-        title: 'Don Diablo @ Tomorrowland Main Stage 2019 | Official…',
-        channel: 'Don Diablo',
-        views: '396 k views',
-        createdAt: 'a week ago',
-    },
-];
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            flexGrow: 1,
+            textAlignLast:'center'
+        },
+        paper: {
+            padding: theme.spacing(2),
+            margin: 'auto',
+            maxWidth: 500,
+            display: 'inline-block'
+            
+        },
+        image: {
+            width: 128,
+            height: 128,
+        },
+        img: {
+            margin: 'auto',
+            display: 'block',
+            maxWidth: '100%',
+            maxHeight: '100%',
+        },
+        Typography: {
+            color: '#000',
+            width:'240px',
+            fontSize:'13px'
+        },
+        Readmore: {
+            color: '#429EFE',
+            width:'max-content'
+        },
+        bgcolor:{
+            backgroundColor:'#f2f2f2'
+        },
+        textHeader:{
+            fontSize:'1.5em',
+            color:'rgb(0 0 0 / 70%)',
+            marginLeft:'-50%',
+         
+        }
+        
+    }),
+);
 
-interface MediaProps {
-    loading?: boolean;
-}
-
-function Media(props: MediaProps) {
-    const { loading = false } = props;
+export default function ComplexGrid() {
+    const classes = useStyles();
 
     return (
-        <div>
-            <p className="text-header">กิจกรรมที่หน้าสนใจ</p>
-            <Grid container wrap="nowrap">
-
-                {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
-                    <Box key={index} width={210} marginRight={0.5} my={5}>
-                        {item ? (
-                            <img style={{ width: 210, height: 118 }} alt={item.title} src={item.src} />
-                        ) : (
-                                <Skeleton variant="rect" width={210} height={118} />
-                            )}
-                        {item ? (
-                            <Box pr={2}>
-                                <Typography gutterBottom variant="body2">
-                                    {item.title}
-                                </Typography>
-                               
-                                <Button color="primary">Primary</Button>
-                               
-                            </Box>
-                        ) : (
-                                <Box pt={0.5}>
-                                    <Skeleton />
-                                    <Skeleton width="60%" />
-                                </Box>
-                            )}
-                    </Box>
-                ))}
-            </Grid>
+        
+        <div className={classes.root}>
+             <p className={classes.textHeader}>ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต</p>
+            <Paper className={classes.paper}>
+                <Grid container spacing={2} className={classes.bgcolor}>
+                    <Grid item >
+                        <ButtonBase className={classes.image}>
+                            <img className={classes.img} alt="complex" src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ" />
+                        </ButtonBase>
+                    </Grid>
+                    <Grid item xs={4} sm container>
+                        <Grid item xs container direction="column" spacing={2}>
+                            <Grid item xs>
+                                <Typography className={classes.Typography} gutterBottom variant="subtitle1">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography className={classes.Readmore} variant="body2" style={{ cursor: 'pointer' }}>
+                                    อ่านเพิ่มเติม
+                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Paper>
+            <Paper className={classes.paper}>
+                <Grid container spacing={2} className={classes.bgcolor}>
+                    <Grid item >
+                        <ButtonBase className={classes.image}>
+                            <img className={classes.img} alt="complex" src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ" />
+                        </ButtonBase>
+                    </Grid>
+                    <Grid item xs={4} sm container>
+                        <Grid item xs container direction="column" spacing={2}>
+                            <Grid item xs>
+                                <Typography className={classes.Typography} gutterBottom variant="subtitle1">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography className={classes.Readmore} variant="body2" style={{ cursor: 'pointer' }}>
+                                    อ่านเพิ่มเติม
+                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Paper>
+            <Paper className={classes.paper}>
+                <Grid container spacing={2} className={classes.bgcolor}>
+                    <Grid item >
+                        <ButtonBase className={classes.image}>
+                            <img className={classes.img} alt="complex" src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ" />
+                        </ButtonBase>
+                    </Grid>
+                    <Grid item xs={4} sm container>
+                        <Grid item xs container direction="column" spacing={2}>
+                            <Grid item xs>
+                                <Typography className={classes.Typography} gutterBottom variant="subtitle1">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography className={classes.Readmore} variant="body2" style={{ cursor: 'pointer' }}>
+                                    อ่านเพิ่มเติม
+                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Paper>
         </div>
-    );
-}
-
-export default function YouTube() {
-    return (
-        <Box overflow="hidden">
-            {/* <Media loading /> */}
-            <Media />
-        </Box>
     );
 }
