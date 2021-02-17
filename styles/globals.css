@@ -188,12 +188,15 @@ margin-top: -2% !important;
 .text-header2{
   font-size: 18px;
   text-align: left;
-  padding: 5px;
+  /* padding: 5px; */
   background-color: #00C660;
+  padding: 5px 10px 16px 10px;
+  color: #fff;
 }
 .makeStyles-paper-26,
 .makeStyles-paper-18,
-.makeStyles-paper-20{
+.makeStyles-paper-20,
+.makeStyles-paper-16{
   background-color: #f2f2f2 !important;
 }
 /* .makeStyles-paper-22{
@@ -346,6 +349,13 @@ margin-left: 35% !important; */
   .img-chat{
     padding-right: 15px !important;
     }
+    .btn-sell3{
+      display: none !important;
+    }
+    .btn-sell2{
+      background-color: #fff !important;
+      color: #000 !important;
+    }
 
 /*------------------------------------------------------ Mobile-Responsive-------------------------------------------------- */
 @media only screen and (width: 375px) {
@@ -452,4 +462,8 @@ padding-left: 5px !important;
 .img-chat{
   padding-right: 5px !important;
   }
+  .MuiTypography-colorPrimary {
+    color: #000 !important;
+    font-size: 9px !important;
+}
 }
