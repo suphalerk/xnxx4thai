@@ -75,7 +75,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   return (
     <div className={classes.root} >
       <Grid container spacing={1}>
-        <Grid item xs={12}>
+        <Grid item xs>
           <Paper className={classes.paper}>
           <Image
               className="img-category"
