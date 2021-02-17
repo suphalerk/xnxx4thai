@@ -414,7 +414,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
 
 
       {/* <Typography className="text-green"> */}
-      <p style={{ textAlign: 'center', marginLeft:'-15%' }} className="text-readmore">ดูน้อยลง <img className="btn-readmore" src="/images/dropdown.png" /></p>
+      <p style={{ textAlign: 'center'}} className="text-readmore">ดูน้อยลง <img className="btn-readmore" src="/images/dropdown.png" /></p>
       {/* </Typography> */}
 
     </div>
