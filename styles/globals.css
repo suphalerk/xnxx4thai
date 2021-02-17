@@ -436,7 +436,7 @@ margin-left: 35% !important; */
 }
 .MuiGrid-spacing-xs-1{
   /* margin-left: -10% !important; */
-  place-content: center;
+  place-content: center !important;
 }
 .MuiGrid-spacing-xs-4{
   flex-wrap: wrap !important;

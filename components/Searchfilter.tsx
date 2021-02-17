@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
 import { Grid, Paper} from '@material-ui/core';
 
+
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root3: {
