@@ -10,13 +10,12 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      textAlignLast: "center",
     },
     paper: {
       padding: theme.spacing(2),
       margin: "auto",
-      maxWidth: 500,
-      display: "inline-block",
+      maxWidth: '410px',
+      display: "flex",
       backgroundColor: "#fff",
       ["@media (width:414px)"]: {
         display:'flex',
@@ -25,6 +24,10 @@ const useStyles = makeStyles((theme: Theme) =>
     image: {
       width: 215,
       height: 128,
+      ["@media (max-width:500px)"]: {
+        height: 'auto',
+        width: 'auto',
+      },
     },
     img: {
       margin: "auto",
@@ -34,12 +37,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     Typography: {
       color: "#000",
-      width: "240px",
       fontSize: "13px",
       textAlign: "left",
       
-      ["@media (width:414px)"]: {
-        width: "110px",
+      ["@media (max-width:500px)"]: {
+        width: '117px'
       },
       ["@media (width:375px)"]: {
         width: "110px",
@@ -63,14 +65,8 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "rgb(0 0 0 / 70%)",
-      marginLeft: "-47%",
-      ["@media (-width:414px)"]: {
+      ["@media (max-width:500px)"]: {
         fontSize: "15px",
-        marginLeft: "-40%",
-      },
-      ["@media (width:375px)"]: {
-        fontSize: "15px",
-        marginLeft: "-12%",
       },
     },
     more: {
@@ -104,7 +100,8 @@ export default function ComplexGrid() {
           <ArrowForwardIcon />
         </p>
       </p>
-
+      <Grid container spacing={3}>
+      <Grid item xs={12} sm={6} md={6} lg={4}>
       <Paper className={classes.paper}>
         <Grid container spacing={2} className={classes.bgcolor}>
           <Grid item>
@@ -116,7 +113,7 @@ export default function ComplexGrid() {
               />
             </ButtonBase>
           </Grid>
-          <Grid item xs={4} sm container>
+          <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography
@@ -141,6 +138,8 @@ export default function ComplexGrid() {
           </Grid>
         </Grid>
       </Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={6} lg={4}>
       <Paper className={classes.paper}>
         <Grid container spacing={2} className={classes.bgcolor}>
           <Grid item>
@@ -152,7 +151,7 @@ export default function ComplexGrid() {
               />
             </ButtonBase>
           </Grid>
-          <Grid item xs={4} sm container>
+          <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography
@@ -177,6 +176,8 @@ export default function ComplexGrid() {
           </Grid>
         </Grid>
       </Paper>
+      </Grid>
+      <Grid item xs={12} sm={6} md={6} lg={4}>
       <Paper className={classes.paper}>
         <Grid container spacing={2} className={classes.bgcolor}>
           <Grid item>
@@ -188,7 +189,7 @@ export default function ComplexGrid() {
               />
             </ButtonBase>
           </Grid>
-          <Grid item xs={4} sm container>
+          <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
                 <Typography
@@ -213,6 +214,10 @@ export default function ComplexGrid() {
           </Grid>
         </Grid>
       </Paper>
+      </Grid>
+      </Grid>
+  
+      
     </div>
   );
 }

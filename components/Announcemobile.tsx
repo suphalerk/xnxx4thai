@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "0px",
     },
     mobileDetail: {
-      width: "375px",
+      width: "217",
       display: "-webkit-box",
       WebkitLineClamp: "2",
       WebkitBoxOrient: "vertical",
@@ -36,14 +36,12 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "fit-content",
       fontSize: "13px",
       float: "right",
-      marginRight: "7%",
       display: "flex",
-      marginTop:'7px',
+      marginTop: "7px",
       ["@media (width:375px)"]: {
         marginTop: "0%",
-        fontSize:'13px',
+        fontSize: "13px",
       },
-      
     },
     imageCategory: {
       width: 39.9,
@@ -52,18 +50,27 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "rgb(0 0 0 / 70%)",
-      marginLeft: "10%",
+
       ["@media (width:375px)"]: {
         marginLeft: "0%",
-        fontSize:'14px',
+        fontSize: "14px",
       },
     },
-    gridMobile:{
+    gridMobile: {
       ["@media (width:375px)"]: {
-        display:'block !important',
-        borderTop:'none',
+        display: "block !important",
+        borderTop: "none",
       },
-    }
+    },
+    textLocation: {
+      fontSize: "13px",
+      textAlign: "left",
+      color: "#7e7e7e",
+      paddingRight: "5px",
+      paddingLeft: "5px",
+      marginTop: "0px",
+      marginBottom: "0px",
+    },
   })
 );
 
@@ -80,7 +87,7 @@ export default function MediaCard() {
         </p>
       </p>
       <Grid container spacing={3} className={classes.gridMobile}>
-        <Grid item xs={3} >
+        <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
             <Image
               className={classes.imageCategory}
@@ -100,7 +107,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
-            <p className="mobile-location">ลาดกระบัง</p>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Image
               className="img-chat"
@@ -118,7 +125,7 @@ export default function MediaCard() {
             />
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
             <Image
               className={classes.imageCategory}
@@ -138,7 +145,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
-            <p className="mobile-location">ลาดกระบัง</p>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Image
               className="img-chat"
@@ -156,7 +163,7 @@ export default function MediaCard() {
             />
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
             <Image
               className={classes.imageCategory}
@@ -176,7 +183,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
-            <p className="mobile-location">ลาดกระบัง</p>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Image
               className="img-chat"
@@ -194,7 +201,7 @@ export default function MediaCard() {
             />
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
             <Image
               className={classes.imageCategory}
@@ -214,7 +221,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
-            <p className="mobile-location">ลาดกระบัง</p>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Image
               className="img-chat"

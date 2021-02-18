@@ -9,21 +9,13 @@ import { Grid, Paper} from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root3: {
-      maxWidth: '10%',
-      display: 'inline-grid',
-      textAlign: 'center',
-    },
+
     media: {
       height: 140,
     },
     root: {
       flexGrow: 1,
-    },
-    root2: {
-      ...theme.typography.button,
-      backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(0),
+     
     },
     paper: {
       padding: theme.spacing(2),
@@ -31,7 +23,26 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.secondary,
       backgroundColor:'#fff',
       boxShadow:'none',
+     
     },
+    textLink:{
+      color:'#111',
+      fontSize:'14px'
+    },
+    gridCon:{
+      display:'flex',
+    },
+    more:{
+      color: '#00C900',
+    },
+    btnMore:{
+      // margin: '-4px 4px !important', 
+      margin: '-4px 4px !important',
+      width: '17px',
+      height: 'auto',
+    }
+
+    
   }),
 );
 
@@ -79,20 +90,19 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
 
   return (
     <div className={classes.root} >
-      <Grid container spacing={1}>
-        <Grid item xs>
+      <Grid container spacing={1} className={classes.gridCon}>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
           <Image
-              className="img-category"
                 src="/images/car.png"
                 alt=""
                 width={75}
                 height={75}
               />
-            <p className="text-link">รถยนต์</p>
+            <p className={classes.textLink}>รถยนต์</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -101,10 +111,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">มอเตอร์ไซค์</p>
+            <p className={classes.textLink}>มอเตอร์ไซค์</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -113,10 +123,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">อสังหาริมทรัพย์</p>
+            <p className={classes.textLink}>อสังหาริมทรัพย์</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -125,10 +135,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">มือถือ แท็บเล็ต</p>
+            <p className={classes.textLink}>มือถือ แท็บเล็ต</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -137,10 +147,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">คอมพิวเตอร์</p>
+            <p className={classes.textLink}>คอมพิวเตอร์</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -149,10 +159,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">เครื่องใช้ไฟฟ้า</p>
+            <p className={classes.textLink}>เครื่องใช้ไฟฟ้า</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -161,10 +171,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">สัตว์เลี้ยง</p>
+            <p className={classes.textLink}>สัตว์เลี้ยง</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -173,12 +183,12 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">บ้านและสวน</p>
+            <p className={classes.textLink}>บ้านและสวน</p>
           </Paper>
         </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs>
+      
+     
+      <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -187,10 +197,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">พระเครื่อง</p>
+            <p className={classes.textLink}>พระเครื่อง</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -199,10 +209,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">อะไหล่รถยนต์</p>
+            <p className={classes.textLink}>อะไหล่รถยนต์</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2}>
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -211,10 +221,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">จักรยาน</p>
+            <p className={classes.textLink}>จักรยาน</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -223,10 +233,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">เครื่องดนตรี</p>
+            <p className={classes.textLink}>เครื่องดนตรี</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -235,10 +245,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">นาฬิกา</p>
+            <p className={classes.textLink}>นาฬิกา</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -247,10 +257,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">เสื้อผ้าและแฟชั่น</p>
+            <p className={classes.textLink}>เสื้อผ้าและแฟชั่น</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -259,10 +269,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">รองเท้า</p>
+            <p className={classes.textLink}>รองเท้า</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -271,12 +281,12 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">กีฬา</p>
+            <p className={classes.textLink}>กีฬา</p>
           </Paper>
         </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs>
+      
+      
+      <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -285,10 +295,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">กล้อง</p>
+            <p className={classes.textLink}>กล้อง</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -297,10 +307,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">กระเป๋า</p>
+            <p className={classes.textLink}>กระเป๋า</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -309,10 +319,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">เกมส์</p>
+            <p className={classes.textLink}>เกมส์</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -321,10 +331,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">เบ็ดตกปลา</p>
+            <p className={classes.textLink}>เบ็ดตกปลา</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -333,10 +343,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">โมเดล</p>
+            <p className={classes.textLink}>โมเดล</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -345,10 +355,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">แม่และเด็ก</p>
+            <p className={classes.textLink}>แม่และเด็ก</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -357,10 +367,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">เกษตร</p>
+            <p className={classes.textLink}>เกษตร</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -369,12 +379,12 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">ท่องเที่ยว</p>
+            <p className={classes.textLink}>ท่องเที่ยว</p>
           </Paper>
         </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs>
+     
+      
+      <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -383,10 +393,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">สุขภาพและความงาม</p>
+            <p className={classes.textLink}>สุขภาพและความงาม</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
           <Image
               className="img-category"
@@ -395,10 +405,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">ชา กาแฟ</p>
+            <p className={classes.textLink}>ชา กาแฟ</p>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={4} md={3} sm={3} lg={2} >
           <Paper className={classes.paper}>
              <Image
               className="img-category"
@@ -407,21 +417,11 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
                 width={75}
                 height={75}
               />
-            <p className="text-link">การเรียน</p>
+            <p className={classes.textLink}>การเรียน</p>
           </Paper>
         </Grid>
       </Grid>
-
-
-
-
-
-
-
-      {/* <Typography className="text-green"> */}
-      <p style={{ textAlign: 'center'}} className="text-readmore">ดูน้อยลง <img className="btn-readmore" src="/images/dropdown.png" /></p>
-      {/* </Typography> */}
-
+      <p style={{ textAlign: 'center'}} className={classes.more}>ดูน้อยลง <img className={classes.btnMore} src="/images/dropdown.png" /></p>
     </div>
   );
 }

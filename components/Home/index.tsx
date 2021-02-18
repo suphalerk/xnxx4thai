@@ -1,7 +1,6 @@
 import { Container } from '@material-ui/core'
 import Layout from '../Layout'
 import { Content, Keyword } from '../../interfaces/product'
-import Search from '../Search'
 import Searchfilter from '../Searchfilter'
 import Popularsearch from '../Popularsearch'
 import Announcemobile from '../Announcemobile'
@@ -11,6 +10,7 @@ import React from 'react'
 import News from '../News'
 import Description from '../Description'
 import Footer from '../Footer'
+
 
 
 const Home = (props: any) => {
@@ -28,8 +28,7 @@ const Home = (props: any) => {
 
     return (
         <Layout title="Home | KaideeWa.com">
-            <Container maxWidth="md" className="container">
-                <Search/>
+            <Container maxWidth="lg" className="container">
                 <Searchfilter keywords={keywords}/>
                 <Popularsearch/>
                 {/* <ul style={{marginLeft:'8%'}}><a href="#">{items}</a></ul> */}

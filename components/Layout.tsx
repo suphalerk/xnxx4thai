@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 
 import { Button } from "@material-ui/core";
+import Search from "./Search";
 
 type Props = {
   children?: ReactNode;
@@ -18,11 +19,11 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
     </Head>
     <header>
       <nav>
-        <img className="logo1" src="/images/logo1.png" />
+        <img className="logo1" src="/images/logo1.png" width='220px' height='auto' /> 
         <img className="btn-love" src="/images/love.png" />
         <img className="btn-chat" src="/images/chat2.png" />
 
-       <a className="text-login"> เข้าสู่ระบบ / สมัครสมาชิก</a>
+       <a className="text-login" href="Prodict"> เข้าสู่ระบบ / สมัครสมาชิก</a>
          
         
         <Button variant="contained" className="btn-sell">
@@ -30,6 +31,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         </Button>
       </nav>
     </header>
+    <Search/>
     {children}
   </div>
 );

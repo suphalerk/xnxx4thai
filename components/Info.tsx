@@ -12,22 +12,53 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     paper: {
       padding: theme.spacing(2),
-      textAlign: "center",
+      textAlign: "left",
       color: theme.palette.text.secondary,
       backgroundColor: "#f2f2f2",
       boxShadow: "none",
       ["@media (width:375px)"]: {
         width: "374px",
       },
-     
     },
     spacingxmobile: {
-      
       ["@media (width:375px)"]: {
         display: "contents",
       },
     },
-  })
+    smallLogo: {
+      width: "115px",
+      margin: "-6px",
+      paddingLeft: " 5px",
+    },
+    textGreen: {
+      color: "#00C900",
+      fontSize: "1.5rem",
+      padding: "0",
+      textAlign: 'center',
+    },
+    textHeader: {
+      fontSize: "18px",
+      textAlign: "left",
+      backgroundColor: "#00C660",
+      padding: " 5px 10px 16px 10px",
+      color: " #fff",
+      margin:'-15px'
+    },
+    btnDis:{
+      color:'#00C660'
+    },
+    TextInfo:{
+      color:'#111',
+      marginTop:'1.5em'
+    },
+    btnSell:{
+      backgroundColor: '#fff',
+      color: '#000',
+      float:'right'
+    }
+
+}
+  )
 );
 
 export default function AutoGrid() {
@@ -41,20 +72,20 @@ export default function AutoGrid() {
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <p className="text-green2">
+            <p className={classes.textGreen}>
               ตอบโจทย์ทุกการซื้อขายกับเรา{" "}
-              <img className="small-logo" src="/images/logo1.png" />
+              <img className={classes.smallLogo} src="/images/logo1.png" />
             </p>
           </Paper>
         </Grid>
       </Grid>
       <Grid container spacing={3} className={classes.spacingxmobile}>
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={6} md={6}>
           <Paper className={classes.paper}>
-            <p className="text-header2">
-              ผู้ขาย<Button className="btn-sell2">ลงขาย</Button>
+            <p className={classes.textHeader}>
+              ผู้ขาย<Button className={classes.btnSell}>ลงขาย</Button>
             </p>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"
@@ -64,7 +95,7 @@ export default function AutoGrid() {
               />
               ขั้นตอนง่ายๆ ใครก็ลงขายได้
             </Typography>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"
@@ -74,7 +105,7 @@ export default function AutoGrid() {
               />
               โปรโมทขายเพื่อเพิ่มโอกาศในการขายมากขึ้น
             </Typography>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"
@@ -84,7 +115,7 @@ export default function AutoGrid() {
               />
               แชทกับลูกค้าโดยตรงเพื่อเพิ่มโอกาสในการปิดการขาย
             </Typography>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"
@@ -96,12 +127,12 @@ export default function AutoGrid() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={6} md={6}>
           <Paper className={classes.paper}>
-            <p className="text-header2">
-              ผู้ซื้อ<Button className="btn-sell3">ลงขาย</Button>
+          <p className={classes.textHeader}>
+              ผู้ซื้อ
             </p>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"
@@ -111,7 +142,7 @@ export default function AutoGrid() {
               />
               สะดวกมั่นใจในการเลือกซื้อสินค้าที่หลากหลาย
             </Typography>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"
@@ -121,7 +152,7 @@ export default function AutoGrid() {
               />
               พูดคุย สอบถามกับคนขายได้โดยตรงเพื่อความปรอดภัยในการซื้อ
             </Typography>
-            <Typography color={"primary"}>
+            <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"
                 src="/images/CORRECT.png"

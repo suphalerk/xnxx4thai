@@ -23,11 +23,11 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "rgb(0 0 0 / 70%)",
-      marginLeft: "10%",
+   
       ["@media (width:375px)"]: {
         fontSize: "11px",
         marginBottom:'-4px',
-        marginLeft: "4%",
+   
       },
     },
     textGreen: {
@@ -67,7 +67,7 @@ export default function FixedContainer() {
     <div className={classes.root}>
       <p className={classes.textHeader}>ผลการค้นหายอดนิยม</p>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
@@ -83,9 +83,9 @@ export default function FixedContainer() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
-            <p className="text-linkgreen">
+          <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
@@ -100,9 +100,9 @@ export default function FixedContainer() {
             
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
-            <p className="text-linkgreen">
+          <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
@@ -116,9 +116,9 @@ export default function FixedContainer() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
-            <p className="text-linkgreen">
+          <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>

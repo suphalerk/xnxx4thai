@@ -21,7 +21,11 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "rgb(0 0 0 / 70%)",
       padding: " 0px",
       fontSize: " 1.5em",
-      marginLeft: "11%",
+      ["@media (max-width:500px)"]: {
+        fontSize: " 16px",
+        marginTop:'4em'
+      },
+      
     },
     activityDetail: {
       fontSize: "11px",
@@ -38,6 +42,11 @@ const useStyles = makeStyles((theme: Theme) =>
       float: "right",
       marginRight: "12%",
       display: "flex",
+      ["@media (max-width:500px)"]: {
+        marginRight: "0px",
+        fontSize: "13px",
+        marginTop:'0px'
+      },
     },
   })
 );
@@ -55,7 +64,7 @@ export default function AutoGrid() {
         </p>
       </p>
       <Grid container spacing={3}>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4} md={4} lg={4} >
           <Paper className={classes.paper}>
             <Image
               className="img-category"
@@ -69,7 +78,7 @@ export default function AutoGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4} md={4} lg={4} >
           <Paper className={classes.paper}>
             <Image
               className="img-category"
@@ -83,7 +92,7 @@ export default function AutoGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4} md={4} lg={4} >
           <Paper className={classes.paper}>
             <Image
               className="img-category"

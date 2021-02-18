@@ -42,16 +42,35 @@ hr {
 * {
   box-sizing: border-box;
 }
-.container{
-  padding:0 !important;
+
+.bg-search{
+  background-image: url('/images/general-large-6b86fad29f1e8919155e0a9e5bcd54b7.jpg') !important;
+
+  height: 523px !important;
+
+  background-size: cover;
 }
+/* .logo1{
+  width: 220px ;
+  height: auto ;
+  margin-left: 5% ;
+}
+.btn-love{
+  margin-left: 57%;
+  padding: 10px;
+}
+.btn-chat{
+  padding: 4px;
+} 
+
+
 .text-login{
   color: #00C900 !important;
-}
+} 
 
 
 /*--------------------------- Header------------------------- */
-.MuiGrid-grid-xs-true{
+/* .MuiGrid-grid-xs-true{
   flex-grow: 1;
   max-width: 10% !important;
   flex-basis: 0;
@@ -107,9 +126,8 @@ margin-top: -2% !important;
 .bg-search{
   background-image: url('/images/general-large-6b86fad29f1e8919155e0a9e5bcd54b7.jpg') !important;
 
-   /* max-width: 1900px !important; */
   height: 523px !important;
-  /* background-color: #000; */
+
   background-size: cover;
 }
 
@@ -117,10 +135,6 @@ margin-top: -2% !important;
   max-width: 1920px !important;
 }
 
-/* .bg-searchfilter{
-  width: 1920px !important;
-  height: 500px !important;
-} */
 
 .btn-filter{
   width: 75px !important;
@@ -185,7 +199,6 @@ margin-top: -2% !important;
 .text-header2{
   font-size: 18px;
   text-align: left;
-  /* padding: 5px; */
   background-color: #00C660;
   padding: 5px 10px 16px 10px;
   color: #fff;
@@ -204,9 +217,7 @@ margin-top: -2% !important;
 .MuiBox-root-26{
   background-color: #f2f2f2;
 }
-/* .makeStyles-paper-22{
-  background-image: url('/images/TEXTBOX.png');
-} */
+
 .MuiButton-text{
   padding: 6px 8px;
     float: right;
@@ -223,12 +234,7 @@ margin-top: -2% !important;
 .MuiContainer-maxWidthSm{
   max-width: none !important;
 }
-/* .MuiButtonBase-root, .MuiTypography-body2{
-  color:#7B8FA8 !important;
-} */
-/* .MuiButton-label{
-  background-image: url('/images/car.png');
-} */
+
 .logo2{
   width: 100px;
     height: auto;
@@ -250,11 +256,7 @@ margin-top: -2% !important;
   background-color: #F8F8F8 !important;
   padding: 1%;
 }
-/* .MuiButton-contained{
-  background-color: #F8F8F8 !important;
-  color: #000 !important;
-    margin-left: 75% !important;
-} */
+
 .text-sell{
   color: #fff;
     text-align: start;
@@ -279,10 +281,7 @@ margin-top: -2% !important;
 .grid-sell{
   width: 1100px !important;
 }
-/* .MuiGrid-container{
-  margin-left: 69% !important;
 
-} */
 
 .MuiTypography-colorTextSecondary{
   color:rgb(0 0 0 / 70%) !important;
@@ -366,9 +365,9 @@ margin-top: -2% !important;
     .btn-sell2{
       background-color: #fff !important;
       color: #000 !important;
-    }
+    } */
 /*------------------------------------------------------ Mobile-Responsive-------------------------------------------------- */
-@media only screen and (width: 375px) {
+/* @media only screen and (width: 375px) {
   body {
     background: #fff !important;
   }
@@ -388,8 +387,7 @@ margin-top: -2% !important;
   margin-top: 1.25em;
 }
   .makeStyles-root-6{
-    /* max-width: 375px !important;
-    background-color: #00C900; */
+
     display: none;
   }
   .btn-love,
@@ -413,23 +411,19 @@ margin-top: -2% !important;
   }
   .MuiGrid-spacing-xs-3{
     padding: 0px !important;
-    /* width: calc(100% + -100px) !important; */
+
   }
   .makeStyles-paper-32,
   .makeStyles-paper-10{
     padding: 0px !important;
   }
-  /* .img-category{
-    width: 39.9px !important;
-    height: auto !important;
-  } */
+
   .MuiGrid-grid-xs-true {
     flex-grow: 1;
     max-width: 13% !important;
     flex-basis: 0;
 }
 .MuiGrid-spacing-xs-1{
-  /* margin-left: -10% !important; */
   place-content: center !important;
   justify-content: center !important;
 }
@@ -487,7 +481,6 @@ padding-left: 5px !important;
   margin-left: -30% !important;
 }
 .makeStyles-p-34{
-  /* display:block; */
   width: 250px;
   display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -506,4 +499,4 @@ padding-left: 5px !important;
 }
 
 
-}
+} */
