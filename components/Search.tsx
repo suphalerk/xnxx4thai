@@ -8,8 +8,12 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: theme.spacing(1),
         width: '50%',
       },
-      
+     
     },
+    position:{
+      marginTop:'13%'
+    }
+    
   }),
 );
 
@@ -19,7 +23,7 @@ function searchInput() {
     <div className="bg-search">
       <form className={classes.root} noValidate autoComplete="off" style={{textAlign:'center'}}>
      
-      <TextField id="outlined-basic" label="คุณกำลังมองาอะไร?" variant="outlined" />
+      <TextField className={classes.position} id="outlined-basic" label="คุณกำลังมองาอะไร?" variant="outlined" />
     </form>
     </div>
   )

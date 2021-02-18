@@ -1,46 +1,54 @@
-import React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Image from 'next/image'
+import React from "react";
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import Image from "next/image";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      backgroundColor:'#00CE00',
-     
+      backgroundColor: "#00CE00",
+
       ["@media (width:375px)"]: {
-        marginTop:'5%',
-        alignSelf:'center !important',
+        marginTop: "5%",
+        alignSelf: "center !important",
       },
     },
     paper: {
       padding: theme.spacing(2),
-      textAlign: 'center',
+      textAlign: "center",
       color: theme.palette.text.secondary,
-      backgroundColor:'#00CE00 !important',
-      boxShadow:'none',
+      backgroundColor: "#00CE00 !important",
+      boxShadow: "none",
     },
-    p:{
-        color:'#fff',
-
-        ["@media (width:375px)"]: {
-          width: "210px",
-          display:'-webkit-box',
-          WebkitLineClamp:'3',
-          WebkitBoxOrient:'vertical',
-          overflow:'hidden',
-        },
-    },
-    logo1:{
+    p: {
+      color: "#fff",
 
       ["@media (width:375px)"]: {
-      
-        marginTop:'5%',
+        
+        display:'-webkit-box',
+        WebkitLineClamp:'3',
+        WebkitBoxOrient:'vertical',
+        overflow:'hidden',
       },
+      ["@media (max-width:500px)"]: {
+        
+        display:'-webkit-box',
+        WebkitLineClamp:'3',
+        WebkitBoxOrient:'vertical',
+        overflow:'hidden',
+      },
+    },
+    logo1: {
+      ["@media (width:375px)"]: {
+        marginTop: "5%",
+      },
+    },
+    centerlogo:{
+      alignSelf:'center'
     }
-  }),
+  })
 );
 
 export default function AutoGrid() {
@@ -48,30 +56,35 @@ export default function AutoGrid() {
 
   return (
     <div className={classes.root}>
-        <hr/>
+      <hr />
       <Grid container spacing={3}>
         <Grid item xs={9}>
           <Paper className={classes.paper}>
-        
-      <p className={classes.p}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-    </p>
+            <p className={classes.p}>
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC,
+              making it over 2000 years old. Richard McClintock, a Latin
+              professor at Hampden-Sydney College in Virginia, looked up one of
+              the more obscure Latin words, consectetur, from a Lorem Ipsum
+              passage, and going through the cites of the word in classical
+              literature, discovered the undoubtable source. Lorem Ipsum comes
+              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+              Malorum"
+            </p>
           </Paper>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={3} className={classes.centerlogo}>
           <Paper className={classes.paper}>
-          <Image
-                className={classes.logo1}
-                src="/images/logo1.png"
-                alt=""
-                width={'300'}
-                height={'70'}
-
-              />
+            <Image
+              className={classes.logo1}
+              src="/images/logo1.png"
+              alt=""
+              width={"300"}
+              height={"70"}
+            />
           </Paper>
         </Grid>
-       
       </Grid>
-     
     </div>
   );
 }

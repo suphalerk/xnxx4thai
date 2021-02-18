@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "rgb(0 0 0 / 70%)",
-      marginLeft: "10%",
+      
       ["@media (width:375px)"]: {
         fontSize:'14px',
       },
@@ -36,15 +36,26 @@ const useStyles = makeStyles((theme: Theme) =>
         WebkitBoxOrient:'vertical',
         overflow:'hidden',
       },
+      ["@media (max-width:500px)"]: {
+        
+        display:'-webkit-box',
+        WebkitLineClamp:'3',
+        WebkitBoxOrient:'vertical',
+        overflow:'hidden',
+      },
     },
     more: {
       color: "#429EFE",
       width: "fit-content",
       fontSize: "13px",
       float: "right",
-      marginRight: "10%",
       ["@media (width:375px)"]: {
-        marginTop:'1px',
+        marginTop:'0px',
+        
+      },
+      ["@media (max-width:500px)"]: {
+        marginTop:'0px',
+        
       },
     },
     
