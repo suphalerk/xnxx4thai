@@ -24,7 +24,10 @@ const useStyles = makeStyles((theme: Theme) =>
         Typography: {
             color: '#000',
             width:'fit-content',
-            fontSize:'13px'
+            fontSize:'13px',
+             ['@media (min-width:780px)']: {
+      color: '#fff'
+    }
         },
         more:{
             color: '#429EFE',

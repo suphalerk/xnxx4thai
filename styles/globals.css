@@ -98,10 +98,12 @@ margin-top: -2% !important;
 }
 
 .bg-search{
-  /* background-image: url('/images/wp2570965.jpg') !important; */
+  background-image: url('/images/general-large-6b86fad29f1e8919155e0a9e5bcd54b7.jpg') !important;
+
    /* max-width: 1900px !important; */
-  height: 350px !important;
-  background-color: #000;
+  height: 523px !important;
+  /* background-color: #000; */
+  background-size: cover;
 }
 
 .MuiContainer-maxWidthMd{
@@ -311,10 +313,14 @@ margin-top: -2% !important;
 }
 
 .MuiInputLabel-outlined{
-  margin-top: 9em;
+  margin-top: 14em;
 }
 .MuiOutlinedInput-root{
-  margin-top: 9em;
+  margin-top: 14em;
+}
+.MuiOutlinedInput-input::placeholder{
+  color:#000;
+
 }
 .mobile-detail{
   font-size: 16px !important;
