@@ -45,6 +45,9 @@ hr {
 .container{
   padding:0 !important;
 }
+.text-login{
+  color: #00C900 !important;
+}
 
 
 /*--------------------------- Header------------------------- */
@@ -76,12 +79,13 @@ hr {
   margin-left: 5% ;
 }
 .btn-love{
-  margin-left: 40%;
+  margin-left: 57%;
   padding: 10px;
 }
 .btn-chat{
   padding: 4px;
 }
+
 .btn-login{
 color: #00C900 !important;
 margin-left: 2em !important;
@@ -94,7 +98,10 @@ margin-top: -2% !important;
   background-color: #00C900 !important;
 }
 .MuiOutlinedInput-notchedOutline{
-  border-color: rgb(171 171 171 / 23%) !important;
+  border-color: #fff !important;
+}
+.MuiInputLabel-outlined{
+  color: #fff;
 }
 
 .bg-search{
@@ -114,9 +121,7 @@ margin-top: -2% !important;
   width: 1920px !important;
   height: 500px !important;
 } */
-.MuiPaper-root{
-  background-color:#fff !important;
-}
+
 .btn-filter{
   width: 75px !important;
   height: auto !important;
@@ -140,11 +145,7 @@ margin-top: -2% !important;
   font-size: 16px;
   text-align: left !important;
 }
-.text-link3{
-  color: #429EFE !important;
-  font-size: 16px;
-  text-align: left !important;
-}
+
 .text-linkgreen{
   color: #00C900 !important;
   font-size: 16px;
@@ -153,7 +154,7 @@ margin-top: -2% !important;
 .MuiGrid-spacing-xs-3{
   margin:0px !important;
   width: calc(100%) !important;
-  /* padding-left: 25% !important; */
+  
   justify-content: center;
   padding-left: 10%;
   padding-right: 10%;
@@ -161,20 +162,12 @@ margin-top: -2% !important;
 .MuiGrid-spacing-xs-1{
   justify-content: center;
 }
-
-.MuiPaper-elevation1{
-  box-shadow:none  !important;
-}
-
 .MuiGrid-spacing-xs-3 > .MuiGrid-item{
   padding: 0px !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
-.text-green{
-  text-align: center;
-  color:#00C900 !important;
-}
+
 .text-green2{
   color:#00C900 !important;
   font-size: 1.5em !important;
@@ -318,7 +311,7 @@ margin-top: -2% !important;
 .MuiOutlinedInput-root{
   margin-top: 14em;
 }
-.MuiOutlinedInput-input::placeholder{
+.MuiOutlinedInput-input label{
   color:#000;
 
 }
@@ -349,11 +342,7 @@ margin-top: -2% !important;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.makeStyles-paper-14{
-  text-align: center !important;
-  border: solid 1px #e1e1e1 !important;
-  padding: 0px !important;
-}
+
 .MuiGrid-spacing-xs-4 > .MuiGrid-item{
   min-width: fit-content;
   
@@ -404,7 +393,8 @@ margin-top: -2% !important;
     display: none;
   }
   .btn-love,
-  .makeStyles-root7-9{
+  .makeStyles-root7-9,
+  .text-login{
     display: none;
   }
   .MuiButton-text
@@ -429,10 +419,10 @@ margin-top: -2% !important;
   .makeStyles-paper-10{
     padding: 0px !important;
   }
-  .img-category{
+  /* .img-category{
     width: 39.9px !important;
     height: auto !important;
-  }
+  } */
   .MuiGrid-grid-xs-true {
     flex-grow: 1;
     max-width: 13% !important;
@@ -449,12 +439,8 @@ margin-top: -2% !important;
 .text-linkgreen{
   font-size: 8px;
 }
-.text-link2{
-  font-size: 8px;
-}
-.text-link3{
-  font-size: 8px;
-}
+
+
 .MuiSvgIcon-root{
   width: 7px !important;
   height: 5px !important;
@@ -514,6 +500,9 @@ padding-left: 5px !important;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.MuiGrid-spacing-xs-3 > .MuiGrid-item{
+  align-self: center;
 }
 
 

@@ -9,19 +9,36 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       backgroundColor:'#00CE00',
+     
+      ["@media (width:375px)"]: {
+        marginTop:'5%',
+        alignSelf:'center !important',
+      },
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
       backgroundColor:'#00CE00 !important',
+      boxShadow:'none',
     },
     p:{
         color:'#fff',
 
+        ["@media (width:375px)"]: {
+          width: "210px",
+          display:'-webkit-box',
+          WebkitLineClamp:'3',
+          WebkitBoxOrient:'vertical',
+          overflow:'hidden',
+        },
     },
     logo1:{
 
+      ["@media (width:375px)"]: {
+      
+        marginTop:'5%',
+      },
     }
   }),
 );

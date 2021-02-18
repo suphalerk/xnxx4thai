@@ -1,16 +1,15 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
+import React, { ReactNode } from "react";
+import Head from "next/head";
 
-import { Button } from '@material-ui/core'
-
+import { Button } from "@material-ui/core";
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+};
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
 
+const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -23,17 +22,16 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         <img className="btn-love" src="/images/love.png" />
         <img className="btn-chat" src="/images/chat2.png" />
 
-        <Button href="#text-buttons" className="btn-login">
-          เข้าสู่ระบบ / สมัครสมาชิก
-        </Button>
+       <a className="text-login"> เข้าสู่ระบบ / สมัครสมาชิก</a>
+         
+        
         <Button variant="contained" className="btn-sell">
           ลองขาย
         </Button>
       </nav>
     </header>
     {children}
-
   </div>
-)
+);
 
-export default Layout
+export default Layout;
