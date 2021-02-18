@@ -33,12 +33,22 @@ const useStyles = makeStyles((theme: Theme) =>
     textGreen: {
       textAlign: "left",
       color: "#00C900",
-      fontSize: "8px",
+      fontSize: "16px",
+      ["@media (width:375px)"]: {
+        textAlign: "left",
+        color: "#00C900",
+        fontSize: "8px",
+      },
     },
     textCategory: {
       textAlign: "left",
-      fontSize: "8px",
-      color:'#000'
+      fontSize: "16px",
+      color:'#000',
+      ["@media (width:375px)"]: {
+        textAlign: "left",
+        color: "#00C900",
+        fontSize: "8px",
+      },
     },
     textMore: {
       color: "#429EFE",
