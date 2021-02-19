@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     mobileDetail: {
       width: "217",
       display: "-webkit-box",
-      WebkitLineClamp: "2",
+      WebkitLineClamp: 2 ,
       WebkitBoxOrient: "vertical",
       overflow: "hidden",
       color: "#222",
