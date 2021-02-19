@@ -59,6 +59,11 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: "1em",
       color: "#fff",
       backgroundColor: "#00C900",
+      ["@media (max-width:751px)"]: {
+        
+        marginLeft: "0em",
+        fontSize:'11px'
+      },
     },
     btnRegister: {
       //   float: "right",
@@ -102,7 +107,7 @@ export default function AutoGrid() {
               
           </Paper>
         </Grid>
-        <Grid item xs lg={1}>
+        <Grid item xs lg={1} className={classes.gridDis}>
           <Paper className={classes.paper3}>
             <Image
               className={classes.love}
@@ -113,7 +118,7 @@ export default function AutoGrid() {
             />
           </Paper>
         </Grid>
-        <Grid item xs lg={1} className={classes.gridDis}>
+        <Grid item xs lg={1} >
           <Paper className={classes.paper4}>
             <Image
               className={classes.love}
@@ -129,7 +134,7 @@ export default function AutoGrid() {
             <Button className={classes.btnRegister} color="primary">
               เข้าสู่ระบบ / สมัครสมาชิก
             </Button>
-            <Button  className={classes.btnSell} variant="contained">
+            <Button className={classes.btnSell} variant="contained">
               ลองขาย
             </Button>
           </Paper>

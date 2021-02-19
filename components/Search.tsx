@@ -11,11 +11,19 @@ const useStyles = makeStyles((theme: Theme) =>
      
     },
     position:{
-      marginTop:'13%'
+      marginTop:'13%',
+      ["@media (max-width:3760px)"]: {
+        marginTop:'6%',
+      },
+
     },
     bgSearch:{
       height: '523px',
       backgroundSize: 'cover',
+      ["@media (max-width:1100px)"]: {
+        height: 'auto',
+        backgroundSize: 'cover',
+      },
     }
 
     

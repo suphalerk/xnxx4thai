@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#f2f2f2",
       boxShadow: "none",
       ["@media (width:375px)"]: {
-        width: "374px",
+        width: "330px",
       },
     },
     spacingxmobile: {
