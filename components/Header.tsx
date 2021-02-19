@@ -137,10 +137,10 @@ export default function AutoGrid() {
         </Grid>
         <Grid item xs lg={3}>
           <Paper className={classes.paper}>
-            {/* <Button  color="primary">
+            {/* <Button   color="primary">
               เข้าสู่ระบบ / สมัครสมาชิก
             </Button> */}
-            <Link href="/pages/product/[name]/[id].tsx">
+            <Link href="/about">
           <a className={classes.btnRegister}>เข้าสู่ระบบ / สมัครสมาชิก</a>
         </Link>
             <Button className={classes.btnSell} variant="contained">
