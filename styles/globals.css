@@ -50,38 +50,3 @@ hr {
 
   background-size: cover;
 }
-.btn-sell{
-  float:right;
-  background-color: #00C900 !important;
-  color: #fff !important;
-}
-.btn-love{
-  margin: 12px;
-}
-.btn-chat{
-  margin: 6px;
-}
-
-@media only screen and (max-width: 500px) {
-  .bg-search{
-    height: 145px !important;
-  }
-  .logo1{
-    width: 107 !important;
-    height: 37 !important;
-  }
-  .btn-love{
-    display: none;
-  }
-  .text-login{
-    display: none;
-  }
-  .btn-sell{
-    float:right;
-    background-color: #00C900 !important;
-    color: #fff !important;
-  }
-  .btn-chat{
-    margin: 10px;
-  }
-}
