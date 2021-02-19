@@ -3,7 +3,8 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
-import { Button, Link } from "@material-ui/core";
+import Link from 'next/link'
+import { Button } from "@material-ui/core";
 // import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme: Theme) =>
