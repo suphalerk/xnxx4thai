@@ -118,7 +118,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon />
+              <ArrowForwardIcon className={classes.arrow} />
             </p>
             
           </Paper>
@@ -135,7 +135,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon />
+              <ArrowForwardIcon className={classes.arrow}/>
             </p>
           </Paper>
         </Grid>
@@ -151,7 +151,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon />
+              <ArrowForwardIcon className={classes.arrow}/>
             </p>
           </Paper>
         </Grid>
