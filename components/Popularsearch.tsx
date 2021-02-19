@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme: Theme) =>
         marginBottom:'-4px',
    
       },
+      ["@media (max-width:500px)"]: {
+        marginLeft: "0%",
+        fontSize: "14px",
+      },
     },
     textGreen: {
       textAlign: "left",
@@ -39,6 +43,10 @@ const useStyles = makeStyles((theme: Theme) =>
         color: "#00C900",
         fontSize: "8px",
       },
+      ["@media (max-width:500px)"]: {
+
+        fontSize: "11px",
+      },
     },
     textCategory: {
       textAlign: "left",
@@ -46,8 +54,18 @@ const useStyles = makeStyles((theme: Theme) =>
       color:'#000',
       ["@media (width:375px)"]: {
         textAlign: "left",
-        color: "#00C900",
+        color: "#000",
         fontSize: "8px",
+      },
+      ["@media (max-width:500px)"]: {
+
+        fontSize: "11px",
+      },
+    },
+    arrow:{
+      ["@media (max-width:500px)"]: {
+        width: '10px',
+        height: '10px'
       },
     },
     textMore: {
@@ -57,6 +75,10 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: '0px 0px -7px 10px',
       ["@media (width:375px)"]: {
         fontSize: "8px",
+      },
+      ["@media (max-width:500px)"]: {
+        margin: '-13px 0px -5px 0px',
+        fontSize: "11px",
       },
     },
   })
@@ -80,7 +102,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon />
+              <ArrowForwardIcon  className={classes.arrow} />
             </p>
           </Paper>
         </Grid>

@@ -55,6 +55,10 @@ const useStyles = makeStyles((theme: Theme) =>
         marginLeft: "0%",
         fontSize: "14px",
       },
+      ["@media (max-width:500px)"]: {
+        marginLeft: "0%",
+        fontSize: "14px",
+      },
     },
     gridMobile: {
       ["@media (width:375px)"]: {
