@@ -96,7 +96,7 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs lg={3}>
+        <Grid item xs={4} lg={3}>
           <Paper className={classes.paper2}>
             <Image
               className={classes.logo}
