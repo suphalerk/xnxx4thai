@@ -74,7 +74,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "fit-content",
       fontSize: "13px",
       float: "right",
-      marginRight:'7%',
       marginTop: '0px',
       display:'flex',
       ["@media (width:414px)"]: {

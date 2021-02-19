@@ -71,6 +71,14 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: "0px",
       marginBottom: "0px",
     },
+    imgChat:{
+      width: '135px',
+      height: '40px',
+    },
+    imgCall:{
+      width: '135px',
+      height: '40px',
+    }
   })
 );
 
@@ -110,14 +118,14 @@ export default function MediaCard() {
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Image
-              className="img-chat"
+              className={classes.imgChat}
               src="/images/Chat.png"
               alt=""
               width={"100"}
               height={"30"}
             />
             <Image
-              className="img-call"
+              className={classes.imgCall}
               src="/images/Call.png"
               alt=""
               width={"100"}

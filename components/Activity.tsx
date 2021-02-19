@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "fit-content",
       fontSize: "13px",
       float: "right",
-      marginRight: "12%",
       display: "flex",
       ["@media (max-width:500px)"]: {
         marginRight: "0px",
