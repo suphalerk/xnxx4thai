@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#429EFE",
       fontSize: "16px",
       textAlign: "left",
+      margin: '0px 0px -7px 10px',
       ["@media (width:375px)"]: {
         fontSize: "8px",
       },
