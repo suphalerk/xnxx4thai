@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
 import { Button } from "@material-ui/core";
+// import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -80,6 +81,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function AutoGrid() {
   const classes = useStyles();
+//   const router = useRouter()
 
   return (
     <div className={classes.root}>
@@ -127,7 +129,7 @@ export default function AutoGrid() {
             <Button className={classes.btnRegister} color="primary">
               เข้าสู่ระบบ / สมัครสมาชิก
             </Button>
-            <Button className={classes.btnSell} variant="contained">
+            <Button  className={classes.btnSell} variant="contained">
               ลองขาย
             </Button>
           </Paper>

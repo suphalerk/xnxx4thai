@@ -6,19 +6,27 @@ import Popularsearch from '../Popularsearch'
 import Announcemobile from '../Announcemobile'
 import Info from '../Info'
 import Activity from '../Activity'
-import React from 'react'
+// import React, { useEffect } from 'react'
 import News from '../News'
 import Description from '../Description'
 import Footer from '../Footer'
+// import { useRouter } from 'next/router'
 
 
 
 const Home = (props: any) => {
+
+    // const router = useRouter()
     const { data } = props.data
     const contents: Content[] = data.contents.datas
     const keywords: Keyword[] = data.keywords.datas
 
     const items = []
+
+    // useEffect(() => {
+    //     router.push('/Product')
+ 
+    // })
 
     for (const [index, value] of contents.entries()) {
         value.content_title
