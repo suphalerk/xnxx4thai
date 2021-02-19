@@ -33,6 +33,13 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       padding: theme.spacing(2),
       textAlignLast: "left",
+     
+    },
+    paper5:{
+        ["@media (max-width:751px)"]: {
+        
+            display:'none',
+          },
     },
     logo: {
       // float:'left',
@@ -52,11 +59,22 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#fff",
       backgroundColor: "#00C900",
     },
-    btnSell2: {
+    btnRegister: {
       //   float: "right",
       marginLeft: "1em",
       color: "#00C900",
-    },
+      ["@media (max-width:1300px)"]: {
+        
+        display:'none',
+      },
+     
+    }, 
+    gridDis:{
+        ["@media (max-width:751px)"]: {
+        
+            display:'none',
+          },
+      },
   })
 );
 
@@ -77,8 +95,10 @@ export default function AutoGrid() {
             />
           </Paper>
         </Grid>
-        <Grid item xs lg={3}>
-          <Paper className={classes.paper}></Paper>
+        <Grid item xs lg={3} className={classes.paper5}>
+          <Paper className={classes.paper5}>
+              
+          </Paper>
         </Grid>
         <Grid item xs lg={1}>
           <Paper className={classes.paper3}>
@@ -91,7 +111,7 @@ export default function AutoGrid() {
             />
           </Paper>
         </Grid>
-        <Grid item xs lg={1}>
+        <Grid item xs lg={1} className={classes.gridDis}>
           <Paper className={classes.paper4}>
             <Image
               className={classes.love}
@@ -104,7 +124,7 @@ export default function AutoGrid() {
         </Grid>
         <Grid item xs lg={3}>
           <Paper className={classes.paper}>
-            <Button className={classes.btnSell2} color="primary">
+            <Button className={classes.btnRegister} color="primary">
               เข้าสู่ระบบ / สมัครสมาชิก
             </Button>
             <Button className={classes.btnSell} variant="contained">

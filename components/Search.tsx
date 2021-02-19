@@ -12,7 +12,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     position:{
       marginTop:'13%'
+    },
+    bgSearch:{
+      height: '523px',
+      backgroundSize: 'cover',
     }
+
     
   }),
 );
@@ -20,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
 function searchInput() {
   const classes = useStyles();
   return (
-    <div className="bg-search">
+    <div className={classes.bgSearch} style={{ backgroundImage: "url(/images/general-large-6b86fad29f1e8919155e0a9e5bcd54b7.jpg)" }}>
       <form className={classes.root} noValidate autoComplete="off" style={{textAlign:'center'}}>
      
       <TextField className={classes.position} id="outlined-basic" label="คุณกำลังมองาอะไร?" variant="outlined" />

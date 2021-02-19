@@ -55,6 +55,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: '#fff',
       color: '#000',
       float:'right'
+    },
+    textSpan:{
+      paddingLeft:'10px'
     }
 
 }
@@ -73,7 +76,7 @@ export default function AutoGrid() {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-              ตอบโจทย์ทุกการซื้อขายกับเรา{" "}
+              ตอบโจทย์ทุกการซื้อขายกับเรา
               <img className={classes.smallLogo} src="/images/logo1.png" />
             </p>
           </Paper>
@@ -93,7 +96,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              ขั้นตอนง่ายๆ ใครก็ลงขายได้
+             <span className={classes.textSpan}>ขั้นตอนง่ายๆ ใครก็ลงขายได้</span>
             </Typography>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
@@ -103,7 +106,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              โปรโมทขายเพื่อเพิ่มโอกาศในการขายมากขึ้น
+             <span className={classes.textSpan}> โปรโมทขายเพื่อเพิ่มโอกาศในการขายมากขึ้น</span>
             </Typography>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
@@ -113,7 +116,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              แชทกับลูกค้าโดยตรงเพื่อเพิ่มโอกาสในการปิดการขาย
+               <span className={classes.textSpan}>แชทกับลูกค้าโดยตรงเพื่อเพิ่มโอกาสในการปิดการขาย</span>
             </Typography>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
@@ -123,7 +126,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              มีระบบหลังบ้านในการจัดการรายการเพื่อโปรโมทสิ้นค้าได้ง่าย
+               <span className={classes.textSpan}>มีระบบหลังบ้านในการจัดการรายการเพื่อโปรโมทสิ้นค้าได้ง่าย</span>
             </Typography>
           </Paper>
         </Grid>
@@ -140,7 +143,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              สะดวกมั่นใจในการเลือกซื้อสินค้าที่หลากหลาย
+               <span className={classes.textSpan}>สะดวกมั่นใจในการเลือกซื้อสินค้าที่หลากหลาย</span>
             </Typography>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
@@ -150,7 +153,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              พูดคุย สอบถามกับคนขายได้โดยตรงเพื่อความปรอดภัยในการซื้อ
+               <span className={classes.textSpan}>พูดคุย สอบถามกับคนขายได้โดยตรงเพื่อความปรอดภัยในการซื้อ</span>
             </Typography>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
@@ -160,7 +163,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-              มีาทงเลือกมากมาย กับ ร้านค้าและสินค้ามากมายอัพเดทตลอดเวลา
+               <span className={classes.textSpan}>มีาทงเลือกมากมาย กับ ร้านค้าและสินค้ามากมายอัพเดทตลอดเวลา</span>
             </Typography>
           </Paper>
         </Grid>
