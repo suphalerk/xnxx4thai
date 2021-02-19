@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 
-import { Button } from "@material-ui/core";
 import Search from "./Search";
+import Header from "./Header";
 
 type Props = {
   children?: ReactNode;
@@ -18,7 +18,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
-      <nav>
+      {/* <nav>
         <img className="logo1" src="/images/logo1.png" width='220px' height='51.45' /> 
         <img className="btn-love" src="/images/love.png"  width='31px' height='25'/>
         <img className="btn-chat" src="/images/chat2.png" width='35px' height='31' />
@@ -29,8 +29,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         <Button variant="contained" className="btn-sell">
           ลองขาย
         </Button>
-      </nav>
+      </nav> */}
     </header>
+    <Header/>
     <Search/>
     {children}
   </div>
