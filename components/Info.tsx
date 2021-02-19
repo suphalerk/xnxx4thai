@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     smallLogo: {
       width: "115px",
-      margin: "-6px",
+      margin: "0px 0px -6px 0px",
       paddingLeft: " 5px",
     },
     textGreen: {

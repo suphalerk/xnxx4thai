@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "center",
       color: theme.palette.text.secondary,
       backgroundColor: "#fff",
-      boxShadow:'none',
+      boxShadow: "none",
     },
     textHeader: {
       color: "rgb(0 0 0 / 70%)",
@@ -23,12 +23,11 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: " 1.5em",
       ["@media (max-width:500px)"]: {
         fontSize: " 16px",
-        marginTop:'4em'
+        marginTop: "4em",
       },
-      
     },
     activityDetail: {
-      fontSize: "11px",
+      fontSize: "16px",
       textAlign: "left",
       color: "#7e7e7e",
       paddingLeft: "0px",
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme: Theme) =>
       ["@media (max-width:500px)"]: {
         marginRight: "0px",
         fontSize: "13px",
-        marginTop:'0px'
+        marginTop: "0px",
       },
     },
   })
@@ -63,10 +62,9 @@ export default function AutoGrid() {
         </p>
       </p>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={4} md={4} lg={4} >
+        <Grid item xs={12} sm={4} md={4} lg={4}>
           <Paper className={classes.paper}>
             <Image
-              className="img-category"
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
               width={"500"}
@@ -77,10 +75,9 @@ export default function AutoGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={4} md={4} lg={4} >
+        <Grid item xs={12} sm={4} md={4} lg={4}>
           <Paper className={classes.paper}>
             <Image
-              className="img-category"
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
               width={"500"}
@@ -91,10 +88,9 @@ export default function AutoGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={4} md={4} lg={4} >
+        <Grid item xs={12} sm={4} md={4} lg={4}>
           <Paper className={classes.paper}>
             <Image
-              className="img-category"
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
               width={"500"}
