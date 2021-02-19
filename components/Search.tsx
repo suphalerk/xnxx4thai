@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme: Theme) =>
       ["@media (max-width:3760px)"]: {
         marginTop:'6%',
       },
+      ["@media (max-width:1496px)"]: {
+        marginTop:'13%',
+      },
 
     },
     bgSearch:{
