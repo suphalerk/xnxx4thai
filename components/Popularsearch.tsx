@@ -21,14 +21,13 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
     },
     textHeader: {
-      margin: '0px',
+      margin: "0px",
       fontSize: "1.5em",
       color: "rgb(0 0 0 / 70%)",
-   
+
       ["@media (width:375px)"]: {
         fontSize: "11px",
-        marginBottom:'-4px',
-   
+        marginBottom: "-4px",
       },
       ["@media (max-width:500px)"]: {
         marginLeft: "0%",
@@ -45,41 +44,46 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: "8px",
       },
       ["@media (max-width:500px)"]: {
-
         fontSize: "11px",
       },
     },
     textCategory: {
       textAlign: "left",
       fontSize: "16px",
-      color:'#000',
+      color: "#000",
       ["@media (width:375px)"]: {
         textAlign: "left",
         color: "#000",
         fontSize: "8px",
       },
       ["@media (max-width:500px)"]: {
-
         fontSize: "11px",
       },
     },
-    arrow:{
+    arrow: {
       ["@media (max-width:500px)"]: {
-        width: '10px',
-        height: '10px'
+        width: "10px",
+        height: "10px",
+      },
+      ["@media (max-width:1560px)"]: {
+        width: "30px",
+        height: "10px",
       },
     },
     textMore: {
       color: "#429EFE",
       fontSize: "16px",
       textAlign: "left",
-      margin: '0px 0px -7px 10px',
+      margin: "0px 0px -7px 10px",
       ["@media (width:375px)"]: {
         fontSize: "8px",
       },
       ["@media (max-width:500px)"]: {
-        margin: '-13px 0px -5px 0px',
+        margin: "-13px 0px -5px 0px",
         fontSize: "11px",
+      },
+      ["@media (max-width:1560px)"]: {
+        margin: "0px",
       },
     },
   })
@@ -103,13 +107,13 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon  className={classes.arrow} />
+              <ArrowForwardIcon className={classes.arrow} />
             </p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
-          <p className={classes.textGreen}>
+            <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
@@ -121,12 +125,11 @@ export default function FixedContainer() {
               ดูรถยนต์ทั้งหมด
               <ArrowForwardIcon className={classes.arrow} />
             </p>
-            
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
-          <p className={classes.textGreen}>
+            <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
@@ -136,13 +139,13 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon className={classes.arrow}/>
+              <ArrowForwardIcon className={classes.arrow} />
             </p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
-          <p className={classes.textGreen}>
+            <p className={classes.textGreen}>
               รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
@@ -152,7 +155,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon className={classes.arrow}/>
+              <ArrowForwardIcon className={classes.arrow} />
             </p>
           </Paper>
         </Grid>
