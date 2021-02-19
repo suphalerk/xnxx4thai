@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     spacingxmobile: {
+      marginBottom: '3em',
       ["@media (width:375px)"]: {
         display: "contents",
       },

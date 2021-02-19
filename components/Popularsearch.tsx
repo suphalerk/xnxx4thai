@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
     },
     textHeader: {
+      margin: '0px',
       fontSize: "1.5em",
       color: "rgb(0 0 0 / 70%)",
    

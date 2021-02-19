@@ -64,6 +64,11 @@ const useStyles = makeStyles((theme: Theme) =>
         marginLeft: "0em",
         fontSize:'11px'
       },
+      ["@media (max-width:354px)"]: {
+        
+        marginLeft: "0em",
+        fontSize:'9px'
+      },
     },
     btnRegister: {
       //   float: "right",
