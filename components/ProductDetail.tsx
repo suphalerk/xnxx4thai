@@ -39,17 +39,19 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function createData(
   name: string,
-  calories: number,
+  calories: string,
 ) {
   return { name, calories };
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159 ),
-  createData("Ice cream sandwich", 2373),
-  createData("Eclair", 262),
-  createData("Cupcake", 305),
-  createData("Gingerbread", 356),
+  createData("ยี่ห้อ", "Honda" ),
+  createData("รุ่น", "Freed"),
+  createData("ปีรถ", "2013"),
+  createData("เชื่อเพลิง", "เบนซิน"),
+  createData("เกียร์", "เกียร์อัตโนมัติ"),
+  createData("สี", "บรอนซ์เงิน"),
+  createData("ประเภทรถ", "รถ MPV/SUV"),
 ];
 
 export default function FullWidthGrid() {
@@ -108,8 +110,7 @@ export default function FullWidthGrid() {
               <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Dessert (100g serving)</TableCell>
-                    <TableCell align="right">Calories</TableCell>
+
                   </TableRow>
                 </TableHead>
                 <TableBody>
