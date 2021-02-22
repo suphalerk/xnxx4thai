@@ -2,20 +2,25 @@
 
 html,
 body {
-  color: #fff;
+  color: #111 !important;
   padding: 0;
   margin: 0;
   font-family: 'Kanit', sans-serif !important;
 }
 body {
-  background: #111;
-  padding-top: 47px;
+  background: #fff !important;
+  /* padding-top: 47px; */
+  padding-top: 1em!important;
+  padding-bottom: 1em!important;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+ 
 }
+
+
 
 a {
   color: inherit;
@@ -37,6 +42,11 @@ hr {
 * {
   box-sizing: border-box;
 }
-.container{
-  padding:0 !important;
+
+.bg-search{
+  background-image: url('/images/general-large-6b86fad29f1e8919155e0a9e5bcd54b7.jpg') !important;
+
+  height: 523px !important;
+
+  background-size: cover;
 }
