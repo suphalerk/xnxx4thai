@@ -17,7 +17,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+ 
 }
+
+
 
 a {
   color: inherit;
@@ -39,34 +42,11 @@ hr {
 * {
   box-sizing: border-box;
 }
-.container{
-  padding:0 !important;
-}
 
+.bg-search{
+  background-image: url('/images/general-large-6b86fad29f1e8919155e0a9e5bcd54b7.jpg') !important;
 
-/*--------------------------- Header------------------------- */
+  height: 523px !important;
 
-.logo1{
-  width: 220px !important;
-  height: auto !important;
-  margin-left: 5% !important;
+  background-size: cover;
 }
-.btn-love{
-  margin-left: 40%;
-  padding: 10px;
-}
-.btn-chat{
-  padding: 4px;
-}
-.btn-login{
-color: #00C900 !important;
-margin-left: 2em !important;
-margin-top: -2% !important;
-}
-.btn-sell{
-  margin-left: 2em !important;
-  margin-top: -40px !important;
-  color: #fff !important;
-  background-color: #00C900 !important;
-}
-
