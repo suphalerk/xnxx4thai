@@ -34,18 +34,33 @@ const useStyles = makeStyles((theme: Theme) =>
     table: {
       minWidth: 300,
     },
+    textPrice: {
+      textAlign: "right",
+      fontSize: "2em",
+      color: "#00C900",
+      fontWeight: "bold",
+    },
+    textPrice2: {
+      textAlign: "right",
+      fontSize: "1em",
+    },
+    textTag: {
+      textAlign: "right",
+      fontSize: "1.5em",
+    },
+    gridPos:{
+      padding:'1em',
+      display:'inline-flex'
+    }
   })
 );
 
-function createData(
-  name: string,
-  calories: string,
-) {
+function createData(name: string, calories: string) {
   return { name, calories };
 }
 
 const rows = [
-  createData("ยี่ห้อ", "Honda" ),
+  createData("ยี่ห้อ", "Honda"),
   createData("รุ่น", "Freed"),
   createData("ปีรถ", "2013"),
   createData("เชื่อเพลิง", "เบนซิน"),
@@ -90,28 +105,44 @@ export default function FullWidthGrid() {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          <Paper className={classes.paper}>
+            <p className={classes.textTag}>ขาย | มือสอง </p>
+          </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <p>฿ 9200</p>
-            <p>ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)</p>
-            <Image
-              src="/images/Addfavorite.png"
-              alt=""
-              width={"150"}
-              height={"30"}
-            />
-            <Image src="/images/share.png" alt="" width={"20"} height={"20"} />
-            แชร์
+            <p className={classes.textPrice}>฿ 9200</p>
+            <p className={classes.textPrice2}>
+              ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
+            </p>
+            <Grid lg={6} className={classes.gridPos}>
+              <Paper>
+                <Image
+                  src="/images/Addfavorite.png"
+                  alt=""
+                  width={"150"}
+                  height={"30"}
+                />
+              </Paper>
+            </Grid>
+
+            <Grid lg={6} className={classes.gridPos}>
+              <Paper>
+                <Image
+                  src="/images/share.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                />
+                แชร์
+              </Paper>
+            </Grid>
           </Paper>
           <Paper className={classes.paper}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead>
-                  <TableRow>
-
-                  </TableRow>
+                  <TableRow></TableRow>
                 </TableHead>
                 <TableBody>
                   {rows.map((row) => (
