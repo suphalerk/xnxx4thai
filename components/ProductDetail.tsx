@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "center",
       color: theme.palette.text.secondary,
       boxShadow: "none",
+      backgroundColor: "#fff",
      
     },
     productTitle: {
@@ -45,14 +46,19 @@ const useStyles = makeStyles((theme: Theme) =>
     textPrice2: {
       textAlign: "right",
       fontSize: "1em",
+      color:'#96A5BA',
     },
     textTag: {
       textAlign: "right",
       fontSize: "1.5em",
+      color:'#96A5BA',
     },
     gridPos:{
       padding:'1em',
       display:'inline-flex'
+    },
+    productDetail:{
+      color:'#96A5BA'
     }
   })
 );
@@ -76,6 +82,7 @@ export default function FullWidthGrid() {
 
   return (
     <div className={classes.root}>
+      
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>xs=12</Paper>
@@ -92,7 +99,7 @@ export default function FullWidthGrid() {
             <Typography className={classes.spanText}>
               กิจกรรมที่หน้าสนใจ
             </Typography>
-            <p>
+            <p className={classes.productDetail}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -118,7 +125,7 @@ export default function FullWidthGrid() {
               ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
             </p>
             <Grid lg={6} className={classes.gridPos}>
-              <Paper>
+              <Paper className={classes.paper}>
                 <Image
                   src="/images/Addfavorite.png"
                   alt=""
@@ -129,7 +136,7 @@ export default function FullWidthGrid() {
             </Grid>
 
             <Grid lg={6} className={classes.gridPos}>
-              <Paper>
+              <Paper className={classes.paper}>
                 <Image
                   src="/images/share.png"
                   alt=""
