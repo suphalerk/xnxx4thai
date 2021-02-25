@@ -29,10 +29,14 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     productTitle: {
       textAlign: "start",
+      color:'#383277',
+      fontSize: "22px",
+      fontWeight:'bold'
     },
     spanText: {
       textAlign: "start",
-      fontSize: "14px",
+      fontSize: "16px",
+      color:"#383277",
     },
     table: {
       minWidth: 300,
@@ -59,6 +63,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     productDetail:{
       color:'#96A5BA'
+    },
+    share:{
+      textAlign: "right",
+      fontSize: "15px",
+      color:'#96A5BA',
     }
   })
 );
@@ -143,7 +152,7 @@ export default function FullWidthGrid() {
                   width={"20"}
                   height={"20"}
                 />
-                แชร์
+               <span className={classes.share}> แชร์ </span>
               </Paper>
             </Grid>
           </Paper>
