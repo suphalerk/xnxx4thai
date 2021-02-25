@@ -62,12 +62,16 @@ const useStyles = makeStyles((theme: Theme) =>
       display:'inline-flex'
     },
     productDetail:{
-      color:'#96A5BA'
+      color:'#96A5BA',
+      textAlign:'left'
     },
     share:{
       textAlign: "right",
       fontSize: "15px",
       color:'#96A5BA',
+    },
+    productImg:{
+      padding:'20px !important'
     }
   })
 );
@@ -94,7 +98,29 @@ export default function FullWidthGrid() {
       
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
+          <Paper className={classes.paper}>
+            <Image
+            className={classes.productImg}
+              src='/images/car-gallery.jpg'
+              alt=""
+              width={"500"}
+              height={"500"}
+            />
+            <Image
+            className={classes.productImg}
+              src='/images/car-gallery.jpg'
+              alt=""
+              width={"500"}
+              height={"500"}
+            />
+            <Image
+            className={classes.productImg}
+              src='/images/car-gallery.jpg'
+              alt=""
+              width={"500"}
+              height={"500"}
+            />
+          </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
