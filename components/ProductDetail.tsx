@@ -15,6 +15,8 @@ import {
 import Image from "next/image";
 import ImageGallery from 'react-image-gallery';
 
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
