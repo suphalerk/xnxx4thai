@@ -12,6 +12,8 @@ import Announcemobile from "../components/Announcemobile";
 import Footer from "../components/Footer";
 // import { useRouter } from 'next/router'
 
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -94,6 +96,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
   })
 );
+
 
 export default function AutoGrid() {
   const classes = useStyles();

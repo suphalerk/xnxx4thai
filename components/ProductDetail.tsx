@@ -13,6 +13,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import Image from "next/image";
+import ImageGallery from 'react-image-gallery';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -76,6 +77,21 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const images = [
+  {
+    original: 'https://picsum.photos/id/1018/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1015/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1019/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+  },
+];
+
 function createData(name: string, calories: string) {
   return { name, calories };
 }
@@ -99,6 +115,7 @@ export default function FullWidthGrid() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
+          <ImageGallery items={images} />;
             <Image
             className={classes.productImg}
               src='/images/car-gallery.jpg'
