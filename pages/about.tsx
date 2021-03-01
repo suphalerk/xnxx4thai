@@ -10,6 +10,7 @@ import PicList from "../components/PicList";
 import ProductDetail from "../components/ProductDetail";
 import Announcemobile from "../components/Announcemobile";
 import Footer from "../components/Footer";
+
 // import { useRouter } from 'next/router'
 
 
