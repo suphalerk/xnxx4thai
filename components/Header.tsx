@@ -99,13 +99,16 @@ export default function AutoGrid() {
       <Grid container spacing={3}>
         <Grid item xs={4} lg={3}>
           <Paper className={classes.paper2}>
+             <Link href="/">
             <Image
               className={classes.logo}
               src="/images/logo1.png"
               alt=""
               width={"170"}
               height={"45"}
+
             />
+            </Link>
           </Paper>
         </Grid>
         <Grid item xs lg={3} className={classes.paper5}>
