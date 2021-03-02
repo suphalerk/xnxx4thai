@@ -125,10 +125,10 @@ const Product = (props: any) => {
     // }
 
     return (
-        <Layout title="Home | KaideeWa.com">
+        <Layout title="Product | KaideeWa.com">
             <Container maxWidth="lg" className="container">
             <div className={classes.root}>
-      <Grid container spacing={3}>
+      {/* <Grid container spacing={3}>
         <Grid item xs={4} lg={3}>
           <Paper className={classes.paper2}>
             <Image
@@ -169,9 +169,7 @@ const Product = (props: any) => {
         </Grid>
         <Grid item xs lg={3}>
           <Paper className={classes.paper}>
-            {/* <Button   color="primary">
-              เข้าสู่ระบบ / สมัครสมาชิก
-            </Button> */}
+          
             <Link href="/about">
           <a className={classes.btnRegister}>เข้าสู่ระบบ / สมัครสมาชิก</a>
         </Link>
@@ -180,12 +178,11 @@ const Product = (props: any) => {
             </Button>
           </Paper>
         </Grid>
-      </Grid>  
-      <Search2/> 
+      </Grid>   */}
+      {/* <Search2/>  */}
       <PicList/>
       <ProductDetail/>  
       <Announcemobile/>
-      <Footer/>
     </div>
     
             </Container>
