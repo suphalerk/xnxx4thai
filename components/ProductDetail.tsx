@@ -152,12 +152,12 @@ export default function FullWidthGrid() {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} lg={6}>
+        <Grid item xs={12} sm={6} lg={5}>
           <Paper className={classes.paper}>
             <p className={classes.textTag}>ขาย | มือสอง </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
+        <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
             <p className={classes.textPrice}>฿ 9200</p>
             <p className={classes.textPrice2}>
@@ -174,7 +174,7 @@ export default function FullWidthGrid() {
               </Paper>
             </Grid>
 
-            <Grid lg={6} className={classes.gridPos}>
+            <Grid lg={4} className={classes.gridPos}>
               <Paper className={classes.paper}>
                 <Image
                   src="/images/share.png"
