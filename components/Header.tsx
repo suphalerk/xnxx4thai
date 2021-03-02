@@ -140,7 +140,7 @@ export default function AutoGrid() {
             {/* <Button   color="primary">
               เข้าสู่ระบบ / สมัครสมาชิก
             </Button> */}
-            <Link href="/about">
+            <Link href="/product/name/1">
           <a className={classes.btnRegister}>เข้าสู่ระบบ / สมัครสมาชิก</a>
         </Link>
             <Button className={classes.btnSell} variant="contained">
