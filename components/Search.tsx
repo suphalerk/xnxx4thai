@@ -24,8 +24,14 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '523px',
       backgroundSize: 'cover',
       ["@media (max-width:1100px)"]: {
-        height: 'auto',
+        height: '400px',
         backgroundSize: 'cover',
+
+      },
+      ["@media (max-width:440px)"]: {
+        height: '170px',
+        backgroundSize: 'cover',
+
       },
     }
 
