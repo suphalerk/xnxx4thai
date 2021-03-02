@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+     
+    },
+    textColor:{
+      color:'#222'
     },
     paper: {
       padding: theme.spacing(2),
@@ -27,6 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.secondary,
       boxShadow: "none",
       backgroundColor: "#fff",
+      color:'#222',
      
     },
     productTitle: {
@@ -194,11 +199,11 @@ export default function FullWidthGrid() {
                 </TableHead>
                 <TableBody>
                   {rows.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell component="th" scope="row">
+                    <TableRow key={row.name} className={classes.paper}>
+                      <TableCell className={classes.textColor} component="th" scope="row">
                         {row.name}
                       </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
+                      <TableCell className={classes.textColor} align="right">{row.calories}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
