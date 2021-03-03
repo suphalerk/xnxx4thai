@@ -151,6 +151,9 @@ const useStyles = makeStyles((theme: Theme) =>
     textReport:{
       color:'#429EFE',
 
+    },
+    iconsize3:{
+      margin: '0px 3px -3px 0px !important',
     }
   })
 );
@@ -409,11 +412,12 @@ export default function FullWidthGrid() {
             <Grid item xs={12} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
-                  <Image
+                  <Image              
                     src="/images/location.png"
                     alt=""
                     width={"15"}
                     height={"15"}
+                    
                   />
                   ตำแหน่ง
                 </p>
@@ -430,6 +434,7 @@ export default function FullWidthGrid() {
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
+
                     src="/images/Announcement-number.png"
                     alt=""
                     width={"15"}
