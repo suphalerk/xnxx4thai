@@ -16,22 +16,18 @@ import {
 } from "@material-ui/core";
 import Image from "next/image";
 
-
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-     
     },
-    textColor:{
-      color:'#222',
-      border: '1px solid rgba(81, 81, 81, 1)'
+    textColor: {
+      color: "#222",
+      border: "1px solid rgba(81, 81, 81, 1)",
     },
-    textColor2:{
-      color:'#96A5BA',
-      border: '1px solid rgba(81, 81, 81, 1)'
-      
+    textColor2: {
+      color: "#96A5BA",
+      border: "1px solid rgba(81, 81, 81, 1)",
     },
     paper: {
       padding: theme.spacing(2),
@@ -39,42 +35,39 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.secondary,
       boxShadow: "none",
       backgroundColor: "#fff",
-    
-     
     },
     paper2: {
-      padding: '6px',
+      padding: "6px",
       textAlign: "center",
-      color: '#222',
+      color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
     },
     paper4: {
-      padding: '6px',
+      padding: "6px",
       textAlign: "left",
-      color: '#222',
+      color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
     },
     paper3: {
-      padding: theme.spacing(2),
+      padding: '0px',
       textAlign: "center",
-      color: '#222',
+      color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
-      border: 'solid 1px #515151',
-      display:'flex',
+      display: "flex",
     },
     productTitle: {
       textAlign: "start",
-      color:'#383277',
+      color: "#383277",
       fontSize: "22px",
-      fontWeight:'bold'
+      fontWeight: "bold",
     },
     spanText: {
       textAlign: "start",
       fontSize: "16px",
-      color:"#383277",
+      color: "#383277",
     },
     table: {
       minWidth: 300,
@@ -88,42 +81,52 @@ const useStyles = makeStyles((theme: Theme) =>
     textPrice2: {
       textAlign: "right",
       fontSize: "1em",
-      color:'#96A5BA',
+      color: "#96A5BA",
     },
     textTag: {
       textAlign: "right",
       fontSize: "1.5em",
-      color:'#96A5BA',
+      color: "#96A5BA",
     },
-    gridPos:{
-      padding:'1em',
-      display:'inline-flex'
+    gridPos: {
+      padding: "1em",
+      display: "inline-flex",
     },
-    productDetail:{
-      color:'#96A5BA',
-      textAlign:'left'
+    productDetail: {
+      color: "#96A5BA",
+      textAlign: "left",
+      fontSize: "1.5em",
     },
-    share:{
+    productDetail2: {
+      color: "#000",
+      textAlign: "left",
+      margin: "0px",
+    },
+    productDetail3: {
+      color: "#96A5BA",
+      textAlign: "left",
+      margin: "0px",
+    },
+    share: {
       textAlign: "right",
       fontSize: "15px",
-      color:'#96A5BA',
+      color: "#96A5BA",
     },
-    productImg:{
-      padding:'20px !important'
+    productImg: {
+      padding: "20px !important",
     },
-    btnActivat:{
-      backgroundColor:'#222',
-
+    btnActivat: {
+      backgroundColor: "rgb(0 0 0 / 12%) !important",
     },
-    textActivat:{
-      color:'#00C900',
-      fontSize:'10px',
-      margin: '2px',
+    textActivat: {
+      color: "#00C900",
+      fontSize: "10px",
+      margin: "2px",
     },
-    textOwner:{
-      color:'#00C900',
-      fontWeight: 'bold'
-
+    textOwner: {
+      color: "#00C900",
+      fontWeight: "bold",
+      margin: '0px',
     },
     more: {
       color: "#429EFE",
@@ -137,14 +140,20 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: "0px",
       },
     },
-    Iconsize:{
-      width: '17px',
-      height: '12px',
+    Iconsize: {
+      width: "17px",
+      height: "12px",
     },
+    Iconsize2: {
+      width: "70px",
+      height: "70px",
+    },
+    textReport:{
+      color:'#429EFE',
+
+    }
   })
 );
-
-
 
 function createData(name: string, calories: string) {
   return { name, calories };
@@ -165,7 +174,6 @@ export default function FullWidthGrid() {
 
   return (
     <div className={classes.root}>
-      
       <Grid container spacing={3}>
         <Grid item xs={12}>
           {/* <Paper className={classes.paper}>
@@ -248,7 +256,7 @@ export default function FullWidthGrid() {
                   width={"20"}
                   height={"20"}
                 />
-               <span className={classes.share}> แชร์ </span>
+                <span className={classes.share}> แชร์ </span>
               </Paper>
             </Grid>
           </Paper>
@@ -261,10 +269,16 @@ export default function FullWidthGrid() {
                 <TableBody>
                   {rows.map((row) => (
                     <TableRow key={row.name} className={classes.paper}>
-                      <TableCell className={classes.textColor2} component="th" scope="row">
+                      <TableCell
+                        className={classes.textColor2}
+                        component="th"
+                        scope="row"
+                      >
                         {row.name}
                       </TableCell>
-                      <TableCell className={classes.textColor} align="right">{row.calories}</TableCell>
+                      <TableCell className={classes.textColor} align="right">
+                        {row.calories}
+                      </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -272,38 +286,180 @@ export default function FullWidthGrid() {
             </TableContainer>
           </Paper>
           <Paper className={classes.paper3}>
-          <Grid item xs={3} lg={3}>
-          <Paper className={classes.paper2}>
-          <AccountCircleRoundedIcon />
-          </Paper>
-        </Grid>
-        <Grid item xs={3}  lg={6}>
-          <Paper className={classes.paper4}>
-          
-            <Typography variant="subtitle2" gutterBottom>
-            <span className={classes.textOwner}>  นาย xxxxxx xxxxx </span>
-            </Typography>
-            <Button className={classes.btnActivat} variant="contained" disabled><Image
-                className="img-correct"
-                src="/images/CORRECT.png"
-                alt=""
-                width={20}
-                height={20}
-              />
-              <span className={classes.textActivat} >ยืนยันด้วยบัตร ปชช. แล้ว</span>
-              </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={3}  lg={3}>
-          <Paper className={classes.paper2}>
-          <p className={classes.more}>
-          ดูทั้งหมด
-          <ArrowForwardIcon className={classes.Iconsize} />
-        </p>
-          </Paper>
-        </Grid>
+            <Grid item xs={3} lg={3}>
+              <Paper className={classes.paper2}>
+                <AccountCircleRoundedIcon className={classes.Iconsize2} />
+              </Paper>
+            </Grid>
+            <Grid item xs={3} lg={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
+
+                <Button
+                  className={classes.btnActivat}
+                  variant="contained"
+                  disabled
+                >
+                  <Image
+                    className="img-correct"
+                    src="/images/CORRECT.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                  />
+                  <span className={classes.textActivat}>
+                    ยืนยันด้วยบัตร ปชช. แล้ว
+                  </span>
+                </Button>
+              </Paper>
+            </Grid>
+            <Grid item xs={3} lg={3}>
+              <Paper className={classes.paper2}>
+                <p className={classes.more}>
+                  ดูทั้งหมด
+                  <ArrowForwardIcon className={classes.Iconsize} />
+                </p>
+              </Paper>
+            </Grid>
             
           </Paper>
+          <Grid container spacing={3}>
+            <Grid item xs={12} lg={12}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
+                <p className={classes.productDetail3}>
+                  เป็นสมาชิกผ่านช่องทาง
+                  <Image
+                    src="/images/Mobile_OK.png"
+                    alt=""
+                    width={"20"}
+                    height={"20"}
+                  />
+                  <Image
+                    src="/images/Facebook.png"
+                    alt=""
+                    width={"20"}
+                    height={"20"}
+                  />
+                  <Image
+                    src="/images/Mail_OK.png"
+                    alt=""
+                    width={"20"}
+                    height={"20"}
+                  />
+                </p>
+              </Paper>
+              <Grid item xs={6} sm={6} lg={12}>
+                <Image
+                  src="/images/Chat-seller.png"
+                  alt=""
+                  width={"400"}
+                  height={"50"}
+                />
+                <Image
+                  src="/images/Call-seller.png"
+                  alt=""
+                  width={"400"}
+                  height={"50"}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail3}>
+                  <Image
+                    src="/images/Update.png"
+                    alt=""
+                    width={"15"}
+                    height={"15"}
+                  />
+                  อัพเดทล่าสุด
+                </p>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail2}>วันนี้ 22.00 น.</p>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail3}>
+                  <Image
+                    src="/images/Date.png"
+                    alt=""
+                    width={"15"}
+                    height={"15"}
+                  />
+                  ลงขายเมื่อ
+                </p>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail2}>31 ม.ค. 2564 11.07 น.</p>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail3}>
+                  <Image
+                    src="/images/location.png"
+                    alt=""
+                    width={"15"}
+                    height={"15"}
+                  />
+                  ตำแหน่ง
+                </p>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail2}>มีนบุรี กรุงเทพมหานคร</p>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail3}>
+                  <Image
+                    src="/images/Announcement-number.png"
+                    alt=""
+                    width={"15"}
+                    height={"15"}
+                  />
+                  หมายเลขประกาศ
+                </p>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Paper className={classes.paper4}>
+                <p className={classes.productDetail2}>535850218</p>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Paper className={classes.paper4}>
+                <p className={classes.textReport}>
+                  <Image
+                    src="/images/report.png"
+                    alt=""
+                    width={"25"}
+                    height={"25"}
+                  />
+                  แจ้งประกาษไม่เหมาะสม
+                </p>
+              </Paper>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </div>
