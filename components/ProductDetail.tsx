@@ -3,7 +3,9 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -39,6 +41,29 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#fff",
     
      
+    },
+    paper2: {
+      padding: '6px',
+      textAlign: "center",
+      color: '#222',
+      boxShadow: "none",
+      backgroundColor: "#fff",
+    },
+    paper4: {
+      padding: '6px',
+      textAlign: "left",
+      color: '#222',
+      boxShadow: "none",
+      backgroundColor: "#fff",
+    },
+    paper3: {
+      padding: theme.spacing(2),
+      textAlign: "center",
+      color: '#222',
+      boxShadow: "none",
+      backgroundColor: "#fff",
+      border: 'solid 1px #515151',
+      display:'flex',
     },
     productTitle: {
       textAlign: "start",
@@ -85,7 +110,37 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     productImg:{
       padding:'20px !important'
-    }
+    },
+    btnActivat:{
+      backgroundColor:'#222',
+
+    },
+    textActivat:{
+      color:'#00C900',
+      fontSize:'10px',
+      margin: '2px',
+    },
+    textOwner:{
+      color:'#00C900',
+      fontWeight: 'bold'
+
+    },
+    more: {
+      color: "#429EFE",
+      width: "fit-content",
+      fontSize: "9px",
+      float: "right",
+      display: "flex",
+      ["@media (max-width:500px)"]: {
+        marginRight: "0px",
+        fontSize: "9px",
+        marginTop: "0px",
+      },
+    },
+    Iconsize:{
+      width: '17px',
+      height: '12px',
+    },
   })
 );
 
@@ -216,11 +271,38 @@ export default function FullWidthGrid() {
               </Table>
             </TableContainer>
           </Paper>
-          <Paper className={classes.paper}>
-            <AccountCircleRoundedIcon />
+          <Paper className={classes.paper3}>
+          <Grid item xs={3} lg={3}>
+          <Paper className={classes.paper2}>
+          <AccountCircleRoundedIcon />
+          </Paper>
+        </Grid>
+        <Grid item xs={3}  lg={6}>
+          <Paper className={classes.paper4}>
+          
             <Typography variant="subtitle2" gutterBottom>
-              นาย xxxxxx xxxxx
+            <span className={classes.textOwner}>  นาย xxxxxx xxxxx </span>
             </Typography>
+            <Button className={classes.btnActivat} variant="contained" disabled><Image
+                className="img-correct"
+                src="/images/CORRECT.png"
+                alt=""
+                width={20}
+                height={20}
+              />
+              <span className={classes.textActivat} >ยืนยันด้วยบัตร ปชช. แล้ว</span>
+              </Button>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}  lg={3}>
+          <Paper className={classes.paper2}>
+          <p className={classes.more}>
+          ดูทั้งหมด
+          <ArrowForwardIcon className={classes.Iconsize} />
+        </p>
+          </Paper>
+        </Grid>
+            
           </Paper>
         </Grid>
       </Grid>
