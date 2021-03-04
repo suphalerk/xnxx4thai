@@ -57,12 +57,6 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       backgroundColor: "#fff",
       display: "flex",
-      marginTop: '1em',
-      borderTop: 'solid 1px',
-      borderLeft:' solid 1px',
-      borderRight: 'solid 1px',
-      borderBottomRightRadius: '0px',
-      borderBottomLeftRadius:'0px',
     },
     paper5: {
       padding: "0px",
@@ -85,12 +79,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
-      borderLeft:' solid 1px',
-      borderRight: 'solid 1px',
-      borderTopLeftRadius:'0px',
-      borderTopRightRadius:'0px',
-      borderBottom:'solid 1px',
-      marginBottom: '1em',
      
     },
     paper8: {
@@ -99,9 +87,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
-      borderLeft:' solid 1px',
-      borderRight: 'solid 1px',
-       borderRadius:'0px',
     },
     productTitle: {
       textAlign: "start",
@@ -201,6 +186,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     iconsize3: {
       margin: "0px 3px -3px 0px !important",
+    },
+    gridBorder:{
+      border: 'solid 1px',
+      borderRadius: '5px',
+      marginTop: '1em',
+      marginBottom: '1em',
+      padding: '10px'
     },
   })
 );
@@ -335,6 +327,7 @@ export default function FullWidthGrid() {
               </Table>
             </TableContainer>
           </Paper>
+          <Grid item lg={12} className={classes.gridBorder}>
           <Paper className={classes.paper3}>
             <Grid item xs={3} sm={4} lg={3}>
               <Paper className={classes.paper2}>
@@ -411,7 +404,7 @@ export default function FullWidthGrid() {
               height={"50"}
             />
           </Paper>
-
+          </Grid>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <Paper className={classes.paper4}>
