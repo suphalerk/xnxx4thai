@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
       // float:'left',
       textAlignLast: "center",
       ["@media (max-width:800px)"]: {
-        display: "none !important",
+        
       },
     },
     love: {
@@ -110,7 +110,7 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={4} lg={3}>
+        <Grid item xs={6} lg={3}>
           <Paper className={classes.paper2}>
             <IconButton
               edge="start"
