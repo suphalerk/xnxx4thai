@@ -32,7 +32,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </nav> */}
     </header>
     <Header/>
-    <Search/>
+    {/* <Search/> */}
     {children}
   </div>
 );

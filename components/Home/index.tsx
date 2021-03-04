@@ -10,6 +10,8 @@ import Activity from '../Activity'
 import News from '../News'
 import Description from '../Description'
 import Footer from '../Footer'
+import React from 'react'
+import Search from '../Search'
 // import { useRouter } from 'next/router'
 
 
@@ -36,6 +38,7 @@ const Home = (props: any) => {
 
     return (
         <Layout title="Home | KaideeWa.com">
+            <Search/>
             <Container maxWidth="lg" className="container">
                 <Searchfilter keywords={keywords}/>
                 <Popularsearch/>
