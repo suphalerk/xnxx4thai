@@ -1,7 +1,5 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-
-import Search from "./Search";
 import Header from "./Header";
 
 type Props = {
@@ -32,7 +30,6 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       </nav> */}
     </header>
     <Header/>
-    {/* <Search/> */}
     {children}
   </div>
 );
