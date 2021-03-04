@@ -51,12 +51,27 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#fff",
     },
     paper3: {
-      padding: '0px',
+      padding: "0px",
       textAlign: "center",
       color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
       display: "flex",
+    },
+    paper5: {
+      padding: "0px",
+      textAlign: "center",
+      color: "#222",
+      boxShadow: "none",
+      backgroundColor: "#fff",
+      display: "flex",
+    },
+    paper6: {
+      padding: "0px",
+      textAlign: "left",
+      color: "#222",
+      boxShadow: "none",
+      backgroundColor: "#fff",
     },
     productTitle: {
       textAlign: "start",
@@ -77,16 +92,19 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "2em",
       color: "#00C900",
       fontWeight: "bold",
+      margin: "0px",
     },
     textPrice2: {
       textAlign: "right",
       fontSize: "1em",
       color: "#96A5BA",
+      margin: "0px",
     },
     textTag: {
       textAlign: "right",
       fontSize: "1.5em",
       color: "#96A5BA",
+      margin: "0px",
     },
     gridPos: {
       padding: "1em",
@@ -126,7 +144,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textOwner: {
       color: "#00C900",
       fontWeight: "bold",
-      margin: '0px',
+      margin: "0px",
     },
     more: {
       color: "#429EFE",
@@ -148,13 +166,12 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "70px",
       height: "70px",
     },
-    textReport:{
-      color:'#429EFE',
-
+    textReport: {
+      color: "#429EFE",
     },
-    iconsize3:{
-      margin: '0px 3px -3px 0px !important',
-    }
+    iconsize3: {
+      margin: "0px 3px -3px 0px !important",
+    },
   })
 );
 
@@ -241,7 +258,7 @@ export default function FullWidthGrid() {
               ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
             </p>
             <Grid lg={6} className={classes.gridPos}>
-              <Paper className={classes.paper}>
+              <Paper className={classes.paper6}>
                 <Image
                   src="/images/Addfavorite.png"
                   alt=""
@@ -251,8 +268,8 @@ export default function FullWidthGrid() {
               </Paper>
             </Grid>
 
-            <Grid lg={4} className={classes.gridPos}>
-              <Paper className={classes.paper}>
+            <Grid lg={6} className={classes.gridPos}>
+              <Paper className={classes.paper6}>
                 <Image
                   src="/images/share.png"
                   alt=""
@@ -263,7 +280,7 @@ export default function FullWidthGrid() {
               </Paper>
             </Grid>
           </Paper>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper5}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead>
@@ -324,50 +341,47 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            
           </Paper>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={12}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
-                <p className={classes.productDetail3}>
-                  เป็นสมาชิกผ่านช่องทาง
-                  <Image
-                    src="/images/Mobile_OK.png"
-                    alt=""
-                    width={"20"}
-                    height={"20"}
-                  />
-                  <Image
-                    src="/images/Facebook.png"
-                    alt=""
-                    width={"20"}
-                    height={"20"}
-                  />
-                  <Image
-                    src="/images/Mail_OK.png"
-                    alt=""
-                    width={"20"}
-                    height={"20"}
-                  />
-                </p>
-              </Paper>
-              <Grid item xs={6} sm={6} lg={12}>
-                <Image
-                  src="/images/Chat-seller.png"
-                  alt=""
-                  width={"400"}
-                  height={"50"}
-                />
-                <Image
-                  src="/images/Call-seller.png"
-                  alt=""
-                  width={"400"}
-                  height={"50"}
-                />
-              </Grid>
-            </Grid>
-          </Grid>
+
+          <Paper className={classes.paper4}>
+            <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
+            <p className={classes.productDetail3}>
+              เป็นสมาชิกผ่านช่องทาง
+              <Image
+                src="/images/Mobile_OK.png"
+                alt=""
+                width={"20"}
+                height={"20"}
+              />
+              <Image
+                src="/images/Facebook.png"
+                alt=""
+                width={"20"}
+                height={"20"}
+              />
+              <Image
+                src="/images/Mail_OK.png"
+                alt=""
+                width={"20"}
+                height={"20"}
+              />
+            </p>
+          </Paper>
+          <Paper className={classes.paper4}>
+            <Image
+              src="/images/Chat-seller.png"
+              alt=""
+              width={"400"}
+              height={"50"}
+            />
+            <Image
+              src="/images/Call-seller.png"
+              alt=""
+              width={"400"}
+              height={"50"}
+            />
+          </Paper>
+
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <Paper className={classes.paper4}>
@@ -412,12 +426,11 @@ export default function FullWidthGrid() {
             <Grid item xs={12} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
-                  <Image              
+                  <Image
                     src="/images/location.png"
                     alt=""
                     width={"15"}
                     height={"15"}
-                    
                   />
                   ตำแหน่ง
                 </p>
@@ -434,7 +447,6 @@ export default function FullWidthGrid() {
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
-
                     src="/images/Announcement-number.png"
                     alt=""
                     width={"15"}
