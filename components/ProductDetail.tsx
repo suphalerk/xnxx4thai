@@ -57,6 +57,12 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       backgroundColor: "#fff",
       display: "flex",
+      marginTop: '1em',
+      borderTop: 'solid 1px',
+      borderLeft:' solid 1px',
+      borderRight: 'solid 1px',
+      borderBottomRightRadius: '0px',
+      borderBottomLeftRadius:'0px',
     },
     paper5: {
       padding: "0px",
@@ -72,6 +78,30 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
+    },
+    paper7: {
+      padding: "6px",
+      textAlign: "left",
+      color: "#222",
+      boxShadow: "none",
+      backgroundColor: "#fff",
+      borderLeft:' solid 1px',
+      borderRight: 'solid 1px',
+      borderTopLeftRadius:'0px',
+      borderTopRightRadius:'0px',
+      borderBottom:'solid 1px',
+      marginBottom: '1em',
+     
+    },
+    paper8: {
+      padding: "6px",
+      textAlign: "left",
+      color: "#222",
+      boxShadow: "none",
+      backgroundColor: "#fff",
+      borderLeft:' solid 1px',
+      borderRight: 'solid 1px',
+       borderRadius:'0px',
     },
     productTitle: {
       textAlign: "start",
@@ -306,12 +336,12 @@ export default function FullWidthGrid() {
             </TableContainer>
           </Paper>
           <Paper className={classes.paper3}>
-            <Grid item xs={3} lg={3}>
+            <Grid item xs={3} sm={4} lg={3}>
               <Paper className={classes.paper2}>
                 <AccountCircleRoundedIcon className={classes.Iconsize2} />
               </Paper>
             </Grid>
-            <Grid item xs={3} lg={6}>
+            <Grid item xs={4} sm={4} lg={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
 
@@ -343,7 +373,7 @@ export default function FullWidthGrid() {
             </Grid>
           </Paper>
 
-          <Paper className={classes.paper4}>
+          <Paper className={classes.paper8}>
             <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
             <p className={classes.productDetail3}>
               เป็นสมาชิกผ่านช่องทาง
@@ -367,7 +397,7 @@ export default function FullWidthGrid() {
               />
             </p>
           </Paper>
-          <Paper className={classes.paper4}>
+          <Paper className={classes.paper7}>
             <Image
               src="/images/Chat-seller.png"
               alt=""
