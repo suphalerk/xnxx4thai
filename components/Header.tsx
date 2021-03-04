@@ -3,8 +3,10 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 import { Button } from "@material-ui/core";
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 // import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -13,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(2),
+      padding: '0px',
       color: theme.palette.text.secondary,
       backgroundColor: "#fff",
       boxShadow: "none",
@@ -21,31 +23,35 @@ const useStyles = makeStyles((theme: Theme) =>
     paper2: {
       backgroundColor: "#fff",
       boxShadow: "none",
-      padding: theme.spacing(2),
+      padding: '0px',
       textAlignLast: "center",
     },
     paper3: {
       backgroundColor: "#fff",
       boxShadow: "none",
-      padding: theme.spacing(2),
+      padding: '0px',
       textAlignLast: "right",
     },
     paper4: {
       backgroundColor: "#fff",
       boxShadow: "none",
-      padding: theme.spacing(2),
+      padding: '0px',
       textAlignLast: "left",
-     
+      ["@media (max-width:800px)"]: {
+        textAlignLast: "right",
+      },
     },
-    paper5:{
-        ["@media (max-width:751px)"]: {
-        
-            display:'none',
-          },
+    paper5: {
+      ["@media (max-width:751px)"]: {
+        display: "none",
+      },
     },
     logo: {
       // float:'left',
       textAlignLast: "center",
+      ["@media (max-width:800px)"]: {
+        display: "none !important",
+      },
     },
     love: {
       float: "right",
@@ -61,14 +67,12 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#fff",
       backgroundColor: "#00C900",
       ["@media (max-width:751px)"]: {
-        
         marginLeft: "0em",
-        fontSize:'11px'
+        fontSize: "11px",
       },
       ["@media (max-width:354px)"]: {
-        
         marginLeft: "0em",
-        fontSize:'9px'
+        fontSize: "9px",
       },
     },
     btnRegister: {
@@ -76,45 +80,59 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: "1em",
       color: "#00C900",
       ["@media (max-width:1300px)"]: {
-        
-        display:'none',
+        display: "none",
       },
-     
-    }, 
-    gridDis:{
-        ["@media (max-width:751px)"]: {
-        
-            display:'none',
-          },
+    },
+    gridDis: {
+      ["@media (max-width:751px)"]: {
+        display: "none",
       },
+      
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+      backgroundColor:'#00C900',
+      marginLeft:'1em',
+      '&:hover' : {
+        backgroundColor:'#00C900',
+      },
+      ["@media (min-width:800px)"]: {
+        display: "none !important",
+      },
+    },
   })
 );
 
 export default function AutoGrid() {
   const classes = useStyles();
-//   const router = useRouter()
+  //   const router = useRouter()
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={4} lg={3}>
           <Paper className={classes.paper2}>
-             <Link href="/">
-            <Image
-              className={classes.logo}
-              src="/images/logo1.png"
-              alt=""
-              width={"170"}
-              height={"45"}
-
-            />
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Link href="/">
+              <Image
+                className={classes.logo}
+                src="/images/logo1.png"
+                alt=""
+                width={"170"}
+                height={"45"}
+              />
             </Link>
           </Paper>
         </Grid>
         <Grid item xs lg={3} className={classes.paper5}>
-          <Paper className={classes.paper5}>
-              
-          </Paper>
+          <Paper className={classes.paper5}></Paper>
         </Grid>
         <Grid item xs lg={1} className={classes.gridDis}>
           <Paper className={classes.paper3}>
@@ -123,18 +141,18 @@ export default function AutoGrid() {
               src="/images/love.png"
               alt=""
               width={"35"}
-              height={"35"}
+              height={"30"}
             />
           </Paper>
         </Grid>
-        <Grid item xs lg={1} >
+        <Grid item xs lg={1}>
           <Paper className={classes.paper4}>
             <Image
               className={classes.love}
               src="/images/chat2.png"
               alt=""
               width={"35"}
-              height={"35"}
+              height={"30"}
             />
           </Paper>
         </Grid>
@@ -144,8 +162,8 @@ export default function AutoGrid() {
               เข้าสู่ระบบ / สมัครสมาชิก
             </Button> */}
             <Link href="/product/name/1">
-          <a className={classes.btnRegister}>เข้าสู่ระบบ / สมัครสมาชิก</a>
-        </Link>
+              <a className={classes.btnRegister}>เข้าสู่ระบบ / สมัครสมาชิก</a>
+            </Link>
             <Button className={classes.btnSell} variant="contained">
               ลองขาย
             </Button>
