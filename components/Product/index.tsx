@@ -1,12 +1,11 @@
-import { Container, createStyles, makeStyles, Theme } from '@material-ui/core'
-import Layout from '../Layout'
-import Footer from '../Footer'
-import React from 'react'
-import PicList from '../PicList'
-import ProductDetail from '../ProductDetail'
-import Announcemobile from '../Announcemobile'
-import Search2 from '../Search2'
-
+import { Container, createStyles, makeStyles, Theme } from "@material-ui/core";
+import Layout from "../Layout";
+import Footer from "../Footer";
+import React from "react";
+import PicList from "../PicList";
+import ProductDetail from "../ProductDetail";
+import Announcemobile from "../Announcemobile";
+import Search2 from "../Search2";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -36,12 +35,10 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       padding: theme.spacing(2),
       textAlignLast: "left",
-
     },
     paper5: {
       ["@media (max-width:751px)"]: {
-
-        display: 'none',
+        display: "none",
       },
     },
     logo: {
@@ -62,14 +59,12 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#fff",
       backgroundColor: "#00C900",
       ["@media (max-width:751px)"]: {
-
         marginLeft: "0em",
-        fontSize: '11px'
+        fontSize: "11px",
       },
       ["@media (max-width:354px)"]: {
-
         marginLeft: "0em",
-        fontSize: '9px'
+        fontSize: "9px",
       },
     },
     btnRegister: {
@@ -77,25 +72,20 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: "1em",
       color: "#00C900",
       ["@media (max-width:1300px)"]: {
-
-        display: 'none',
+        display: "none",
       },
-
     },
     gridDis: {
       ["@media (max-width:751px)"]: {
-
-        display: 'none',
+        display: "none",
       },
     },
   })
 );
 
-
 const Product = (props: any) => {
   // A Content
-  const content = props.data.data.content
-
+  const content = props.data.data.content;
 
   const classes = useStyles();
   // const router = useRouter()
@@ -103,8 +93,8 @@ const Product = (props: any) => {
   // const contents: Content[] = data.contents.datas
   // const keywords: Keyword[] = data.keywords.datas
 
-  const items = []
-
+  const items = [];
+  console.log(content)
   // useEffect(() => {
   //     router.push('/Product')
 
@@ -118,20 +108,18 @@ const Product = (props: any) => {
 
   return (
     <Layout title="Product | KaideeWa.com">
-      <Search2/>
+      <Search2 />
       <Container maxWidth="lg" className="container">
         <div className={classes.root}>
-          {/* <Search2/>  */}
           <PicList />
           <ProductDetail />
           <Announcemobile />
         </div>
-
+       
       </Container>
       <Footer />
     </Layout>
+  );
+};
 
-  )
-}
-
-export default Product
+export default Product;
