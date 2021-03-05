@@ -210,7 +210,7 @@ const rows = [
   createData("ประเภทรถ", "รถ MPV/SUV"),
 ];
 
-export default function FullWidthGrid(props: {data:any}) {
+export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
   console.log(props);
 
@@ -224,33 +224,24 @@ export default function FullWidthGrid(props: {data:any}) {
               variant="h6"
               gutterBottom
             >
-              Honda Freed
+             { props.data.datas.content_title}
             </Typography>
             <Typography className={classes.spanText}>
               กิจกรรมที่หน้าสนใจ
             </Typography>
             <p className={classes.productDetail}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            { props.data.datas.content_description}
             </p>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={5}>
           <Paper className={classes.paper}>
-            <p className={classes.textTag}>ขาย | มือสอง </p>
+            <p className={classes.textTag}> { props.data.datas.scrape_keyword.keyword} |  { props.data.datas.scrape_keyword.title_keyword} </p>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
-            <p className={classes.textPrice}>฿ 9200</p>
+            <p className={classes.textPrice}>฿  { props.data.datas.price}</p>
             <p className={classes.textPrice2}>
               ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
             </p>
@@ -416,7 +407,7 @@ export default function FullWidthGrid(props: {data:any}) {
             </Grid>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
-                <p className={classes.productDetail2}>31 ม.ค. 2564 11.07 น.</p>
+                <p className={classes.productDetail2}> { props.data.datas.created_date}</p>
               </Paper>
             </Grid>
           </Grid>
