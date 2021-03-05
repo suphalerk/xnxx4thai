@@ -73,7 +73,7 @@ function searchInput() {
         />
         <Search className={classes.MuiIcons} />
         <Button className={classes.btnSell} variant="contained">
-          ลองขาย
+          ค้นหา
         </Button>
       </form>
     </div>
