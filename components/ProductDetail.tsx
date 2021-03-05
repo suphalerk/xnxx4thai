@@ -406,7 +406,7 @@ export default function FullWidthGrid() {
           </Paper>
           </Grid>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
@@ -419,14 +419,14 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>วันนี้ 22.00 น.</p>
               </Paper>
             </Grid>
           </Grid>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
@@ -439,14 +439,14 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>31 ม.ค. 2564 11.07 น.</p>
               </Paper>
             </Grid>
           </Grid>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item  xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
@@ -459,14 +459,14 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item  xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>มีนบุรี กรุงเทพมหานคร</p>
               </Paper>
             </Grid>
           </Grid>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item  xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
@@ -479,7 +479,7 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item  xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>535850218</p>
               </Paper>
