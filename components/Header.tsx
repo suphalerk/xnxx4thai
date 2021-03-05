@@ -19,17 +19,22 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.secondary,
       backgroundColor: "#fff",
       boxShadow: "none",
+      
     },
     paper2: {
       backgroundColor: "#fff",
       boxShadow: "none",
       padding: '0px',
       textAlignLast: "center",
+      
+      ["@media (max-width:800px)"]: {
+        display:'flex',
+      },
     },
     paper3: {
       backgroundColor: "#fff",
       boxShadow: "none",
-      padding: '0px',
+      padding: '5px',
       textAlignLast: "right",
     },
     paper4: {
@@ -42,6 +47,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     paper5: {
+      padding: '5px',
+      backgroundColor: "#fff",
+      boxShadow: "none",
       ["@media (max-width:751px)"]: {
         display: "none",
       },
@@ -100,6 +108,9 @@ const useStyles = makeStyles((theme: Theme) =>
         display: "none !important",
       },
     },
+    Header:{
+      marginBottom:'10px !important',
+    }
   })
 );
 
@@ -109,7 +120,7 @@ export default function AutoGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container className={classes.Header}>
         <Grid item xs={6} lg={3}>
           <Paper className={classes.paper2}>
             <IconButton
