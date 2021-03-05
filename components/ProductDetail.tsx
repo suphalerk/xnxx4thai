@@ -210,8 +210,9 @@ const rows = [
   createData("ประเภทรถ", "รถ MPV/SUV"),
 ];
 
-export default function FullWidthGrid() {
+export default function FullWidthGrid(props: {data:any}) {
   const classes = useStyles();
+  console.log(props);
 
   return (
     <div className={classes.root}>

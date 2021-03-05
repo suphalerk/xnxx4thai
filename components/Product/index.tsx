@@ -94,7 +94,7 @@ const Product = (props: any) => {
   // const keywords: Keyword[] = data.keywords.datas
 
   const items = [];
-  console.log(content)
+  // console.log(content)
   // useEffect(() => {
   //     router.push('/Product')
 
@@ -112,7 +112,7 @@ const Product = (props: any) => {
       <Container maxWidth="lg" className="container">
         <div className={classes.root}>
           <PicList />
-          <ProductDetail />
+          <ProductDetail data={content} />
           <Announcemobile />
         </div>
        
