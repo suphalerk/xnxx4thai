@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#222",
       boxShadow: "none",
       backgroundColor: "#fff",
-     
     },
     paper8: {
       padding: "6px",
@@ -187,12 +186,12 @@ const useStyles = makeStyles((theme: Theme) =>
     iconsize3: {
       margin: "0px 3px -3px 0px !important",
     },
-    gridBorder:{
-      border: 'solid 1px',
-      borderRadius: '5px',
-      marginTop: '1em',
-      marginBottom: '1em',
-      padding: '10px'
+    gridBorder: {
+      border: "solid 1px",
+      borderRadius: "5px",
+      marginTop: "1em",
+      marginBottom: "1em",
+      padding: "10px",
     },
   })
 );
@@ -217,31 +216,6 @@ export default function FullWidthGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          {/* <Paper className={classes.paper}>
-            <Image
-            className={classes.productImg}
-              src='/images/car-gallery.jpg'
-              alt=""
-              width={"500"}
-              height={"500"}
-            />
-            <Image
-            className={classes.productImg}
-              src='/images/car-gallery.jpg'
-              alt=""
-              width={"500"}
-              height={"500"}
-            />
-            <Image
-            className={classes.productImg}
-              src='/images/car-gallery.jpg'
-              alt=""
-              width={"500"}
-              height={"500"}
-            />
-          </Paper> */}
-        </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
             <Typography
@@ -328,82 +302,82 @@ export default function FullWidthGrid() {
             </TableContainer>
           </Paper>
           <Grid item lg={12} className={classes.gridBorder}>
-          <Paper className={classes.paper3}>
-            <Grid item xs={3} sm={4} lg={3}>
-              <Paper className={classes.paper2}>
-                <AccountCircleRoundedIcon className={classes.Iconsize2} />
-              </Paper>
-            </Grid>
-            <Grid item xs={4} sm={4} lg={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
+            <Paper className={classes.paper3}>
+              <Grid item xs={3} sm={4} lg={3}>
+                <Paper className={classes.paper2}>
+                  <AccountCircleRoundedIcon className={classes.Iconsize2} />
+                </Paper>
+              </Grid>
+              <Grid item xs={4} sm={4} lg={6}>
+                <Paper className={classes.paper4}>
+                  <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
 
-                <Button
-                  className={classes.btnActivat}
-                  variant="contained"
-                  disabled
-                >
-                  <Image
-                    className="img-correct"
-                    src="/images/CORRECT.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                  />
-                  <span className={classes.textActivat}>
-                    ยืนยันด้วยบัตร ปชช. แล้ว
-                  </span>
-                </Button>
-              </Paper>
-            </Grid>
-            <Grid item xs={3} lg={3}>
-              <Paper className={classes.paper2}>
-                <p className={classes.more}>
-                  ดูทั้งหมด
-                  <ArrowForwardIcon className={classes.Iconsize} />
-                </p>
-              </Paper>
-            </Grid>
-          </Paper>
+                  <Button
+                    className={classes.btnActivat}
+                    variant="contained"
+                    disabled
+                  >
+                    <Image
+                      className="img-correct"
+                      src="/images/CORRECT.png"
+                      alt=""
+                      width={20}
+                      height={20}
+                    />
+                    <span className={classes.textActivat}>
+                      ยืนยันด้วยบัตร ปชช. แล้ว
+                    </span>
+                  </Button>
+                </Paper>
+              </Grid>
+              <Grid item xs={3} lg={3}>
+                <Paper className={classes.paper2}>
+                  <p className={classes.more}>
+                    ดูทั้งหมด
+                    <ArrowForwardIcon className={classes.Iconsize} />
+                  </p>
+                </Paper>
+              </Grid>
+            </Paper>
 
-          <Paper className={classes.paper8}>
-            <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
-            <p className={classes.productDetail3}>
-              เป็นสมาชิกผ่านช่องทาง
+            <Paper className={classes.paper8}>
+              <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
+              <p className={classes.productDetail3}>
+                เป็นสมาชิกผ่านช่องทาง
+                <Image
+                  src="/images/Mobile_OK.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                />
+                <Image
+                  src="/images/Facebook.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                />
+                <Image
+                  src="/images/Mail_OK.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                />
+              </p>
+            </Paper>
+            <Paper className={classes.paper7}>
               <Image
-                src="/images/Mobile_OK.png"
+                src="/images/Chat-seller.png"
                 alt=""
-                width={"20"}
-                height={"20"}
+                width={"400"}
+                height={"50"}
               />
               <Image
-                src="/images/Facebook.png"
+                src="/images/Call-seller.png"
                 alt=""
-                width={"20"}
-                height={"20"}
+                width={"400"}
+                height={"50"}
               />
-              <Image
-                src="/images/Mail_OK.png"
-                alt=""
-                width={"20"}
-                height={"20"}
-              />
-            </p>
-          </Paper>
-          <Paper className={classes.paper7}>
-            <Image
-              src="/images/Chat-seller.png"
-              alt=""
-              width={"400"}
-              height={"50"}
-            />
-            <Image
-              src="/images/Call-seller.png"
-              alt=""
-              width={"400"}
-              height={"50"}
-            />
-          </Paper>
+            </Paper>
           </Grid>
           <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
@@ -446,7 +420,7 @@ export default function FullWidthGrid() {
             </Grid>
           </Grid>
           <Grid container spacing={3}>
-            <Grid item  xs={6} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
@@ -459,14 +433,14 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item  xs={6} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>มีนบุรี กรุงเทพมหานคร</p>
               </Paper>
             </Grid>
           </Grid>
           <Grid container spacing={3}>
-            <Grid item  xs={6} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
                   <Image
@@ -479,7 +453,7 @@ export default function FullWidthGrid() {
                 </p>
               </Paper>
             </Grid>
-            <Grid item  xs={6} md={6}>
+            <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>535850218</p>
               </Paper>
