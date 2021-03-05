@@ -111,6 +111,10 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     Header:{
       marginBottom:'10px !important',
+    },
+    gridImg:{
+      alignSelf:'center',
+      marginTop: '6px',
     }
   })
 );
@@ -122,7 +126,7 @@ export default function AutoGrid() {
   return (
     <div className={classes.root}>
       <Grid container className={classes.Header}>
-        <Grid item xs={6} lg={3}>
+        <Grid item xs={6} lg={3} className={classes.gridImg}>
           <Paper className={classes.paper2}>
             <IconButton
               edge="start"
@@ -132,6 +136,7 @@ export default function AutoGrid() {
             >
               <MenuIcon />
             </IconButton>
+            <Grid className={classes.gridImg}>
             <Link href="/">
               <Image
                 className={classes.logo}
@@ -141,6 +146,7 @@ export default function AutoGrid() {
                 height={"45"}
               />
             </Link>
+            </Grid>
           </Paper>
         </Grid>
         <Grid item xs lg={3} className={classes.paper5}>

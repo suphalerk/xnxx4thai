@@ -61,3 +61,14 @@ hr {
   margin-right: 1em !important;
 
 }
+@media only screen and (max-width: 800px){
+  .MuiOutlinedInput-root:hover{
+  border-color: rgb(146 146 146) !important;
+}
+.MuiOutlinedInput-notchedOutline{
+  border-color: rgb(146 146 146) !important;
+}
+.MuiOutlinedInput-notchedOutline::placeholder{
+  color: #111 !important;
+}
+}
