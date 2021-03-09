@@ -111,7 +111,7 @@ const Product = (props: any) => {
       <Search2 />
       <Container maxWidth="lg" className="container">
         <div className={classes.root}>
-          <PicList />
+          <PicList data={content} />
           <ProductDetail data={content} />
           <Announcemobile />
         </div>

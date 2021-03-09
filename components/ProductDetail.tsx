@@ -12,7 +12,6 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@material-ui/core";
 import Image from "next/image";
 
@@ -92,6 +91,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#383277",
       fontSize: "22px",
       fontWeight: "bold",
+      margin: "0",
     },
     spanText: {
       textAlign: "start",
@@ -147,8 +147,9 @@ const useStyles = makeStyles((theme: Theme) =>
     productImg: {
       padding: "20px !important",
     },
-    btnActivat: {
+    btnActivate: {
       backgroundColor: "rgb(0 0 0 / 12%) !important",
+      padding: '6px 6px',
     },
     textActivat: {
       color: "#00C900",
@@ -193,6 +194,13 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: "1em",
       padding: "10px",
     },
+    gridChat: {
+     
+      ["@media (max-width:800px)"]: {
+        display: "inline-flex",
+      },
+
+    },
   })
 );
 
@@ -219,29 +227,29 @@ export default function FullWidthGrid(props: { data: any }) {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Typography
-              className={classes.productTitle}
-              variant="h6"
-              gutterBottom
-            >
-             { props.data.datas.content_title}
-            </Typography>
-            <Typography className={classes.spanText}>
-              กิจกรรมที่หน้าสนใจ
-            </Typography>
+            <p className={classes.productTitle}>
+              {" "}
+              {props.data.datas.content_title}{" "}
+            </p>
+
+            <p className={classes.spanText}> กิจกรรมที่หน้าสนใจ </p>
             <p className={classes.productDetail}>
-            { props.data.datas.content_description}
+              {props.data.datas.content_description}
             </p>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={5}>
           <Paper className={classes.paper}>
-            <p className={classes.textTag}> { props.data.datas.scrape_keyword.keyword} |  { props.data.datas.scrape_keyword.title_keyword} </p>
+            <p className={classes.textTag}>
+              {" "}
+              {props.data.datas.scrape_keyword.keyword} |{" "}
+              {props.data.datas.scrape_keyword.title_keyword}{" "}
+            </p>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
-            <p className={classes.textPrice}>฿  { props.data.datas.price}</p>
+            <p className={classes.textPrice}>฿ {props.data.datas.price}</p>
             <p className={classes.textPrice2}>
               ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
             </p>
@@ -300,12 +308,12 @@ export default function FullWidthGrid(props: { data: any }) {
                   <AccountCircleRoundedIcon className={classes.Iconsize2} />
                 </Paper>
               </Grid>
-              <Grid item xs={4} sm={4} lg={6}>
+              <Grid item xs={6} sm={4} lg={6}>
                 <Paper className={classes.paper4}>
                   <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
 
                   <Button
-                    className={classes.btnActivat}
+                    className={classes.btnActivate}
                     variant="contained"
                     disabled
                   >
@@ -356,20 +364,28 @@ export default function FullWidthGrid(props: { data: any }) {
                 />
               </p>
             </Paper>
-            <Paper className={classes.paper7}>
-              <Image
-                src="/images/Chat-seller.png"
-                alt=""
-                width={"400"}
-                height={"50"}
-              />
-              <Image
-                src="/images/Call-seller.png"
-                alt=""
-                width={"400"}
-                height={"50"}
-              />
-            </Paper>
+            <Grid className={classes.gridChat}>
+              <Grid item xs={6} md={6} lg={12}>
+                <Paper className={classes.paper7}>
+                  <Image
+                    src="/images/Chat-seller.png"
+                    alt=""
+                    width={"400"}
+                    height={"50"}
+                  />
+                </Paper>
+              </Grid>
+              <Grid item xs={6} md={6} lg={12}>
+                <Paper className={classes.paper7}>
+                  <Image
+                    src="/images/Call-seller.png"
+                    alt=""
+                    width={"400"}
+                    height={"50"}
+                  />
+                </Paper>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
@@ -407,7 +423,10 @@ export default function FullWidthGrid(props: { data: any }) {
             </Grid>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
-                <p className={classes.productDetail2}> { props.data.datas.created_date}</p>
+                <p className={classes.productDetail2}>
+                  {" "}
+                  {props.data.datas.created_date}
+                </p>
               </Paper>
             </Grid>
           </Grid>

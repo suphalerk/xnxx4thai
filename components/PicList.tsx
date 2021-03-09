@@ -1,9 +1,10 @@
-import React from 'react';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import React from "react";
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import Image from "next/image";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -16,37 +17,63 @@ const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.text.secondary,
       boxShadow: "none",
       backgroundColor: "#fff",
-      
     },
-  }),
+  })
 );
 
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <img src="/images/car-gallery.jpg"  
-  width={"500"}
-  height={"500"} 
-  onDragStart={handleDragStart} />,
-  <img src="/images/car-gallery.jpg"
-  width={"500"}
-  height={"500"}
-   onDragStart={handleDragStart} />,
-  <img src="/images/car-gallery.jpg" 
-  width={"500"}
-  height={"500"}
-   onDragStart={handleDragStart} />,
+  <img
+    src="/images/car-gallery.jpg"
+    width={"500"}
+    height={"500"}
+    onDragStart={handleDragStart}
+  />,
+  <img
+    src="/images/car-gallery.jpg"
+    width={"500"}
+    height={"500"}
+    onDragStart={handleDragStart}
+  />,
+  <img
+    src="/images/car-gallery.jpg"
+    width={"500"}
+    height={"500"}
+    onDragStart={handleDragStart}
+  />,
 ];
 
-export default function FullWidthGrid() {
+
+
+export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
+  // console.log(props.data.datas.images[0].image_title);
+
+  // data.map((item, i) => { });
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-          <AliceCarousel mouseTracking items={items} />
+          {props.data.datas.images.map((row) => (
+             <Image
+              src={row.raw_url}
+              alt=""
+              width={200}
+              height={200}
+            />
+                  ))}
+
+            {/* <Image
+              src={props.data.datas.images[0].raw_url}
+
+              alt=""
+              width={75}
+              height={75}
+            /> */}
+            {/* <AliceCarousel mouseTracking   /> */}
           </Paper>
         </Grid>
       </Grid>
