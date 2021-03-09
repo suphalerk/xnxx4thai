@@ -48,8 +48,8 @@ const items = [
 
 export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
-  // console.log(props.data.datas.images[0].image_title);
-
+  // console.log('image_url ===> '+props.data.datas.images[0].raw_url);
+  // console.log(row.raw_url);
   // data.map((item, i) => { });
 
   return (
@@ -57,14 +57,20 @@ export default function FullWidthGrid(props: { data: any }) {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
+            
           {props.data.datas.images.map((row) => (
-             <Image
+             
+             <img
               src={row.raw_url}
               alt=""
               width={200}
               height={200}
             />
                   ))}
+                  {/* {console.log('img_url => '+row.images[0])} */}
+                  
+
+                  
 
             {/* <Image
               src={props.data.datas.images[0].raw_url}
@@ -79,4 +85,5 @@ export default function FullWidthGrid(props: { data: any }) {
       </Grid>
     </div>
   );
+  
 }
