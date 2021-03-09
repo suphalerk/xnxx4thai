@@ -225,7 +225,7 @@ export default function FullWidthGrid(props: { data: any }) {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} lg={3}>
+        <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
             <p className={classes.productTitle}>
               {" "}
@@ -238,7 +238,7 @@ export default function FullWidthGrid(props: { data: any }) {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} lg={5}>
+        <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
