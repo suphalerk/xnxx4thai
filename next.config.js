@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-      domains: ['img.kaidee.com'],
+      domains: ['kaidee.com','img.kaidee.com'],
     },
   }
