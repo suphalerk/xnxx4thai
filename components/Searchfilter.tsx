@@ -2,7 +2,8 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
-import { Grid, Paper } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Grid, Paper, Typography } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -11,6 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     root: {
       flexGrow: 1,
+     
 
     },
     paper: {
@@ -35,6 +37,13 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: '-4px 4px !important',
       width: '17px',
       height: 'auto',
+    },
+     heading: {
+      fontSize: theme.typography.pxToRem(15),
+      fontWeight: theme.typography.fontWeightRegular,
+    },
+    AccordionSum:{
+      placeContent:'center',
     }
   }),
 );
@@ -85,7 +94,34 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
 
   return (
     <div className={classes.root} >
-      <Grid container spacing={1} className={classes.gridCon}>
+      {/* <Grid container spacing={1} className={classes.gridCon}>
+        {keywordFilter.map((k, index) => {
+          if (k == undefined) return <></>
+
+          return <Grid item xs={4} md={3} sm={3} lg={2} key={index}>
+            <Paper className={classes.paper}>
+              <Image
+                className="img-category"
+                src={k.image}
+                alt=""
+                width={75}
+                height={75}
+              />
+              <p className={classes.textLink}>{k.name}</p>
+            </Paper>
+          </Grid >
+        })}
+      </Grid> */}
+      <Accordion className={classes.paper}>
+        <AccordionSummary
+          className={classes.AccordionSum}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+           <p style={{ textAlign: 'center', }} className={classes.more}>ดูมากขึ้น <img className={classes.btnMore} src="/images/dropdown.png" /></p>
+        </AccordionSummary>
+        <AccordionDetails>
+        <Grid container spacing={1} className={classes.gridCon}>
         {keywordFilter.map((k, index) => {
           if (k == undefined) return <></>
 
@@ -103,7 +139,10 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
           </Grid >
         })}
       </Grid>
-      <p style={{ textAlign: 'center' }} className={classes.more}>ดูน้อยลง <img className={classes.btnMore} src="/images/dropdown.png" /></p>
+        </AccordionDetails>
+      </Accordion>
+    
+      {/* <p style={{ textAlign: 'center' }} className={classes.more}>ดูมากขึ้น <img className={classes.btnMore} src="/images/dropdown.png" /></p> */}
     </div>
   );
 }
