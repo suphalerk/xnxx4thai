@@ -2,8 +2,9 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
-import { Accordion, AccordionDetails, AccordionSummary, Grid, Paper, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, CardContent, Collapse, Grid, IconButton, Paper, Typography } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -44,7 +45,18 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     AccordionSum:{
       placeContent:'center',
-    }
+    },
+    expand: {
+      color:'#00C900',
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
+    },
   }),
 );
 
@@ -92,36 +104,15 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
     if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
   }).filter(x => x !== undefined)
 
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className={classes.root} >
-      {/* <Grid container spacing={1} className={classes.gridCon}>
-        {keywordFilter.map((k, index) => {
-          if (k == undefined) return <></>
-
-          return <Grid item xs={4} md={3} sm={3} lg={2} key={index}>
-            <Paper className={classes.paper}>
-              <Image
-                className="img-category"
-                src={k.image}
-                alt=""
-                width={75}
-                height={75}
-              />
-              <p className={classes.textLink}>{k.name}</p>
-            </Paper>
-          </Grid >
-        })}
-      </Grid> */}
-      <Accordion className={classes.paper}>
-        <AccordionSummary
-          className={classes.AccordionSum}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-           <p style={{ textAlign: 'center', }} className={classes.more}>ดูมากขึ้น <img className={classes.btnMore} src="/images/dropdown.png" /></p>
-        </AccordionSummary>
-        <AccordionDetails>
-        <Grid container spacing={1} className={classes.gridCon}>
+      <Grid container spacing={1} className={classes.gridCon}>
         {keywordFilter.map((k, index) => {
           if (k == undefined) return <></>
 
@@ -139,8 +130,46 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
           </Grid >
         })}
       </Grid>
-        </AccordionDetails>
-      </Accordion>
+      <p style={{ textAlign: 'center' }} className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })} onClick={handleExpandClick}  aria-expanded={expanded} aria-label="show more">ดูมากขึ้น <img style={{ margin: '-4px 4px',width: '17px',height: 'auto',}} src="/images/dropdown.png" /></p>
+      {/* <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton> */}
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
+            minutes.
+          </Typography>
+          <Typography paragraph>
+            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
+            heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
+            browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
+            and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
+            pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
+            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+          </Typography>
+          <Typography paragraph>
+            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
+            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
+            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
+            again without stirring, until mussels have opened and rice is just tender, 5 to 7
+            minutes more. (Discard any mussels that don’t open.)
+          </Typography>
+          <Typography>
+            Set aside off of the heat to let rest for 10 minutes, and then serve.
+          </Typography>
+        </CardContent>
+      </Collapse>
     
       {/* <p style={{ textAlign: 'center' }} className={classes.more}>ดูมากขึ้น <img className={classes.btnMore} src="/images/dropdown.png" /></p> */}
     </div>
