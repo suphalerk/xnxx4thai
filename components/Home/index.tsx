@@ -37,7 +37,9 @@ const Home = (props: any) => {
     }
 
     return (
+        
         <Layout title="Home | KaideeWa.com">
+            <link rel="shortcut icon" href="/favicon.ico" />
             <Search/>
             <Container maxWidth="lg" className="container">
                 <Searchfilter keywords={keywords}/>

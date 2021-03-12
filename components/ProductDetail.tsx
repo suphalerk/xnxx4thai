@@ -2,11 +2,6 @@ import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import {
-  Button,
-} from "@material-ui/core";
 import Image from "next/image";
 
 const useStyles = makeStyles((theme: Theme) =>
