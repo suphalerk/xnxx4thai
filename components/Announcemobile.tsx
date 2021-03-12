@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     mobileDetail: {
       width: "217",
       display: "-webkit-box",
-      WebkitLineClamp: 2 ,
+      WebkitLineClamp: 2,
       WebkitBoxOrient: "vertical",
       overflow: "hidden",
       color: "#222",
@@ -75,14 +75,17 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: "0px",
       marginBottom: "0px",
     },
-    imgChat:{
-      width: '135px',
-      height: '40px',
+    imgChat: {
+      width: "135px",
+      height: "40px",
     },
-    imgCall:{
-      width: '135px',
-      height: '40px',
-    }
+    imgCall: {
+      width: "135px",
+      height: "40px",
+    },
+    gridFlex: {
+      display: "flex",
+    },
   })
 );
 
@@ -121,20 +124,26 @@ export default function MediaCard() {
             </p>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
-            <Image
-              className={classes.imgChat}
-              src="/images/Chat.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
-            <Image
-              className={classes.imgCall}
-              src="/images/Call.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
         <Grid item xs={12} lg={3} sm={3}>
@@ -159,20 +168,26 @@ export default function MediaCard() {
             </p>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
-            <Image
-              className="img-chat"
-              src="/images/Chat.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
-            <Image
-              className="img-call"
-              src="/images/Call.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
         <Grid item xs={12} lg={3} sm={3}>
@@ -197,20 +212,26 @@ export default function MediaCard() {
             </p>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
-            <Image
-              className="img-chat"
-              src="/images/Chat.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
-            <Image
-              className="img-call"
-              src="/images/Call.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
         <Grid item xs={12} lg={3} sm={3}>
@@ -235,20 +256,26 @@ export default function MediaCard() {
             </p>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
-            <Image
-              className="img-chat"
-              src="/images/Chat.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
-            <Image
-              className="img-call"
-              src="/images/Call.png"
-              alt=""
-              width={"100"}
-              height={"30"}
-            />
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"120"}
+                  height={"35"}
+                />
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
       </Grid>
