@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
-import { Accordion, AccordionDetails, AccordionSummary, CardContent, Collapse, Grid, IconButton, Paper, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Button, Card, CardContent, Collapse, Grid, IconButton, Paper, Typography } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from 'clsx';
 
@@ -130,9 +130,9 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
           </Grid >
         })}
       </Grid>
-      <p style={{ textAlign: 'center' }} className={clsx(classes.expand, {
+      {/* <p style={{ textAlign: 'center' }} className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
-          })} onClick={handleExpandClick}  aria-expanded={expanded} aria-label="show more">ดูมากขึ้น <img style={{ margin: '-4px 4px',width: '17px',height: 'auto',}} src="/images/dropdown.png" /></p>
+          })} onClick={handleExpandClick}  aria-expanded={expanded} aria-label="show more">ดูมากขึ้น <img style={{ margin: '-4px 4px',width: '17px',height: 'auto',}} src="/images/dropdown.png" /></p> */}
       {/* <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -165,6 +165,9 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
       </Grid>
         </CardContent>
       </Collapse>
+      <p style={{ textAlign: 'center' }} className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })} onClick={handleExpandClick}  aria-expanded={expanded} aria-label="show more">ดูมากขึ้น <img style={{ margin: '-4px 4px',width: '17px',height: 'auto',}} src="/images/dropdown.png" /></p>
     
       {/* <p style={{ textAlign: 'center' }} className={classes.more}>ดูมากขึ้น <img className={classes.btnMore} src="/images/dropdown.png" /></p> */}
     </div>
