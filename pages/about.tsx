@@ -6,8 +6,6 @@ import Image from "next/image";
 import Link from 'next/link'
 import { Button } from "@material-ui/core";
 import Search2 from "../components/Search2";
-import PicList from "../components/PicList";
-import ProductDetail from "../components/ProductDetail";
 import Announcemobile from "../components/Announcemobile";
 import Footer from "../components/Footer";
 
@@ -160,8 +158,6 @@ export default function AutoGrid() {
         </Grid>
       </Grid>  
       <Search2/> 
-      <PicList/>
-      <ProductDetail/>  
       <Announcemobile/>
       <Footer/>
     </div>

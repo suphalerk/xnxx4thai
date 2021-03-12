@@ -45,9 +45,9 @@ export default function FullWidthGrid(props: { data: any }) {
 
 
       <GridList cellHeight={200} spacing={1} className={classes.gridList}>
-        {props.data.datas.images.map((tile) => (
+        {props.data.datas.images.map((tile: { img: React.Key | null | undefined; featured: any; raw_url: string | undefined; title: {} | null | undefined; }) => (
           <GridListTile key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
-            <img src={tile.raw_url} alt={tile.title} />
+            <img src={tile.raw_url} />
             <GridListTileBar
               title={tile.title}
               titlePosition="top"

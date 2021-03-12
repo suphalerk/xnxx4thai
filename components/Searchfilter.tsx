@@ -111,8 +111,8 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
     <div className={classes.root} >
       <CardContent>
        <Grid container spacing={1} className={classes.gridCon}>
-        {keywordFilter.map((k, index) => {
-          if ( index >=6) return <></>
+        {keywordFilter.map((k: any, index ) => {
+          if (index >=6) return <></>
 
           return <Grid item xs={4} md={3} sm={3} lg={2} key={index}>
             <Paper className={classes.paper}>
@@ -132,7 +132,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
       <Collapse in={expanded} timeout="auto">
         <CardContent>
         <Grid container spacing={1} className={classes.gridCon}>
-        {keywordFilter.map((k, index) => {
+        {keywordFilter.map((k: any, index) => {
           if (index <=5) return <></>
 
           return <Grid item xs={4} md={3} sm={3} lg={2} key={index}>

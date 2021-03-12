@@ -88,23 +88,7 @@ const Product = (props: any) => {
   const content = props.data.data.content;
 
   const classes = useStyles();
-  // const router = useRouter()
-  // const { data } = props.data
-  // const contents: Content[] = data.contents.datas
-  // const keywords: Keyword[] = data.keywords.datas
 
-  const items = [];
-  // console.log(content)
-  // useEffect(() => {
-  //     router.push('/Product')
-
-  // })
-
-  // for (const [index, value] of contents.entries()) {
-  //     value.content_title
-
-  //     items.push(<li key={index}>{value.content_title}</li>)
-  // }
 
   return (
     <Layout title="Product | KaideeWa.com">
