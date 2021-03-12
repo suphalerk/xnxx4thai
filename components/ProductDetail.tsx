@@ -6,12 +6,6 @@ import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import {
   Button,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
 } from "@material-ui/core";
 import Image from "next/image";
 

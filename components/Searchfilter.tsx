@@ -2,8 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Image from 'next/image'
 import { Keyword } from '../interfaces/product'
-import { Accordion, AccordionDetails, AccordionSummary, Button, Card, CardContent, Collapse, Grid, IconButton, Paper, Typography } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { CardContent, Collapse, Grid, Paper } from '@material-ui/core';
 import clsx from 'clsx';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -100,6 +99,8 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const keywords = props.keywords
   const classes = useStyles();
 
+  console.log('keyword==>'+keywords);
+
   const keywordFilter = keywordTypes.map((type) => {
     if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
   }).filter(x => x !== undefined)
@@ -130,19 +131,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
           </Grid >
         })}
       </Grid>
-      {/* <p style={{ textAlign: 'center' }} className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })} onClick={handleExpandClick}  aria-expanded={expanded} aria-label="show more">ดูมากขึ้น <img style={{ margin: '-4px 4px',width: '17px',height: 'auto',}} src="/images/dropdown.png" /></p> */}
-      {/* <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton> */}
+     
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
         <Grid container spacing={1} className={classes.gridCon}>
