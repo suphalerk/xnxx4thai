@@ -99,7 +99,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const keywords = props.keywords
   const classes = useStyles();
 
-  console.log('keyword==>'+keywords);
+ 
 
   const keywordFilter = keywordTypes.map((type) => {
     if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
@@ -110,7 +110,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+//  console.log('keyword==>'+JSON.stringify(keywords));
   return (
     <div className={classes.root} >
       <Grid container spacing={1} className={classes.gridCon}>
@@ -157,8 +157,6 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
       <p style={{ textAlign: 'center' }} className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
           })} onClick={handleExpandClick}  aria-expanded={expanded} aria-label="show more">ดูมากขึ้น <img style={{ margin: '-4px 4px',width: '17px',height: 'auto',}} src="/images/dropdown.png" /></p>
-    
-      {/* <p style={{ textAlign: 'center' }} className={classes.more}>ดูมากขึ้น <img className={classes.btnMore} src="/images/dropdown.png" /></p> */}
     </div>
   );
 }

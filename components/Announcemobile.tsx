@@ -49,7 +49,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     textHeader: {
       fontSize: "1.5em",
-      color: "rgb(0 0 0 / 70%)",
+      color: "#213aa3",
+      fontWeight:'bold',
 
       ["@media (width:375px)"]: {
         marginLeft: "0%",
