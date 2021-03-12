@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "18px",
       textAlign: "left",
       backgroundColor: "#00C660",
-      padding: " 5px 10px 16px 10px",
+      padding: "15px 10px 16px 10px",
       color: " #fff",
       margin:'-15px'
     },
@@ -55,10 +55,14 @@ const useStyles = makeStyles((theme: Theme) =>
     btnSell:{
       backgroundColor: '#fff',
       color: '#000',
-      float:'right'
+      float:'right',
+      padding: '3px 21px',
     },
     textSpan:{
       paddingLeft:'10px'
+    },
+    gridCenter:{
+      alignSelf:'center'
     }
 
 }
@@ -86,9 +90,11 @@ export default function AutoGrid() {
       <Grid container spacing={3} className={classes.spacingxmobile}>
         <Grid item xs={12} lg={6} md={6}>
           <Paper className={classes.paper}>
+            <Grid className={classes.gridCenter}>
             <p className={classes.textHeader}>
               ผู้ขาย<Button className={classes.btnSell}>ลงขาย</Button>
             </p>
+            </Grid>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
                 className="img-correct"

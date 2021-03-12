@@ -169,7 +169,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     gridDis:{
-      ["@media (max-width:1235px)"]: {
+      ["@media (max-width:1265px)"]: {
         display:'none'
       },
     },
@@ -196,7 +196,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     gridChat: {
      
-      ["@media (max-width:800px)"]: {
+      ["@media (max-width:1265px)"]: {
         display: "inline-flex",
       },
 
@@ -311,14 +311,14 @@ export default function FullWidthGrid(props: { data: any }) {
           </Paper> */}
           <Grid item lg={12} className={classes.gridBorder}>
             <Paper className={classes.paper3}>
-              <Grid item xs={3} sm={4} lg={3}>
+              {/* <Grid item xs={3} sm={4} lg={3}>
                 <Paper className={classes.paper2}>
                   <AccountCircleRoundedIcon className={classes.Iconsize2} />
                 </Paper>
               </Grid>
               <Grid item xs={6} sm={4} lg={6}>
                 <Paper className={classes.paper4}>
-                  {/* <p className={classes.textOwner}> นาย xxxxxx xxxxx </p> */}
+                  <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
 
                   <Button
                     className={classes.btnActivate}
@@ -337,15 +337,15 @@ export default function FullWidthGrid(props: { data: any }) {
                     </span>
                   </Button>
                 </Paper>
-              </Grid>
-              <Grid item xs={3} lg={3}>
+              </Grid> */}
+              {/* <Grid item xs={3} lg={3}>
                 <Paper className={classes.paper2}>
                   <p className={classes.more}>
                     ดูทั้งหมด
                     <ArrowForwardIcon className={classes.Iconsize} />
                   </p>
                 </Paper>
-              </Grid>
+              </Grid> */}
             </Paper>
 
             <Paper className={classes.paper8}>

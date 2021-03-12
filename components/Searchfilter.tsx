@@ -113,7 +113,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
 //  console.log('keyword==>'+JSON.stringify(keywords));
   return (
     <div className={classes.root} >
-      <Grid container spacing={1} className={classes.gridCon}>
+      {/* <Grid container spacing={1} className={classes.gridCon}>
         {keywordFilter.map((k, index) => {
           if (k == undefined) return <></>
 
@@ -130,9 +130,9 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
             </Paper>
           </Grid >
         })}
-      </Grid>
+      </Grid> */}
      
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      <Collapse in={expanded} timeout="auto">
         <CardContent>
         <Grid container spacing={1} className={classes.gridCon}>
         {keywordFilter.map((k, index) => {
