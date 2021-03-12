@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#429EFE",
       fontSize: "16px",
       textAlign: "left",
-      margin: "0px 0px -7px 10px",
+      margin: "0px 0px -7px 0px",
       ["@media (width:375px)"]: {
         fontSize: "8px",
       },
@@ -87,6 +87,10 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: "0px",
       },
     },
+    textBlack:{
+      color:'#000 !important',
+      textDecoration:'underline !important',
+    }
   })
 );
 
@@ -99,7 +103,7 @@ export default function FixedContainer() {
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-              รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
+              รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>
@@ -115,7 +119,7 @@ export default function FixedContainer() {
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-              รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
+            รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>
@@ -131,7 +135,7 @@ export default function FixedContainer() {
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-              รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
+            รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>
@@ -147,7 +151,7 @@ export default function FixedContainer() {
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-              รถยนต์ <a style={{ color: "#000 !important" }}>(19,000)</a>
+            รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>

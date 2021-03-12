@@ -98,9 +98,6 @@ const keywordTypes: KeywordData[] = [
 const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const keywords = props.keywords
   const classes = useStyles();
-
- 
-
   const keywordFilter = keywordTypes.map((type) => {
     if (keywords.find((k) => type.data.includes(k.keyword))) { return type }
   }).filter(x => x !== undefined)
@@ -110,27 +107,8 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-//  console.log('keyword==>'+JSON.stringify(keywords));
   return (
     <div className={classes.root} >
-      {/* <Grid container spacing={1} className={classes.gridCon}>
-        {keywordFilter.map((k, index) => {
-          if (k == undefined) return <></>
-
-          return <Grid item xs={4} md={3} sm={3} lg={2} key={index}>
-            <Paper className={classes.paper}>
-              <Image
-                className="img-category"
-                src={k.image}
-                alt=""
-                width={75}
-                height={75}
-              />
-              <p className={classes.textLink}>{k.name}</p>
-            </Paper>
-          </Grid >
-        })}
-      </Grid> */}
       <CardContent>
        <Grid container spacing={1} className={classes.gridCon}>
         {keywordFilter.map((k, index) => {
