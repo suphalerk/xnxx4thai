@@ -150,6 +150,7 @@ const useStyles = makeStyles((theme: Theme) =>
     btnActivate: {
       backgroundColor: "rgb(0 0 0 / 12%) !important",
       padding: '6px 6px',
+      alignSelf:'center',
     },
     textActivat: {
       color: "#00C900",
@@ -171,6 +172,11 @@ const useStyles = makeStyles((theme: Theme) =>
         marginRight: "0px",
         fontSize: "9px",
         marginTop: "0px",
+      },
+    },
+    gridDis:{
+      ["@media (max-width:1235px)"]: {
+        display:'none'
       },
     },
     Iconsize: {
@@ -208,15 +214,15 @@ function createData(name: string, calories: string) {
   return { name, calories };
 }
 
-const rows = [
-  createData("ยี่ห้อ", "Honda"),
-  createData("รุ่น", "Freed"),
-  createData("ปีรถ", "2013"),
-  createData("เชื่อเพลิง", "เบนซิน"),
-  createData("เกียร์", "เกียร์อัตโนมัติ"),
-  createData("สี", "บรอนซ์เงิน"),
-  createData("ประเภทรถ", "รถ MPV/SUV"),
-];
+// const rows = [
+//   createData("ยี่ห้อ", "Honda"),
+//   createData("รุ่น", "Freed"),
+//   createData("ปีรถ", "2013"),
+//   createData("เชื่อเพลิง", "เบนซิน"),
+//   createData("เกียร์", "เกียร์อัตโนมัติ"),
+//   createData("สี", "บรอนซ์เงิน"),
+//   createData("ประเภทรถ", "รถ MPV/SUV"),
+// ];
 
 export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
@@ -238,16 +244,24 @@ export default function FullWidthGrid(props: { data: any }) {
             </p>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} lg={4}>
+        <Grid className={classes.gridDis} item xs={12} sm={6} lg={4}>
+{/*           
           <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
               {props.data.datas.scrape_keyword.keyword} |{" "}
               {props.data.datas.scrape_keyword.title_keyword}{" "}
             </p>
-          </Paper>
+          </Paper> */}
         </Grid>
         <Grid item xs={12} sm={6} lg={4}>
+        <Paper className={classes.paper}>
+            <p className={classes.textTag}>
+              {" "}
+              {props.data.datas.scrape_keyword.keyword} |{" "}
+              {props.data.datas.scrape_keyword.title_keyword}{" "}
+            </p>
+          </Paper>
           <Paper className={classes.paper}>
             <p className={classes.textPrice}>฿ {props.data.datas.price}</p>
             <p className={classes.textPrice2}>
@@ -276,7 +290,7 @@ export default function FullWidthGrid(props: { data: any }) {
               </Paper>
             </Grid>
           </Paper>
-          <Paper className={classes.paper5}>
+          {/* <Paper className={classes.paper5}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
                 <TableHead>
@@ -300,7 +314,7 @@ export default function FullWidthGrid(props: { data: any }) {
                 </TableBody>
               </Table>
             </TableContainer>
-          </Paper>
+          </Paper> */}
           <Grid item lg={12} className={classes.gridBorder}>
             <Paper className={classes.paper3}>
               <Grid item xs={3} sm={4} lg={3}>
@@ -310,7 +324,7 @@ export default function FullWidthGrid(props: { data: any }) {
               </Grid>
               <Grid item xs={6} sm={4} lg={6}>
                 <Paper className={classes.paper4}>
-                  <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
+                  {/* <p className={classes.textOwner}> นาย xxxxxx xxxxx </p> */}
 
                   <Button
                     className={classes.btnActivate}
@@ -387,7 +401,7 @@ export default function FullWidthGrid(props: { data: any }) {
               </Grid>
             </Grid>
           </Grid>
-          <Grid container spacing={3}>
+          {/* <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
@@ -406,7 +420,7 @@ export default function FullWidthGrid(props: { data: any }) {
                 <p className={classes.productDetail2}>วันนี้ 22.00 น.</p>
               </Paper>
             </Grid>
-          </Grid>
+          </Grid> */}
           <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
@@ -430,7 +444,7 @@ export default function FullWidthGrid(props: { data: any }) {
               </Paper>
             </Grid>
           </Grid>
-          <Grid container spacing={3}>
+          {/* <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
@@ -449,8 +463,8 @@ export default function FullWidthGrid(props: { data: any }) {
                 <p className={classes.productDetail2}>มีนบุรี กรุงเทพมหานคร</p>
               </Paper>
             </Grid>
-          </Grid>
-          <Grid container spacing={3}>
+          </Grid> */}
+          {/* <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail3}>
@@ -469,7 +483,7 @@ export default function FullWidthGrid(props: { data: any }) {
                 <p className={classes.productDetail2}>535850218</p>
               </Paper>
             </Grid>
-          </Grid>
+          </Grid> */}
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Paper className={classes.paper4}>
