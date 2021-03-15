@@ -85,6 +85,11 @@ const useStyles = makeStyles((theme: Theme) =>
       },
 
     },
+    arrowPos: {
+      width: "10px",
+      Height: "10px",
+      marginTop: '-2px'
+    },
   })
 );
 
@@ -97,7 +102,9 @@ export default function ComplexGrid() {
         ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
         <p className={classes.more}>
           ดูทั้งหมด
+          <Grid className={classes.arrowPos}>
           <ArrowForwardIcon />
+          </Grid>
         </p>
       </p>
       <Grid container spacing={3}>
