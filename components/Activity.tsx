@@ -47,6 +47,11 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: "0px",
       },
     },
+    arrowPos: {
+      width: "10px",
+      Height: "10px",
+      marginTop: '-2px'
+    },
   })
 );
 
@@ -59,7 +64,9 @@ export default function AutoGrid() {
         กิจกรรมที่หน้าสนใจ
         <p className={classes.more}>
           ดูทั้งหมด
+          <Grid className={classes.arrowPos}>
           <ArrowForwardIcon />
+          </Grid>
         </p>
       </p>
       <Grid container spacing={3}>
