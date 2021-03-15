@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "13px",
       float: "right",
       margin:'0px',
+      display: 'flex',
       ["@media (width:375px)"]: {
         marginTop:'0px',
         
@@ -59,6 +60,11 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop:'0px',
         
       },
+    },
+    arrowPos: {
+      width: "10px",
+      Height: "10px",
+      marginTop: '-3px'
     },
     
   })
@@ -73,7 +79,9 @@ export default function AutoGrid() {
         ทำไมต้องซื้อของกับ Kaideewa
         <p className={classes.more}>
           ดูทั้งหมด
+          <Grid className={classes.arrowPos}>
           <ArrowForwardIcon />
+          </Grid>
         </p>
       </p>
       <Grid container spacing={3}>
