@@ -64,9 +64,9 @@ export default function AutoGrid() {
         กิจกรรมที่หน้าสนใจ
         <p className={classes.more}>
           ดูทั้งหมด
-          <Grid className={classes.arrowPos}>
+          
           <ArrowForwardIcon />
-          </Grid>
+         
         </p>
       </p>
       <Grid container spacing={3}>

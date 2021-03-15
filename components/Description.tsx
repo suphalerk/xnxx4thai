@@ -77,11 +77,12 @@ export default function AutoGrid() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ทำไมต้องซื้อของกับ Kaideewa
+        
         <p className={classes.more}>
           ดูทั้งหมด
-          <Grid className={classes.arrowPos}>
+        
           <ArrowForwardIcon />
-          </Grid>
+         
         </p>
       </p>
       <Grid container spacing={3}>
