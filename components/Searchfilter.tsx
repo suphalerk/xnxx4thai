@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
       }),
     },
     expandOpen: {
-      transform: 'rotate(180deg)',
+      transform: 'rotate(0deg)',
     },
   }),
 );
