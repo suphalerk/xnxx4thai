@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -101,12 +102,12 @@ export default function ComplexGrid() {
       <p className={classes.textHeader}>
         ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
         
-        <p className={classes.more}>
-          ดูทั้งหมด
-          
-          <ArrowForwardIcon />
-        
-        </p>
+        <Link href="/#">
+          <p className={classes.more}>
+            ดูทั้งหมด
+            <ArrowForwardIcon />
+          </p>
+        </Link>
       </p>
       <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={6} lg={4}>

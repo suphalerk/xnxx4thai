@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     textHeader: {
       color: "#213aa3",
-      fontWeight:'bold',
+      fontWeight: "bold",
       padding: " 0px",
       fontSize: " 1.5em",
       ["@media (max-width:500px)"]: {
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
     arrowPos: {
       width: "10px",
       Height: "10px",
-      marginTop: '-2px'
+      marginTop: "-2px",
     },
   })
 );
@@ -62,12 +63,12 @@ export default function AutoGrid() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         กิจกรรมที่หน้าสนใจ
-        <p className={classes.more}>
-          ดูทั้งหมด
-          
-          <ArrowForwardIcon />
-         
-        </p>
+        <Link href="/#">
+          <p className={classes.more}>
+            ดูทั้งหมด
+            <ArrowForwardIcon />
+          </p>
+        </Link>
       </p>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4} md={4} lg={4}>

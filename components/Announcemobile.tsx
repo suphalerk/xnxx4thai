@@ -102,12 +102,12 @@ export default function MediaCard() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
-        <p className={classes.more}>
-          ดูทั้งหมด
-          
-          <ArrowForwardIcon />
-         
-        </p>
+        <Link href="/#">
+          <p className={classes.more}>
+            ดูทั้งหมด
+            <ArrowForwardIcon />
+          </p>
+        </Link>
       </p>
       <Grid container spacing={3} className={classes.gridMobile}>
         
