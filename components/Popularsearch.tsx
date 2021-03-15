@@ -3,6 +3,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import {
   createStyles,
   Grid,
+  Link,
   makeStyles,
   Paper,
   Theme,
@@ -95,9 +96,8 @@ const useStyles = makeStyles((theme: Theme) =>
     arrowPos: {
       width: "10px",
       Height: "10px",
-      marginTop: '-2px'
+      marginTop: "-2px",
     },
-    
   })
 );
 
@@ -117,12 +117,14 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <p className={classes.textMore}>
-              ดูรถยนต์ทั้งหมด
-              <Grid className={classes.arrowPos}>
-              <ArrowForwardIcon className={classes.arrow} />
-              </Grid>
-            </p>
+            <Link href="/#">
+              <p className={classes.textMore}>
+                ดูรถยนต์ทั้งหมด
+                <Grid className={classes.arrowPos}>
+                  <ArrowForwardIcon className={classes.arrow} />
+                </Grid>
+              </p>
+            </Link>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
@@ -135,12 +137,14 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <p className={classes.textMore}>
-              ดูรถยนต์ทั้งหมด
-              <Grid className={classes.arrowPos}>
-              <ArrowForwardIcon className={classes.arrow} />
-              </Grid>
-            </p>
+            <Link href="/#">
+              <p className={classes.textMore}>
+                ดูรถยนต์ทั้งหมด
+                <Grid className={classes.arrowPos}>
+                  <ArrowForwardIcon className={classes.arrow} />
+                </Grid>
+              </p>
+            </Link>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
@@ -153,12 +157,14 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <p className={classes.textMore}>
-              ดูรถยนต์ทั้งหมด
-              <Grid className={classes.arrowPos}>
-              <ArrowForwardIcon className={classes.arrow} />
-              </Grid>
-            </p>
+            <Link href="/#">
+              <p className={classes.textMore}>
+                ดูรถยนต์ทั้งหมด
+                <Grid className={classes.arrowPos}>
+                  <ArrowForwardIcon className={classes.arrow} />
+                </Grid>
+              </p>
+            </Link>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
@@ -171,12 +177,14 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <p className={classes.textMore}>
-              ดูรถยนต์ทั้งหมด
-              <Grid className={classes.arrowPos}>
-              <ArrowForwardIcon className={classes.arrow} />
-              </Grid>
-            </p>
+            <Link href="/#">
+              <p className={classes.textMore}>
+                ดูรถยนต์ทั้งหมด
+                <Grid className={classes.arrowPos}>
+                  <ArrowForwardIcon className={classes.arrow} />
+                </Grid>
+              </p>
+            </Link>
           </Paper>
         </Grid>
       </Grid>

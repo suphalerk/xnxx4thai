@@ -92,6 +92,14 @@ const useStyles = makeStyles((theme: Theme) =>
       Height: "10px",
       marginTop: '-2px'
     },
+    textCost:{
+      textAlign: "left",
+      fontSize: "2em",
+      color: "#00C900",
+      fontWeight:'bold',
+      paddingL: '5px',
+      marginTop:'0px',
+    },
   })
 );
 
@@ -134,7 +142,7 @@ export default function MediaCard() {
             </p>
             </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
-            <p className="text-cost">฿ 9200</p>
+            <p className={classes.textCost}>฿ 9200</p>
             <Grid className={classes.gridFlex}>
               <Grid item xs lg={6}>
                 <Image
@@ -181,7 +189,7 @@ export default function MediaCard() {
             </p>
             </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
-            <p className="text-cost">฿ 9200</p>
+            <p className={classes.textCost}>฿ 9200</p>
             <Grid className={classes.gridFlex}>
               <Grid item xs lg={6}>
                 <Image
@@ -227,7 +235,7 @@ export default function MediaCard() {
             </p>
             </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
-            <p className="text-cost">฿ 9200</p>
+            <p className={classes.textCost}>฿ 9200</p>
             <Grid className={classes.gridFlex}>
               <Grid item xs lg={6}>
                 <Image
@@ -273,7 +281,7 @@ export default function MediaCard() {
             </p>
             </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
-            <p className="text-cost">฿ 9200</p>
+            <p className={classes.textCost}>฿ 9200</p>
             <Grid className={classes.gridFlex}>
               <Grid item xs lg={6}>
                 <Image
