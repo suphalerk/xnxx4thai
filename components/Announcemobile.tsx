@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { createStyles, Grid, Paper, Theme } from "@material-ui/core";
+import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
@@ -103,6 +103,7 @@ export default function MediaCard() {
         </p>
       </p>
       <Grid container spacing={3} className={classes.gridMobile}>
+        
         <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
             <Image
@@ -112,6 +113,7 @@ export default function MediaCard() {
               width={"400"}
               height={"300"}
             />
+            <Link href="/product/name/1">
             <p className={classes.mobileDetail}>
               IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
               popular belief, Lorem Ipsum is not simply random text. It has
@@ -123,6 +125,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
+            </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Grid className={classes.gridFlex}>
@@ -147,6 +150,7 @@ export default function MediaCard() {
             </Grid>
           </Paper>
         </Grid>
+        
         <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
             <Image
@@ -156,6 +160,7 @@ export default function MediaCard() {
               width={"400"}
               height={"300"}
             />
+            <Link href="/product/name/2">
             <p className={classes.mobileDetail}>
               IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
               popular belief, Lorem Ipsum is not simply random text. It has
@@ -167,6 +172,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
+            </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Grid className={classes.gridFlex}>
@@ -200,8 +206,9 @@ export default function MediaCard() {
               width={"400"}
               height={"300"}
             />
+            <Link href="/product/name/3">
             <p className={classes.mobileDetail}>
-              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอยContrary to
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
               popular belief, Lorem Ipsum is not simply random text. It has
               roots in a piece of classical Latin literature from 45 BC, making
               it over 2000 years old. Richard McClintock, a Latin professor at
@@ -211,6 +218,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
+            </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Grid className={classes.gridFlex}>
@@ -244,8 +252,9 @@ export default function MediaCard() {
               width={"400"}
               height={"300"}
             />
+            <Link href="/product/name/4">
             <p className={classes.mobileDetail}>
-              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอยContrary to
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
               popular belief, Lorem Ipsum is not simply random text. It has
               roots in a piece of classical Latin literature from 45 BC, making
               it over 2000 years old. Richard McClintock, a Latin professor at
@@ -255,6 +264,7 @@ export default function MediaCard() {
               discovered the undoubtable source. Lorem Ipsum comes from sections
               1.10.32 and 1.1
             </p>
+            </Link>
             <p className={classes.textLocation}>ลาดกระบัง</p>
             <p className="text-cost">฿ 9200</p>
             <Grid className={classes.gridFlex}>
