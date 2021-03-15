@@ -15,19 +15,19 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       padding: theme.spacing(2),
       margin: "auto",
-      maxWidth: '410px',
+      maxWidth: "410px",
       display: "flex",
       backgroundColor: "#fff",
       ["@media (width:414px)"]: {
-        display:'flex',
+        display: "flex",
       },
     },
     image: {
       width: 215,
       height: 128,
       ["@media (max-width:500px)"]: {
-        height: 'auto',
-        width: 'auto',
+        height: "auto",
+        width: "auto",
       },
     },
     img: {
@@ -40,24 +40,23 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#000",
       fontSize: "13px",
       textAlign: "left",
-      
+
       ["@media (max-width:500px)"]: {
-        width: '117px'
+        width: "117px",
       },
       ["@media (width:375px)"]: {
         width: "110px",
-        display:'-webkit-box',
-        WebkitLineClamp:'3',
-        WebkitBoxOrient:'vertical',
-        overflow:'hidden',
+        display: "-webkit-box",
+        WebkitLineClamp: "3",
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
       },
     },
     Readmore: {
-      color: "#429EFE",
+      color: "#429EFE !important",
       width: "max-content",
       ["@media (width:375px)"]: {
-        fontSize:'11px !important',
-
+        fontSize: "11px !important",
       },
     },
     bgcolor: {
@@ -66,7 +65,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "#213aa3",
-      fontWeight:'bold',
+      fontWeight: "bold",
       ["@media (max-width:500px)"]: {
         fontSize: "15px",
       },
@@ -76,20 +75,23 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "fit-content",
       fontSize: "13px",
       float: "right",
-      marginTop: '0px',
-      display:'flex',
+      marginTop: "0px",
+      display: "flex",
       ["@media (width:414px)"]: {
-        display:'none'
+        display: "none",
       },
       ["@media (width:375px)"]: {
-        marginTop:'1px',
+        marginTop: "1px",
       },
-
     },
     arrowPos: {
       width: "10px",
       Height: "10px",
-      marginTop: '-2px'
+      marginTop: "-2px",
+    },
+    textmore: {
+      color: "#429EFE",
+      textDecoration: "0",
     },
   })
 );
@@ -101,7 +103,6 @@ export default function ComplexGrid() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
-        
         <Link href="/#">
           <p className={classes.more}>
             ดูทั้งหมด
@@ -110,123 +111,129 @@ export default function ComplexGrid() {
         </Link>
       </p>
       <Grid container spacing={3}>
-      <Grid item xs={12} sm={6} md={6} lg={4}>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2} className={classes.bgcolor}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img
-                className={classes.img}
-                alt="complex"
-                src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ"
-              />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography
-                  className={classes.Typography}
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry
-                </Typography>
-              </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+          <Paper className={classes.paper}>
+            <Grid container spacing={2} className={classes.bgcolor}>
               <Grid item>
-                <Typography
-                  className={classes.Readmore}
-                  variant="body2"
-                  style={{ cursor: "pointer" }}
-                >
-                  อ่านเพิ่มเติม
-                </Typography>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="complex"
+                    src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ"
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography
+                      className={classes.Typography}
+                      gutterBottom
+                      variant="subtitle1"
+                    >
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      className={classes.Readmore}
+                      variant="body2"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <Link href="/#">
+                        <p className={classes.textmore}>อ่านเพิ่มเติม</p>
+                      </Link>
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </Paper>
         </Grid>
-      </Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={6} lg={4}>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2} className={classes.bgcolor}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img
-                className={classes.img}
-                alt="complex"
-                src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ"
-              />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography
-                  className={classes.Typography}
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry
-                </Typography>
-              </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+          <Paper className={classes.paper}>
+            <Grid container spacing={2} className={classes.bgcolor}>
               <Grid item>
-                <Typography
-                  className={classes.Readmore}
-                  variant="body2"
-                  style={{ cursor: "pointer" }}
-                >
-                  อ่านเพิ่มเติม
-                </Typography>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="complex"
+                    src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ"
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography
+                      className={classes.Typography}
+                      gutterBottom
+                      variant="subtitle1"
+                    >
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      className={classes.Readmore}
+                      variant="body2"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <Link href="/#">
+                        {" "}
+                        <p className={classes.textmore}>อ่านเพิ่มเติม</p>
+                      </Link>
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </Paper>
         </Grid>
-      </Paper>
-      </Grid>
-      <Grid item xs={12} sm={6} md={6} lg={4}>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2} className={classes.bgcolor}>
-          <Grid item>
-            <ButtonBase className={classes.image}>
-              <img
-                className={classes.img}
-                alt="complex"
-                src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ"
-              />
-            </ButtonBase>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography
-                  className={classes.Typography}
-                  gutterBottom
-                  variant="subtitle1"
-                >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry
-                </Typography>
-              </Grid>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
+          <Paper className={classes.paper}>
+            <Grid container spacing={2} className={classes.bgcolor}>
               <Grid item>
-                <Typography
-                  className={classes.Readmore}
-                  variant="body2"
-                  style={{ cursor: "pointer" }}
-                >
-                  อ่านเพิ่มเติม
-                </Typography>
+                <ButtonBase className={classes.image}>
+                  <img
+                    className={classes.img}
+                    alt="complex"
+                    src="https://i.ytimg.com/vi/pLqipJNItIo/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBkklsyaw9FxDmMKapyBYCn9tbPNQ"
+                  />
+                </ButtonBase>
+              </Grid>
+              <Grid item xs={12} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <Grid item xs>
+                    <Typography
+                      className={classes.Typography}
+                      gutterBottom
+                      variant="subtitle1"
+                    >
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      className={classes.Readmore}
+                      variant="body2"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <Link href="/#">
+                        {" "}
+                        <p className={classes.textmore}>อ่านเพิ่มเติม</p>
+                      </Link>
+                    </Typography>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
-          </Grid>
+          </Paper>
         </Grid>
-      </Paper>
       </Grid>
-      </Grid>
-  
-      
     </div>
   );
 }
