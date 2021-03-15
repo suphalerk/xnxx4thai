@@ -135,7 +135,7 @@ export default function MediaCard() {
                   src="/images/Chat.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
               <Grid item xs lg={6}>
@@ -144,7 +144,7 @@ export default function MediaCard() {
                   src="/images/Call.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
             </Grid>
@@ -182,7 +182,7 @@ export default function MediaCard() {
                   src="/images/Chat.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
               <Grid item xs lg={6}>
@@ -191,7 +191,7 @@ export default function MediaCard() {
                   src="/images/Call.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
             </Grid>
@@ -228,7 +228,7 @@ export default function MediaCard() {
                   src="/images/Chat.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
               <Grid item xs lg={6}>
@@ -237,7 +237,7 @@ export default function MediaCard() {
                   src="/images/Call.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
             </Grid>
@@ -274,7 +274,7 @@ export default function MediaCard() {
                   src="/images/Chat.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
               <Grid item xs lg={6}>
@@ -283,7 +283,7 @@ export default function MediaCard() {
                   src="/images/Call.png"
                   alt=""
                   width={"130"}
-                  height={"35"}
+                  height={"45"}
                 />
               </Grid>
             </Grid>
