@@ -101,7 +101,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: "2em",
       color: "#00C900",
       fontWeight:'bold',
-      paddingL: '5px',
+      paddingLeft: '5px',
       marginTop:'0px',
     },
     btnMore:{

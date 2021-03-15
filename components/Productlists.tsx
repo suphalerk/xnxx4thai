@@ -102,20 +102,20 @@ const useStyles = makeStyles((theme: Theme) =>
       minWidth: 300,
     },
     textPrice: {
-      textAlign: "right",
+      textAlign: "center",
       fontSize: "2em",
       color: "#00C900",
       fontWeight: "bold",
       margin: "0px",
     },
     textPrice2: {
-      textAlign: "right",
+      textAlign: "center",
       fontSize: "1em",
       color: "#96A5BA",
       margin: "0px",
     },
     textTag: {
-      textAlign: "right",
+      textAlign: "center",
       fontSize: "1.5em",
       color: "#96A5BA",
       margin: "0px",
@@ -219,6 +219,9 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     bgWarning:{
       backgroundColor:"#FFD815"
+    },
+    gridCenter:{
+      justifyContent:'center'
     }
   })
 );
@@ -230,7 +233,7 @@ export default function FullWidthGrid(props: { data: any }) {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} lg={4}>
+        {/* <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
             <p className={classes.productTitle}>
               {" "}
@@ -242,18 +245,18 @@ export default function FullWidthGrid(props: { data: any }) {
               {props.data.datas.content_description}
             </p>
           </Paper>
-        </Grid>
-        <Grid className={classes.gridDis} item xs={12} sm={6} lg={4}>
-          {/*           
+        </Grid> */}
+        {/* <Grid className={classes.gridDis} item xs={12} sm={6} lg={4}>
+                    
           <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
               {props.data.datas.scrape_keyword.keyword} |{" "}
               {props.data.datas.scrape_keyword.title_keyword}{" "}
             </p>
-          </Paper> */}
-        </Grid>
-        <Grid item xs={12} sm={6} lg={4}>
+          </Paper>
+        </Grid> */}
+        <Grid className={classes.gridCenter} item xs={12} sm={6} lg={6} md={6}>
           <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
