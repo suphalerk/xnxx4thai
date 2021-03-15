@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
+import { Button, createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
@@ -100,6 +100,24 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingL: '5px',
       marginTop:'0px',
     },
+    btnMore:{
+      color: "#fff",
+      backgroundColor:'#00C900',
+      paddingLeft:' 40%',
+      paddingRight:' 40%',
+      fontSize: '1.5em',
+      '&:hover' : {
+        backgroundColor:'#00C900',
+      },
+      ["@media (max-width:500px)"]: {
+        paddingLeft:'20%',
+      paddingRight:'20%',
+      fontSize: '1em',
+      },
+    },
+    btnCenter:{
+      textAlign:'center',
+    }
   })
 );
 
@@ -110,7 +128,7 @@ export default function MediaCard() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
-        <Link href="/#">
+        <Link href="/productlist/name/1">
           <p className={classes.more}>
             ดูทั้งหมด
             <ArrowForwardIcon />
@@ -304,6 +322,9 @@ export default function MediaCard() {
             </Grid>
           </Paper>
         </Grid>
+        <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12} >
+        <Button className={classes.btnMore} variant="contained">ดูมือถือ แท็บเล็ตทั้งหมด <ArrowForwardIcon/> </Button>
+         </Grid>
       </Grid>
     </div>
   );

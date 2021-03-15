@@ -2,8 +2,8 @@ import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { Link, Typography } from "@material-ui/core";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { Typography } from "@material-ui/core";
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -78,12 +78,7 @@ export default function AutoGrid() {
       <p className={classes.textHeader}>
         ทำไมต้องซื้อของกับ Kaideewa
         
-        <Link href="/#">
-          <p className={classes.more}>
-            ดูทั้งหมด
-            <ArrowForwardIcon />
-          </p>
-        </Link>
+      
       </p>
       <Grid container spacing={3}>
         <Grid item xs={12}>
