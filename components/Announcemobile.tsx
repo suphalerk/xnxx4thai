@@ -110,7 +110,7 @@ export default function MediaCard() {
               className={classes.imageCategory}
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
-              width={"400"}
+              width={"450"}
               height={"300"}
             />
             <Link href="/product/name/1">
@@ -134,7 +134,7 @@ export default function MediaCard() {
                   className="img-chat"
                   src="/images/Chat.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -143,7 +143,7 @@ export default function MediaCard() {
                   className="img-call"
                   src="/images/Call.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -157,7 +157,7 @@ export default function MediaCard() {
               className={classes.imageCategory}
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
-              width={"400"}
+              width={"450"}
               height={"300"}
             />
             <Link href="/product/name/2">
@@ -181,7 +181,7 @@ export default function MediaCard() {
                   className="img-chat"
                   src="/images/Chat.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -190,7 +190,7 @@ export default function MediaCard() {
                   className="img-call"
                   src="/images/Call.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -203,7 +203,7 @@ export default function MediaCard() {
               className={classes.imageCategory}
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
-              width={"400"}
+              width={"450"}
               height={"300"}
             />
             <Link href="/product/name/3">
@@ -227,7 +227,7 @@ export default function MediaCard() {
                   className="img-chat"
                   src="/images/Chat.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -236,7 +236,7 @@ export default function MediaCard() {
                   className="img-call"
                   src="/images/Call.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -249,7 +249,7 @@ export default function MediaCard() {
               className={classes.imageCategory}
               src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
               alt=""
-              width={"400"}
+              width={"450"}
               height={"300"}
             />
             <Link href="/product/name/4">
@@ -273,7 +273,7 @@ export default function MediaCard() {
                   className="img-chat"
                   src="/images/Chat.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>
@@ -282,7 +282,7 @@ export default function MediaCard() {
                   className="img-call"
                   src="/images/Call.png"
                   alt=""
-                  width={"120"}
+                  width={"130"}
                   height={"35"}
                 />
               </Grid>

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: "0px",
       fontSize: "1.5em",
       color: "#213aa3",
-      fontWeight:'bold',
+      fontWeight: "bold",
 
       ["@media (width:375px)"]: {
         fontSize: "11px",
@@ -62,6 +62,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     arrow: {
+     
       ["@media (max-width:500px)"]: {
         width: "10px",
         height: "10px",
@@ -87,9 +88,13 @@ const useStyles = makeStyles((theme: Theme) =>
         margin: "0px",
       },
     },
-    textBlack:{
-      color:'#000 !important',
-      textDecoration:'underline !important',
+    textBlack: {
+      color: "#000 !important",
+      textDecoration: "underline !important",
+    },
+    gridArrow:{
+      width:'10px',
+      Height:'10px'
     }
   })
 );
@@ -112,14 +117,16 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon className={classes.arrow} />
+              
+                <ArrowForwardIcon className={classes.arrow} />
+                
             </p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-            รถยนต์ <span className={classes.textBlack}>(19,000)</span>
+              รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>
@@ -135,7 +142,7 @@ export default function FixedContainer() {
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-            รถยนต์ <span className={classes.textBlack}>(19,000)</span>
+              รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>
@@ -144,14 +151,16 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถขนของ</p>
             <p className={classes.textMore}>
               ดูรถยนต์ทั้งหมด
-              <ArrowForwardIcon className={classes.arrow} />
+              <Grid>
+                <ArrowForwardIcon className={classes.arrow} />
+              </Grid>
             </p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={6} md={6} lg={3}>
           <Paper className={classes.paper}>
             <p className={classes.textGreen}>
-            รถยนต์ <span className={classes.textBlack}>(19,000)</span>
+              รถยนต์ <span className={classes.textBlack}>(19,000)</span>
             </p>
             <p className={classes.textCategory}>รถมือสอง</p>
             <p className={classes.textCategory}>รถเก๋งมือสอง</p>
