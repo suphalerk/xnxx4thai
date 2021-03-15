@@ -30,6 +30,8 @@ const Home = (props: any) => {
  
     // })
 
+    console.log(data.contents.datas)
+
     for (const [index, value] of contents.entries()) {
         value.content_title
 
@@ -45,7 +47,7 @@ const Home = (props: any) => {
                 <Searchfilter keywords={keywords}/>
                 <Popularsearch/>
                 {/* <ul style={{marginLeft:'8%'}}><a href="#">{items}</a></ul> */}
-                <Announcemobile/>
+                <Announcemobile contents={contents}/>
                 <Info/>
                 <Activity/>
                 <News/>

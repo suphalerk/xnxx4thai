@@ -3,6 +3,7 @@ import React from "react";
 import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { Content } from '../interfaces/product'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -124,9 +125,19 @@ const useStyles = makeStyles((theme: Theme) =>
     }
   })
 );
+  interface ContentData {
+    title: string,
+    location: string[]
+    image: string
+    price: string
+  }
+
+ 
 
 export default function MediaCard() {
   const classes = useStyles();
+
+
 
   return (
     <div className={classes.root}>
