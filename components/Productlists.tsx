@@ -3,6 +3,7 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -75,6 +76,16 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       backgroundColor: "#fff",
     },
+    paper9: {
+      padding: "6px",
+      textAlign: "left",
+      color: "#222",
+      boxShadow: "none",
+      backgroundColor: "#fff",
+      ["@media (max-width:500px)"]: {
+        textAlign: "center",
+      },
+    },
     productTitle: {
       textAlign: "start",
       color: "#383277",
@@ -118,7 +129,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "left",
       fontSize: "1.5em",
       ["@media (max-width:500px)"]: {
-       display:'none'
+        display: "none",
       },
     },
     productDetail2: {
@@ -141,8 +152,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     btnActivate: {
       backgroundColor: "rgb(0 0 0 / 12%) !important",
-      padding: '6px 6px',
-      alignSelf:'center',
+      padding: "6px 6px",
+      alignSelf: "center",
     },
     textActivat: {
       color: "#00C900",
@@ -166,9 +177,9 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: "0px",
       },
     },
-    gridDis:{
+    gridDis: {
       ["@media (max-width:1265px)"]: {
-        display:'none'
+        display: "none",
       },
     },
     Iconsize: {
@@ -193,15 +204,24 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "10px",
     },
     gridChat: {
-     
       ["@media (max-width:1265px)"]: {
         display: "inline-flex",
       },
-
     },
+    textWarning: {
+      fontSize: "1.5em",
+      textAlign: "center",
+    },
+    textWarning2: {
+      fontSize: "1.5em",
+      textDecoration: "underline",
+      textAlign: "center",
+    },
+    bgWarning:{
+      backgroundColor:"#FFD815"
+    }
   })
 );
-
 
 export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
@@ -224,7 +244,7 @@ export default function FullWidthGrid(props: { data: any }) {
           </Paper>
         </Grid>
         <Grid className={classes.gridDis} item xs={12} sm={6} lg={4}>
-{/*           
+          {/*           
           <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
@@ -234,7 +254,7 @@ export default function FullWidthGrid(props: { data: any }) {
           </Paper> */}
         </Grid>
         <Grid item xs={12} sm={6} lg={4}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
               {props.data.datas.scrape_keyword.keyword} |{" "}
@@ -464,8 +484,25 @@ export default function FullWidthGrid(props: { data: any }) {
             </Grid>
           </Grid> */}
           <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Paper className={classes.paper4}>
+          <Grid className={classes.bgWarning} item xs={12}>
+              <p className={classes.textWarning}>
+                {" "}
+                กรุณาอย่าโอนเงินไม่ว่ากรณีใดๆ{" "}
+              </p>
+              <p className={classes.textWarning}>
+                {" "}
+                หากต้องการโอนเงินหรือมัดจำล่วงหน้า
+              </p>
+              <Link href="/#">
+                <p className={classes.textWarning2}>
+                  ตรวจสอบบัญชีมิจฉาชีพ ที่นี่
+                </p>
+              </Link>
+
+            </Grid>
+            <Grid  item xs={12}>
+      
+              <Paper className={classes.paper9}>
                 <p className={classes.textReport}>
                   <Image
                     src="/images/report.png"

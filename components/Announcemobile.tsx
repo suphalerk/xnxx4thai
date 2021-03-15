@@ -39,7 +39,11 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       marginTop: "7px",
       ["@media (width:375px)"]: {
-        marginTop: "0%",
+        marginTop: "0px",
+        fontSize: "13px",
+      },
+      ["@media (max-width:500px)"]: {
+        marginTop: "0px",
         fontSize: "13px",
       },
     },
