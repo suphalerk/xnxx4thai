@@ -326,9 +326,9 @@ export default function MediaCard() {
             </Grid>
           </Paper>
         </Grid>
-        <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12} >
+        {/* <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12} >
         <Button className={classes.btnMore} variant="contained">ดูมือถือ แท็บเล็ตทั้งหมด <ArrowForwardIcon/> </Button>
-         </Grid>
+         </Grid> */}
       </Grid>
     </div>
   );

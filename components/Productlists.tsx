@@ -1,524 +1,887 @@
+import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
+import { Button, createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
-import { Link } from "@material-ui/core";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
     },
-    textColor: {
-      color: "#222",
-      border: "1px solid rgba(81, 81, 81, 1)",
-    },
-    textColor2: {
-      color: "#96A5BA",
-      border: "1px solid rgba(81, 81, 81, 1)",
-    },
     paper: {
-      padding: theme.spacing(2),
+      // padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      boxShadow: "none",
       backgroundColor: "#fff",
-    },
-    paper2: {
-      padding: "6px",
-      textAlign: "center",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-    },
-    paper4: {
-      padding: "6px",
-      textAlign: "left",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-    },
-    paper3: {
+      border: "solid 1px #e1e1e1",
       padding: "0px",
-      textAlign: "center",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-      display: "flex",
     },
-    paper5: {
-      padding: "0px",
-      textAlign: "center",
+    mobileDetail: {
+      width: "217",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      overflow: "hidden",
       color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-      display: "flex",
-    },
-    paper6: {
-      padding: "0px",
       textAlign: "left",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-    },
-    paper7: {
-      padding: "6px",
-      textAlign: "left",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-    },
-    paper8: {
-      padding: "6px",
-      textAlign: "left",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-    },
-    paper9: {
-      padding: "6px",
-      textAlign: "left",
-      color: "#222",
-      boxShadow: "none",
-      backgroundColor: "#fff",
-      ["@media (max-width:500px)"]: {
-        textAlign: "center",
-      },
-    },
-    productTitle: {
-      textAlign: "start",
-      color: "#383277",
-      fontSize: "22px",
-      fontWeight: "bold",
-      margin: "0",
-    },
-    spanText: {
-      textAlign: "start",
+      paddingRight: "5px",
+      paddingLeft: "5px",
+      marginTop: "0px",
+      marginBottom: "0px",
       fontSize: "16px",
-      color: "#383277",
-    },
-    table: {
-      minWidth: 300,
-    },
-    textPrice: {
-      textAlign: "center",
-      fontSize: "2em",
-      color: "#00C900",
-      fontWeight: "bold",
-      margin: "0px",
-    },
-    textPrice2: {
-      textAlign: "center",
-      fontSize: "1em",
-      color: "#96A5BA",
-      margin: "0px",
-    },
-    textTag: {
-      textAlign: "center",
-      fontSize: "1.5em",
-      color: "#96A5BA",
-      margin: "0px",
-    },
-    gridPos: {
-      padding: "1em",
-      display: "inline-flex",
-    },
-    productDetail: {
-      color: "#96A5BA",
-      textAlign: "left",
-      fontSize: "1.5em",
-      ["@media (max-width:500px)"]: {
-        display: "none",
-      },
-    },
-    productDetail2: {
-      color: "#000",
-      textAlign: "left",
-      margin: "0px",
-    },
-    productDetail3: {
-      color: "#96A5BA",
-      textAlign: "left",
-      margin: "0px",
-    },
-    share: {
-      textAlign: "right",
-      fontSize: "15px",
-      color: "#96A5BA",
-    },
-    productImg: {
-      padding: "20px !important",
-    },
-    btnActivate: {
-      backgroundColor: "rgb(0 0 0 / 12%) !important",
-      padding: "6px 6px",
-      alignSelf: "center",
-    },
-    textActivat: {
-      color: "#00C900",
-      fontSize: "10px",
-      margin: "2px",
-    },
-    textOwner: {
-      color: "#00C900",
-      fontWeight: "bold",
-      margin: "0px",
     },
     more: {
       color: "#429EFE",
       width: "fit-content",
-      fontSize: "9px",
+      fontSize: "13px",
       float: "right",
       display: "flex",
-      ["@media (max-width:500px)"]: {
-        marginRight: "0px",
-        fontSize: "9px",
+      marginTop: "7px",
+      ["@media (width:375px)"]: {
         marginTop: "0px",
+        fontSize: "13px",
+      },
+      ["@media (max-width:500px)"]: {
+        marginTop: "0px",
+        fontSize: "13px",
       },
     },
-    gridDis: {
-      ["@media (max-width:1265px)"]: {
-        display: "none",
-      },
+    imageCategory: {
+      width: 39.9,
+      height: "auto",
     },
-    Iconsize: {
-      width: "17px",
-      height: "12px",
-    },
-    Iconsize2: {
-      width: "70px",
-      height: "70px",
-    },
-    textReport: {
-      color: "#429EFE",
-    },
-    iconsize3: {
-      margin: "0px 3px -3px 0px !important",
-    },
-    gridBorder: {
-      border: "solid 1px",
-      borderRadius: "5px",
-      marginTop: "1em",
-      marginBottom: "1em",
-      padding: "10px",
-    },
-    gridChat: {
-      ["@media (max-width:1265px)"]: {
-        display: "inline-flex",
-      },
-    },
-    textWarning: {
+    textHeader: {
       fontSize: "1.5em",
-      textAlign: "center",
+      color: "#213aa3",
+      fontWeight:'bold',
+
+      ["@media (width:375px)"]: {
+        marginLeft: "0%",
+        fontSize: "14px",
+      },
+      ["@media (max-width:500px)"]: {
+        marginLeft: "0%",
+        fontSize: "14px",
+      },
     },
-    textWarning2: {
-      fontSize: "1.5em",
-      textDecoration: "underline",
-      textAlign: "center",
+    gridMobile: {
+      ["@media (width:375px)"]: {
+        display: "block !important",
+        borderTop: "none",
+      },
     },
-    bgWarning:{
-      backgroundColor:"#FFD815"
+    textLocation: {
+      fontSize: "13px",
+      textAlign: "left",
+      color: "#7e7e7e",
+      paddingRight: "5px",
+      paddingLeft: "5px",
+      marginTop: "0px",
+      marginBottom: "0px",
     },
-    gridCenter:{
-      justifyContent:'center'
+    imgChat: {
+      width: "135px",
+      height: "40px",
+    },
+    imgCall: {
+      width: "135px",
+      height: "40px",
+    },
+    gridFlex: {
+      display: "flex",
+    },
+        arrowPos: {
+      width: "10px",
+      Height: "10px",
+      marginTop: '-2px'
+    },
+    textCost:{
+      textAlign: "left",
+      fontSize: "2em",
+      color: "#00C900",
+      fontWeight:'bold',
+      paddingLeft: '5px',
+      marginTop:'0px',
+    },
+    btnMore:{
+      color: "#fff",
+      backgroundColor:'#00C900',
+      paddingLeft:' 40%',
+      paddingRight:' 40%',
+      fontSize: '1.5em',
+      '&:hover' : {
+        backgroundColor:'#00C900',
+      },
+      ["@media (max-width:500px)"]: {
+        paddingLeft:'20%',
+      paddingRight:'20%',
+      fontSize: '1em',
+      },
+    },
+    btnCenter:{
+      textAlign:'center',
     }
   })
 );
 
-export default function FullWidthGrid(props: { data: any }) {
+export default function MediaCard() {
   const classes = useStyles();
-  console.log(props);
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        {/* <Grid item xs={12} sm={6} lg={4}>
+      <hr/>
+      {/* <p className={classes.textHeader}>
+        ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
+        <Link href="/productlist/name/1">
+          <p className={classes.more}>
+            ดูทั้งหมด
+            <ArrowForwardIcon />
+          </p>
+        </Link>
+      </p> */}
+      <Grid container spacing={3} className={classes.gridMobile}>
+        
+        <Grid item xs={12} lg={3} sm={3}>
           <Paper className={classes.paper}>
-            <p className={classes.productTitle}>
-              {" "}
-              {props.data.datas.content_title}{" "}
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
             </p>
-
-            <p className={classes.spanText}> กิจกรรมที่หน้าสนใจ </p>
-            <p className={classes.productDetail}>
-              {props.data.datas.content_description}
-            </p>
-          </Paper>
-        </Grid> */}
-        {/* <Grid className={classes.gridDis} item xs={12} sm={6} lg={4}>
-                    
-          <Paper className={classes.paper}>
-            <p className={classes.textTag}>
-              {" "}
-              {props.data.datas.scrape_keyword.keyword} |{" "}
-              {props.data.datas.scrape_keyword.title_keyword}{" "}
-            </p>
-          </Paper>
-        </Grid> */}
-        <Grid className={classes.gridCenter} item xs={12} sm={6} lg={6} md={6}>
-          <Paper className={classes.paper}>
-            <p className={classes.textTag}>
-              {" "}
-              {props.data.datas.scrape_keyword.keyword} |{" "}
-              {props.data.datas.scrape_keyword.title_keyword}{" "}
-            </p>
-          </Paper>
-          <Paper className={classes.paper}>
-            <p className={classes.textPrice}>฿ {props.data.datas.price}</p>
-            <p className={classes.textPrice2}>
-              ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
-            </p>
-            <Grid lg={6} className={classes.gridPos}>
-              <Paper className={classes.paper6}>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
                 <Image
-                  src="/images/Addfavorite.png"
+                  className="img-chat"
+                  src="/images/Chat.png"
                   alt=""
-                  width={"150"}
-                  height={"30"}
+                  width={"130"}
+                  height={"45"}
                 />
-              </Paper>
-            </Grid>
-
-            <Grid lg={6} className={classes.gridPos}>
-              <Paper className={classes.paper6}>
-                <Image
-                  src="/images/share.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
-                <span className={classes.share}> แชร์ </span>
-              </Paper>
-            </Grid>
-          </Paper>
-          {/* <Paper className={classes.paper5}>
-            <TableContainer component={Paper}>
-              <Table className={classes.table} aria-label="simple table">
-                <TableHead>
-                  <TableRow></TableRow>
-                </TableHead>
-                <TableBody>
-                  {rows.map((row) => (
-                    <TableRow key={row.name} className={classes.paper}>
-                      <TableCell
-                        className={classes.textColor2}
-                        component="th"
-                        scope="row"
-                      >
-                        {row.name}
-                      </TableCell>
-                      <TableCell className={classes.textColor} align="right">
-                        {row.calories}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Paper> */}
-          <Grid item lg={12} className={classes.gridBorder}>
-            <Paper className={classes.paper3}>
-              {/* <Grid item xs={3} sm={4} lg={3}>
-                <Paper className={classes.paper2}>
-                  <AccountCircleRoundedIcon className={classes.Iconsize2} />
-                </Paper>
               </Grid>
-              <Grid item xs={6} sm={4} lg={6}>
-                <Paper className={classes.paper4}>
-                  <p className={classes.textOwner}> นาย xxxxxx xxxxx </p>
-
-                  <Button
-                    className={classes.btnActivate}
-                    variant="contained"
-                    disabled
-                  >
-                    <Image
-                      className="img-correct"
-                      src="/images/CORRECT.png"
-                      alt=""
-                      width={20}
-                      height={20}
-                    />
-                    <span className={classes.textActivat}>
-                      ยืนยันด้วยบัตร ปชช. แล้ว
-                    </span>
-                  </Button>
-                </Paper>
-              </Grid> */}
-              {/* <Grid item xs={3} lg={3}>
-                <Paper className={classes.paper2}>
-                  <p className={classes.more}>
-                    ดูทั้งหมด
-                    <ArrowForwardIcon className={classes.Iconsize} />
-                  </p>
-                </Paper>
-              </Grid> */}
-            </Paper>
-
-            <Paper className={classes.paper8}>
-              <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
-              <p className={classes.productDetail3}>
-                เป็นสมาชิกผ่านช่องทาง
+              <Grid item xs lg={6}>
                 <Image
-                  src="/images/Mobile_OK.png"
+                  className="img-call"
+                  src="/images/Call.png"
                   alt=""
-                  width={"20"}
-                  height={"20"}
+                  width={"130"}
+                  height={"45"}
                 />
-                <Image
-                  src="/images/Facebook.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
-                <Image
-                  src="/images/Mail_OK.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
-              </p>
-            </Paper>
-            <Grid className={classes.gridChat}>
-              <Grid item xs={6} md={6} lg={12}>
-                <Paper className={classes.paper7}>
-                  <Image
-                    src="/images/Chat-seller.png"
-                    alt=""
-                    width={"400"}
-                    height={"50"}
-                  />
-                </Paper>
-              </Grid>
-              <Grid item xs={6} md={6} lg={12}>
-                <Paper className={classes.paper7}>
-                  <Image
-                    src="/images/Call-seller.png"
-                    alt=""
-                    width={"400"}
-                    height={"50"}
-                  />
-                </Paper>
               </Grid>
             </Grid>
-          </Grid>
-          {/* <Grid container spacing={3}>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail3}>
-                  <Image
-                    src="/images/Update.png"
-                    alt=""
-                    width={"15"}
-                    height={"15"}
-                  />
-                  อัพเดทล่าสุด
-                </p>
-              </Paper>
-            </Grid>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail2}>วันนี้ 22.00 น.</p>
-              </Paper>
-            </Grid>
-          </Grid> */}
-          <Grid container spacing={3}>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail3}>
-                  <Image
-                    src="/images/Date.png"
-                    alt=""
-                    width={"15"}
-                    height={"15"}
-                  />
-                  ลงขายเมื่อ
-                </p>
-              </Paper>
-            </Grid>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail2}>
-                  {" "}
-                  {props.data.datas.created_date}
-                </p>
-              </Paper>
-            </Grid>
-          </Grid>
-          {/* <Grid container spacing={3}>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail3}>
-                  <Image
-                    src="/images/location.png"
-                    alt=""
-                    width={"15"}
-                    height={"15"}
-                  />
-                  ตำแหน่ง
-                </p>
-              </Paper>
-            </Grid>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail2}>มีนบุรี กรุงเทพมหานคร</p>
-              </Paper>
-            </Grid>
-          </Grid> */}
-          {/* <Grid container spacing={3}>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail3}>
-                  <Image
-                    src="/images/Announcement-number.png"
-                    alt=""
-                    width={"15"}
-                    height={"15"}
-                  />
-                  หมายเลขประกาศ
-                </p>
-              </Paper>
-            </Grid>
-            <Grid item xs={6} md={6}>
-              <Paper className={classes.paper4}>
-                <p className={classes.productDetail2}>535850218</p>
-              </Paper>
-            </Grid>
-          </Grid> */}
-          <Grid container spacing={3}>
-          <Grid className={classes.bgWarning} item xs={12}>
-              <p className={classes.textWarning}>
-                {" "}
-                กรุณาอย่าโอนเงินไม่ว่ากรณีใดๆ{" "}
-              </p>
-              <p className={classes.textWarning}>
-                {" "}
-                หากต้องการโอนเงินหรือมัดจำล่วงหน้า
-              </p>
-              <Link href="/#">
-                <p className={classes.textWarning2}>
-                  ตรวจสอบบัญชีมิจฉาชีพ ที่นี่
-                </p>
-              </Link>
-
-            </Grid>
-            <Grid  item xs={12}>
-      
-              <Paper className={classes.paper9}>
-                <p className={classes.textReport}>
-                  <Image
-                    src="/images/report.png"
-                    alt=""
-                    width={"25"}
-                    height={"25"}
-                  />
-                  แจ้งประกาษไม่เหมาะสม
-                </p>
-              </Paper>
-            </Grid>
-          </Grid>
+          </Paper>
         </Grid>
+        
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/2">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/3">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/4">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} lg={3} sm={3}>
+          <Paper className={classes.paper}>
+            <Image
+              className={classes.imageCategory}
+              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
+              alt=""
+              width={"450"}
+              height={"300"}
+            />
+            <Link href="/product/name/1">
+            <p className={classes.mobileDetail}>
+              IPhone 11 Pro Max ประกันเหลือ 10 เดือนสถาพ ไม่มีรอย Contrary to
+              popular belief, Lorem Ipsum is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old. Richard McClintock, a Latin professor at
+              Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+              going through the cites of the word in classical literature,
+              discovered the undoubtable source. Lorem Ipsum comes from sections
+              1.10.32 and 1.1
+            </p>
+            </Link>
+            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textCost}>฿ 9200</p>
+            <Grid className={classes.gridFlex}>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-chat"
+                  src="/images/Chat.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+              <Grid item xs lg={6}>
+                <Image
+                  className="img-call"
+                  src="/images/Call.png"
+                  alt=""
+                  width={"130"}
+                  height={"45"}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12} >
+        <Button className={classes.btnMore} variant="contained">ดูมือถือ แท็บเล็ตทั้งหมด <ArrowForwardIcon/> </Button>
+         </Grid>
       </Grid>
     </div>
   );

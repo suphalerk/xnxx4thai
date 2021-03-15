@@ -103,7 +103,7 @@ export default function ComplexGrid() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
-        <Link href="/#">
+        <Link href="/productlist/name/1">
           <p className={classes.more}>
             ดูทั้งหมด
             <ArrowForwardIcon />

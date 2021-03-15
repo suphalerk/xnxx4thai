@@ -8,10 +8,10 @@ import {
 import Layout from "../Layout";
 import Footer from "../Footer";
 import React from "react";
-import Announcemobile from "../Announcemobile";
 import Search2 from "../Search2";
 import Description from "../Description";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import Productlists from "../Productlists";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Product = (props: any) => {
   // A Content
-  const content = props.data.data.content;
+  // const content = props.data.data.content;
 
   const classes = useStyles();
 
@@ -111,7 +111,7 @@ const Product = (props: any) => {
         <div className={classes.root}>
           {/* <Gallery2 data={content} /> */}
           {/* <Productlists data={content} /> */}
-          <Announcemobile />
+          <Productlists/>
           <Grid item xs={12} sm={12} md={12} lg={12}>
             <p className={classes.textresult}>ผลการค้นหายอดนิยม</p>
             <p>Iphone 12 <ArrowForwardIcon className={classes.arrow}/></p>
