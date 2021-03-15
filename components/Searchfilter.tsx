@@ -67,7 +67,7 @@ interface KeywordData {
 
 const keywordTypes: KeywordData[] = [
   { name: "อสังหาริมทรัพย์", data: ["บ้าน", "ที่ดิน"], image: "/images/Real-estate2.png" },
-  { name: "รถยนต์", data: ["รถยนต์", "รถบรรทุก"], image: "/images/car.png" },
+  { name: "รถยนต์", data: ["รถยนต์", "รถบรรทุก"], image: "/images/car2.png" },
   { name: "มอเตอร์ไซค์", data: ["มอเตอร์ไซค์"], image: "/images/Motocycle2.png" },
   { name: "มือถือ แท๊บเล็ต", data: ["มือถือ แท๊บเล็ต", "samsung", "xiaomi", "oppo", "Huawei", "OnePlus", "Vivo"], image: "/images/Mobile-tablet2.png" },
   { name: "คอมพิวเตอร์", data: ["คอมพิวเตอร์"], image: "/images/Computer2.png" },
