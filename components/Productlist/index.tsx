@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Product = (props: any) => {
+const Product = () => {
   // A Content
   // const content = props.data.data.content;
 

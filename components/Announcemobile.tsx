@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { Button, createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
+import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
