@@ -30,7 +30,7 @@ const Home = (props: any) => {
  
     // })
 
-    console.log(data.contents.datas)
+    // console.log(data.contents.datas)
 
     for (const [index, value] of contents.entries()) {
         value.content_title

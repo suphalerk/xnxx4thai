@@ -1,16 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import {
-  Button,
-  createStyles,
-  Grid,
-  Link,
-  Paper,
-  Theme,
-} from "@material-ui/core";
+import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import { Content } from "../interfaces/product";
+import { Content } from '../interfaces/product'
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -28,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
     mobileDetail: {
       width: "217",
       display: "-webkit-box",
-      WebkitLineClamp: 2,
+      WebkitLineClamp: 1,
       WebkitBoxOrient: "vertical",
       overflow: "hidden",
       color: "#222",
@@ -62,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "#213aa3",
-      fontWeight: "bold",
+      fontWeight:'bold',
 
       ["@media (width:375px)"]: {
         marginLeft: "0%",
@@ -81,12 +75,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     textLocation: {
       fontSize: "13px",
-      textAlign: "left",
       color: "#7e7e7e",
+      width: "217",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      overflow: "hidden",
+      textAlign: "left",
       paddingRight: "5px",
       paddingLeft: "5px",
-      marginTop: "0px",
-      marginBottom: "0px",
     },
     imgChat: {
       width: "135px",
@@ -99,68 +96,63 @@ const useStyles = makeStyles((theme: Theme) =>
     gridFlex: {
       display: "flex",
     },
-    arrowPos: {
+        arrowPos: {
       width: "10px",
       Height: "10px",
-      marginTop: "-2px",
+      marginTop: '-2px'
     },
-    textCost: {
+    textCost:{
       textAlign: "left",
       fontSize: "2em",
       color: "#00C900",
-      fontWeight: "bold",
-      paddingLeft: "5px",
-      marginTop: "0px",
+      fontWeight:'bold',
+      paddingLeft: '5px',
+      marginTop:'0px',
     },
-    btnMore: {
+    btnMore:{
       color: "#fff",
-      backgroundColor: "#00C900",
-      paddingLeft: " 40%",
-      paddingRight: " 40%",
-      fontSize: "1.5em",
-      "&:hover": {
-        backgroundColor: "#00C900",
+      backgroundColor:'#00C900',
+      paddingLeft:' 40%',
+      paddingRight:' 40%',
+      fontSize: '1.5em',
+      '&:hover' : {
+        backgroundColor:'#00C900',
       },
       ["@media (max-width:500px)"]: {
-        paddingLeft: "20%",
-        paddingRight: "20%",
-        fontSize: "1em",
+        paddingLeft:'20%',
+      paddingRight:'20%',
+      fontSize: '1em',
       },
     },
-    btnCenter: {
-      textAlign: "center",
-    },
-    textresult: {
-      fontSize: "1.5em",
-      fontWeight: "bold",
-      color: "#213aa3",
-    },
-    arrow: {
-      float: "right",
-    },
+    btnCenter:{
+      textAlign:'center',
+    }
   })
 );
 
+
+ 
+
 export default function MediaCard(props: { contents: Content[] }) {
-  const contents = props.contents;
+  const contents = props.contents
   const classes = useStyles();
-  console.log("data ==> " + contents);
+  console.log(props.contents)
   return (
     <div className={classes.root}>
-      <hr />
-
-      {/* <p className={classes.textHeader}>
-        ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
+      <p className={classes.textHeader}>
+        ประกาศมาใหม่
         <Link href="/productlist/name/1">
           <p className={classes.more}>
             ดูทั้งหมด
             <ArrowForwardIcon />
           </p>
         </Link>
-      </p> */}
+      </p>
+      
       <Grid container spacing={3} className={classes.gridMobile}>
-        {/* {contents.map((item) => (  */}
-        <Grid item xs={12} lg={3} sm={3}>
+       {/* {contents.map((item) => ( */}
+        <Grid item xs={12} lg={3} sm={3}> 
+      
           <Paper className={classes.paper}>
             <Image
               className={classes.imageCategory}
@@ -170,9 +162,11 @@ export default function MediaCard(props: { contents: Content[] }) {
               height={"300"}
             />
             <Link href="/product/name/1">
-              <p className={classes.mobileDetail}></p>
+            <p className={classes.mobileDetail}>
+            
+            </p>
             </Link>
-            <p className={classes.textLocation}>ลาดกระบัง</p>
+            <p className={classes.textLocation}></p>
             <p className={classes.textCost}>฿ </p>
             <Grid className={classes.gridFlex}>
               <Grid item xs lg={6}>
@@ -196,31 +190,9 @@ export default function MediaCard(props: { contents: Content[] }) {
             </Grid>
           </Paper>
         </Grid>
-        {/* ) )}  */}
+ {/* ) )} */}
       </Grid>
-      <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12}>
-        <Button className={classes.btnMore} variant="contained">
-          ดูมือถือ แท็บเล็ตทั้งหมด <ArrowForwardIcon />{" "}
-        </Button>
-      </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={12}>
-        <p className={classes.textresult}>ผลการค้นหายอดนิยม</p>
-        <p>
-          Iphone 12 <ArrowForwardIcon className={classes.arrow} />
-        </p>
-        <p>
-          Iphone xr <ArrowForwardIcon className={classes.arrow} />
-        </p>
-        <p>
-          Ipad <ArrowForwardIcon className={classes.arrow} />
-        </p>
-        <p>
-          Iphone11 pro max <ArrowForwardIcon className={classes.arrow} />
-        </p>
-        <p>
-          Iphone x <ArrowForwardIcon className={classes.arrow} />
-        </p>
-      </Grid>
+      
     </div>
   );
 }

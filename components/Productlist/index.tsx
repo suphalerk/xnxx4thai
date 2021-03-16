@@ -1,7 +1,6 @@
 import {
   Container,
   createStyles,
-  Grid,
   makeStyles,
   Theme,
 } from "@material-ui/core";
@@ -10,8 +9,8 @@ import Footer from "../Footer";
 import React from "react";
 import Search2 from "../Search2";
 import Description from "../Description";
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Productlists from "../Productlists";
+import { Content } from '../../interfaces/product'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -98,9 +97,13 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Product = () => {
+const Product = (props: any) => {
+  
+  const { data } = props.data
+  const contents: Content[] = data.contents
   // A Content
   // const content = props.data.data.content;
+  
 
   const classes = useStyles();
 
@@ -111,15 +114,7 @@ const Product = () => {
         <div className={classes.root}>
           {/* <Gallery2 data={content} /> */}
           {/* <Productlists data={content} /> */}
-          <Productlists/>
-          <Grid item xs={12} sm={12} md={12} lg={12}>
-            <p className={classes.textresult}>ผลการค้นหายอดนิยม</p>
-            <p>Iphone 12 <ArrowForwardIcon className={classes.arrow}/></p>
-            <p>Iphone xr <ArrowForwardIcon className={classes.arrow}/></p>
-            <p>Ipad <ArrowForwardIcon className={classes.arrow}/></p>
-            <p>Iphone11 pro max <ArrowForwardIcon className={classes.arrow}/></p>
-            <p>Iphone x <ArrowForwardIcon className={classes.arrow}/></p>
-          </Grid>
+          <Productlists contents={contents}/>     
           <Description />
         </div>
       </Container>
