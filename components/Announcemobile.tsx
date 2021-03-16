@@ -147,7 +147,7 @@ export default function MediaCard(props: { contents: Content[] }) {
         </Link>
       </p>
       <Grid container spacing={3} className={classes.gridMobile}> 
-      {contents.map((item,index) => {
+      {contents.map((item : any,index) => {
           if (index <=5) return  <></>
           return  <Grid item xs={12} lg={3} sm={3}>
             <Paper className={classes.paper}>
