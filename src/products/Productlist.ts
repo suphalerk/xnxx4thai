@@ -2,7 +2,7 @@ import { GetServerSidePropsContext } from "next"
 import { ParsedUrlQuery } from "querystring"
 import { getContents, getKeywords } from "../../utils/dudey"
 
-const Products = async (context: GetServerSidePropsContext<ParsedUrlQuery>) => {
+const Productlist = async (context: GetServerSidePropsContext<ParsedUrlQuery>) => {
     const page: number = +context.query.page || 1
     const contents = await getContents({ page, pageSize: 10 })
 
@@ -13,4 +13,4 @@ const Products = async (context: GetServerSidePropsContext<ParsedUrlQuery>) => {
     return { props: { data } }
 }
 
-export default Products
+export default Productlist

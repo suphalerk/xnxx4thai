@@ -4,7 +4,7 @@ import { getContents, getKeywords } from "../../utils/dudey"
 
 const Products = async (context: GetServerSidePropsContext<ParsedUrlQuery>) => {
     const page: number = +context.query.page || 1
-    const contents = await getContents({ page, pageSize: 10 })
+    const contents = await getContents({ page, pageSize: 12 })
 
     const keywords = await getKeywords()
 

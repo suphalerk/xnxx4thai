@@ -97,13 +97,13 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const Product = (props: any) => {
+const Productlist = (props: any) => {
   
   const { data } = props.data
-  const contents: Content[] = data.contents
   // A Content
-  // const content = props.data.data.content;
-  
+  const content = props.data.data.content;
+  const contents: Content[] = data.contents
+ console.log(content)
 
   const classes = useStyles();
 
@@ -114,7 +114,7 @@ const Product = (props: any) => {
         <div className={classes.root}>
           {/* <Gallery2 data={content} /> */}
           {/* <Productlists data={content} /> */}
-          <Productlists contents={contents}/>     
+          <Productlists contents={contents} />     
           <Description />
         </div>
       </Container>
@@ -123,4 +123,4 @@ const Product = (props: any) => {
   );
 };
 
-export default Product;
+export default Productlist;

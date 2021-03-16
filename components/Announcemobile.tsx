@@ -139,7 +139,7 @@ export default function MediaCard(props: { contents: Content[] }) {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่
-        <Link href="/productlist/name/1">
+        <Link href="/productlist">
           <p className={classes.more}>
             ดูทั้งหมด
             <ArrowForwardIcon />
@@ -148,7 +148,7 @@ export default function MediaCard(props: { contents: Content[] }) {
       </p>
       <Grid container spacing={3} className={classes.gridMobile}> 
       {contents.map((item : any,index) => {
-          if (index <=5) return  <></>
+          if (index <=7) return  <></>
           return  <Grid item xs={12} lg={3} sm={3}>
             <Paper className={classes.paper}>
             <Image

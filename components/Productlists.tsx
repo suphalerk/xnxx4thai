@@ -1,13 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import {
-  Button,
-  createStyles,
-  Grid,
-  Link,
-  Paper,
-  Theme,
-} from "@material-ui/core";
+import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Content } from "../interfaces/product";
@@ -28,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
     mobileDetail: {
       width: "217",
       display: "-webkit-box",
-      WebkitLineClamp: 2,
+      WebkitLineClamp: 1,
       WebkitBoxOrient: "vertical",
       overflow: "hidden",
       color: "#222",
@@ -39,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: "0px",
       fontSize: "16px",
     },
+
     more: {
       color: "#429EFE",
       width: "fit-content",
@@ -81,12 +75,15 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     textLocation: {
       fontSize: "13px",
-      textAlign: "left",
       color: "#7e7e7e",
+      width: "217",
+      display: "-webkit-box",
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: "vertical",
+      overflow: "hidden",
+      textAlign: "left",
       paddingRight: "5px",
       paddingLeft: "5px",
-      marginTop: "0px",
-      marginBottom: "0px",
     },
     imgChat: {
       width: "135px",
@@ -142,9 +139,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function MediaCard(props: { contents: Content[] }) {
-  const contents = props.contents;
   const classes = useStyles();
-  console.log("data ==> " + contents);
+  console.log(props.contents);
   return (
     <div className={classes.root}>
       <hr />
@@ -159,50 +155,54 @@ export default function MediaCard(props: { contents: Content[] }) {
         </Link>
       </p> */}
       <Grid container spacing={3} className={classes.gridMobile}>
-        {/* {contents.map((item) => (  */}
-        <Grid item xs={12} lg={3} sm={3}>
-          <Paper className={classes.paper}>
-            <Image
-              className={classes.imageCategory}
-              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
-              alt=""
-              width={"450"}
-              height={"300"}
-            />
-            <Link href="/product/name/1">
-              <p className={classes.mobileDetail}></p>
-            </Link>
-            <p className={classes.textLocation}>ลาดกระบัง</p>
-            <p className={classes.textCost}>฿ </p>
-            <Grid className={classes.gridFlex}>
-              <Grid item xs lg={6}>
+        {props.contents.datas.map((item: any) => {
+          return (
+            <Grid item xs={12} lg={3} sm={3}>
+              <Paper className={classes.paper}>
                 <Image
-                  className="img-chat"
-                  src="/images/Chat.png"
+                  className={classes.imageCategory}
+                  src={item.images[0].raw_url}
                   alt=""
-                  width={"130"}
-                  height={"45"}
+                  width={"450"}
+                  height={"300"}
                 />
-              </Grid>
-              <Grid item xs lg={6}>
-                <Image
-                  className="img-call"
-                  src="/images/Call.png"
-                  alt=""
-                  width={"130"}
-                  height={"45"}
-                />
-              </Grid>
+                <Link href="/product/name/1">
+                  <p className={classes.mobileDetail}>{item.content_title}</p>
+                </Link>
+                <p className={classes.textLocation}>
+                  {item.content_description}
+                </p>
+                <p className={classes.textCost}>฿ {item.price}</p>
+                <Grid className={classes.gridFlex}>
+                  <Grid item xs lg={6}>
+                    <Image
+                      className="img-chat"
+                      src="/images/Chat.png"
+                      alt=""
+                      width={"130"}
+                      height={"45"}
+                    />
+                  </Grid>
+                  <Grid item xs lg={6}>
+                    <Image
+                      className="img-call"
+                      src="/images/Call.png"
+                      alt=""
+                      width={"130"}
+                      height={"45"}
+                    />
+                  </Grid>
+                </Grid>
+              </Paper>
             </Grid>
-          </Paper>
-        </Grid>
-        {/* ) )}  */}
+          );
+        })}
       </Grid>
-      <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12}>
+      {/* <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12}>
         <Button className={classes.btnMore} variant="contained">
           ดูมือถือ แท็บเล็ตทั้งหมด <ArrowForwardIcon />{" "}
         </Button>
-      </Grid>
+      </Grid> */}
       <Grid item xs={12} sm={12} md={12} lg={12}>
         <p className={classes.textresult}>ผลการค้นหายอดนิยม</p>
         <p>
