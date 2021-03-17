@@ -1,4 +1,5 @@
 export interface Content {
+    datas: any
     id: number
     content_title: string
     content_url: string

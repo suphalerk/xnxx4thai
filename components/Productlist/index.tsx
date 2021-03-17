@@ -102,7 +102,7 @@ const Productlist = (props: any) => {
   const { data } = props.data
   // A Content
   const content = props.data.data.content;
-  const contents: Content[] = data.contents
+  const contents: Content = data.contents
  console.log(content)
 
   const classes = useStyles();

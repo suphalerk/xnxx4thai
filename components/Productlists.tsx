@@ -138,8 +138,9 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function MediaCard(props: { contents: Content[] }) {
+export default function MediaCard(props: { contents: Content }) {
   const classes = useStyles();
+
   console.log(props.contents);
   return (
     <div className={classes.root}>
