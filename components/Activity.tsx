@@ -63,7 +63,7 @@ export default function AutoGrid() {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         กิจกรรมที่หน้าสนใจ
-        <Link href="/productlist/name/1">
+        <Link href="/productlist">
           <p className={classes.more}>
             ดูทั้งหมด
             <ArrowForwardIcon />

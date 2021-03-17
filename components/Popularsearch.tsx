@@ -117,7 +117,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <Link href="/productlist/name/1">
+            <Link href="/productlist">
               <p className={classes.textMore}>
                 ดูรถยนต์ทั้งหมด
                 <Grid className={classes.arrowPos}>
@@ -137,7 +137,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <Link href="/productlist/name/1">
+            <Link href="/productlist">
               <p className={classes.textMore}>
                 ดูรถยนต์ทั้งหมด
                 <Grid className={classes.arrowPos}>
@@ -157,7 +157,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <Link href="/productlist/name/1">
+            <Link href="/productlist">
               <p className={classes.textMore}>
                 ดูรถยนต์ทั้งหมด
                 <Grid className={classes.arrowPos}>
@@ -177,7 +177,7 @@ export default function FixedContainer() {
             <p className={classes.textCategory}>รถบ้านมือสอง</p>
             <p className={classes.textCategory}>รถกระบะมือสอง</p>
             <p className={classes.textCategory}>รถขนของ</p>
-            <Link href="/productlist/name/1">
+            <Link href="/productlist">
               <p className={classes.textMore}>
                 ดูรถยนต์ทั้งหมด
                 <Grid className={classes.arrowPos}>

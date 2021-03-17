@@ -140,7 +140,7 @@ export default function MediaCard(props: { contents: Content[] }) {
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่
-        <Link href="/productlist/name/1">
+        <Link href="/productlist">
           <p className={classes.more}>
             ดูทั้งหมด
             <ArrowForwardIcon />
