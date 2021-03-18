@@ -3,8 +3,7 @@ import React from "react";
 import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
 import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import { Content } from '../interfaces/product'
-
+import { Content } from "../interfaces/product";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -56,7 +55,7 @@ const useStyles = makeStyles((theme: Theme) =>
     textHeader: {
       fontSize: "1.5em",
       color: "#213aa3",
-      fontWeight:'bold',
+      fontWeight: "bold",
 
       ["@media (width:375px)"]: {
         marginLeft: "0%",
@@ -96,102 +95,97 @@ const useStyles = makeStyles((theme: Theme) =>
     gridFlex: {
       display: "flex",
     },
-        arrowPos: {
+    arrowPos: {
       width: "10px",
       Height: "10px",
-      marginTop: '-2px'
+      marginTop: "-2px",
     },
-    textCost:{
+    textCost: {
       textAlign: "left",
       fontSize: "2em",
       color: "#00C900",
-      fontWeight:'bold',
-      paddingLeft: '5px',
-      marginTop:'0px',
+      fontWeight: "bold",
+      paddingLeft: "5px",
+      marginTop: "0px",
     },
-    btnMore:{
+    btnMore: {
       color: "#fff",
-      backgroundColor:'#00C900',
-      paddingLeft:' 40%',
-      paddingRight:' 40%',
-      fontSize: '1.5em',
-      '&:hover' : {
-        backgroundColor:'#00C900',
+      backgroundColor: "#00C900",
+      paddingLeft: " 40%",
+      paddingRight: " 40%",
+      fontSize: "1.5em",
+      "&:hover": {
+        backgroundColor: "#00C900",
       },
       ["@media (max-width:500px)"]: {
-        paddingLeft:'20%',
-      paddingRight:'20%',
-      fontSize: '1em',
+        paddingLeft: "20%",
+        paddingRight: "20%",
+        fontSize: "1em",
       },
     },
-    btnCenter:{
-      textAlign:'center',
-    }
+    btnCenter: {
+      textAlign: "center",
+    },
   })
 );
 
-
- 
-
-export default function MediaCard(props: { contents: Content[] }) {
+export default function MediaCard(props: { data: any }) {
   const classes = useStyles();
-  console.log(props.contents)
+  console.log(props.data);
   return (
     <div className={classes.root}>
       <p className={classes.textHeader}>
         ประกาศมาใหม่
         <Link href="/productlist">
           <p className={classes.more}>
-            ดูทั้งหมด
+            ดูทั้งหมด 
             <ArrowForwardIcon />
           </p>
         </Link>
       </p>
-      
+
+
+
       <Grid container spacing={3} className={classes.gridMobile}>
-       {/* {contents.map((item) => ( */}
-        <Grid item xs={12} lg={3} sm={3}> 
-      
-          <Paper className={classes.paper}>
-            <Image
-              className={classes.imageCategory}
-              src="/images/aHR0cHM6Ly9zLmlzYW5vb2suY29tL2hpLzAvdWQvMzAxLzE1MDg5NzMvZmluLmpwZw==.jpg"
-              alt=""
-              width={"450"}
-              height={"300"}
-            />
-            <Link href="/product/name/1">
-            <p className={classes.mobileDetail}>
-            
-            </p>
-            </Link>
-            <p className={classes.textLocation}></p>
-            <p className={classes.textCost}>฿ </p>
-            <Grid className={classes.gridFlex}>
-              <Grid item xs lg={6}>
-                <Image
-                  className="img-chat"
-                  src="/images/Chat.png"
-                  alt=""
-                  width={"130"}
-                  height={"45"}
-                />
+        {/* {props.data.datas.map((item : any) => ( */}
+          <Grid item xs={12} lg={3} sm={3}>
+            <Paper className={classes.paper}>
+              <Image
+                className={classes.imageCategory}
+                src={props.data.datas.images[0].raw_url}
+                alt=""
+                width={"450"}
+                height={"300"}
+              />
+              <Link href="/#">
+                <p className={classes.mobileDetail}>{props.data.datas.content_title}</p>
+              </Link>
+              <p className={classes.textLocation}>{props.data.datas.content_description}</p>
+              <p className={classes.textCost}>฿ {props.data.datas.price}</p>
+              <Grid className={classes.gridFlex}>
+                <Grid item xs lg={6}>
+                  <Image
+                    className="img-chat"
+                    src="/images/Chat.png"
+                    alt=""
+                    width={"130"}
+                    height={"45"}
+                  />
+                </Grid>
+                <Grid item xs lg={6}>
+                  <Image
+                    className="img-call"
+                    src="/images/Call.png"
+                    alt=""
+                    width={"130"}
+                    height={"45"}
+                  />
+                </Grid>
               </Grid>
-              <Grid item xs lg={6}>
-                <Image
-                  className="img-call"
-                  src="/images/Call.png"
-                  alt=""
-                  width={"130"}
-                  height={"45"}
-                />
-              </Grid>
-            </Grid>
-          </Paper>
-        </Grid>
- {/* ) )} */}
+            </Paper>
+          </Grid>
+         {/* ))}  */}
       </Grid>
-      
     </div>
   );
 }
