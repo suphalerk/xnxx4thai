@@ -26,14 +26,14 @@ const Home = (props: any) => {
 
     const items = []
 
-    console.log("mobiledata ==>"+content)
+    // console.log("mobiledata ==>"+props.data.data.content)
 
     // useEffect(() => {
     //     router.push('/Product')
  
     // })
 
-    // console.log(data.contents.datas)
+    console.log(data.contents.datas)
 
     for (const [index, value] of contents.entries()) {
         value.content_title
