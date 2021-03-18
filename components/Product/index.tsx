@@ -101,7 +101,7 @@ const Product = (props: any) => {
         <div className={classes.root}>
           <PicList data={content} />
           <ProductDetail data={content} />
-          <Announce contents={contents}/>
+          <Announce data={content}/>
         </div>
        
       </Container>
