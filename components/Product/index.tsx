@@ -4,9 +4,9 @@ import Footer from "../Footer";
 import React from "react";
 import PicList from "../PicList";
 import ProductDetail from "../ProductDetail";
-import Announce from "../Announce";
 import Search2 from "../Search2";
 import { Content } from '../../interfaces/product'
+import Announcemobile from "../Announcemobile";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -87,10 +87,11 @@ const useStyles = makeStyles((theme: Theme) =>
 const Product = (props: any) => {
   const { data } = props.data
   // A Content
-  const content = props.data.data.content;
-  const contents: Content[] = data.contents
+  const content = data.content;
+  const contents: Content[] = data.contents.datas;
   
-
+console.log(contents)
+// console.log(props.data.data.contents)
   const classes = useStyles();
 
 
@@ -101,7 +102,7 @@ const Product = (props: any) => {
         <div className={classes.root}>
           <PicList data={content} />
           <ProductDetail data={content} />
-          <Announce data={content}/>
+          <Announcemobile contents={contents}/>
         </div>
        
       </Container>

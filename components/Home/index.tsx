@@ -22,7 +22,7 @@ const Home = (props: any) => {
     const { data } = props.data
     const contents: Content[] = data.contents.datas
     const keywords: Keyword[] = data.keywords.datas
-    const content = props.data.data.content;
+    // const content = props.data.data.content;
 
     const items = []
 

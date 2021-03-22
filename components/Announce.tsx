@@ -1,9 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import { createStyles, Grid, Link, Paper, Theme } from "@material-ui/core";
-import Image from "next/image";
+import { createStyles, Link, Theme } from "@material-ui/core";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import { Content } from "../interfaces/product";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -145,9 +143,8 @@ export default function MediaCard(props: { data: any }) {
       </p>
 
 
-
-      <Grid container spacing={3} className={classes.gridMobile}>
-        {/* {props.data.datas.map((item : any) => ( */}
+      {/* <Grid container spacing={3} className={classes.gridMobile}>
+        {props.data.datas.map((item : any) => (
           <Grid item xs={12} lg={3} sm={3}>
             <Paper className={classes.paper}>
               <Image
@@ -161,7 +158,7 @@ export default function MediaCard(props: { data: any }) {
                 <p className={classes.mobileDetail}>{props.data.datas.content_title}</p>
               </Link>
               <p className={classes.textLocation}>{props.data.datas.content_description}</p>
-              <p className={classes.textCost}>฿ {props.data.datas.price}</p>
+              <p className={classes.textCost}>฿ {props.data.data.price}</p>
               <Grid className={classes.gridFlex}>
                 <Grid item xs lg={6}>
                   <Image
@@ -184,8 +181,8 @@ export default function MediaCard(props: { data: any }) {
               </Grid>
             </Paper>
           </Grid>
-         {/* ))}  */}
-      </Grid>
+          ))}  
+      </Grid> */}
     </div>
   );
 }
