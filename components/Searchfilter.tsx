@@ -223,7 +223,7 @@ const FullWidthGrid = (props: { keywords: Keyword[] }) => {
         aria-expanded={expanded}
         aria-label="show more"
       >
-        ดูมากขึ้น
+        {expanded == true ? 'ดูน้อยลง' : 'ดูมากขึ้น'}
         <img
           style={{ margin: "-4px 4px", width: "17px", height: "auto" }}
           src="/images/dropdown.png"
