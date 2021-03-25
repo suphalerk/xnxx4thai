@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     search: {
-      padding:'20px',
+      padding:'15px',
       position: "relative",
       borderRadius: theme.shape.borderRadius,
       backgroundColor: "#fff",
