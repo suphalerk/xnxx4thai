@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     search: {
+      padding:'20px',
       position: "relative",
       borderRadius: theme.shape.borderRadius,
       backgroundColor: "#fff",
@@ -66,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     searchIcon: {
       padding: theme.spacing(0, 2),
-      height: "100%",
+      height: "55%",
       position: "absolute",
       pointerEvents: "none",
       display: "flex",
@@ -74,10 +75,10 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: "center",
     },
     inputRoot: {
-      color: "inherit",
+      color: "inherit",      
     },
     inputInput: {
-      padding: "20px 20px 20px 20px",
+      fontSize:'1.5em',
       // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
       transition: theme.transitions.create("width"),
@@ -124,13 +125,14 @@ function searchInput() {
             <Grid item xs>
               <Paper className={classes.paper}>xs</Paper>
             </Grid>
-            <Grid item xs={6} md={6} sm={6} lg={6} style={{marginTop:'5%',}} >
+            <Grid item xs={6} md={6} sm={6} lg={6} style={{marginTop:'6%',}} >
               <div className={classes.search}>
                 <div className={classes.searchIcon}>
                   <SearchIcon />
                 </div>
                 <InputBase
-                  placeholder="คุณกำลังมองาอะไร"
+                  // style={{}}
+                   placeholder="คุณกำลังมองาอะไร"
                   classes={{
                     root: classes.inputRoot,
                     input: classes.inputInput,
