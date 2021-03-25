@@ -1,11 +1,9 @@
 import {
   createStyles,
-  fade,
   Grid,
   InputBase,
   makeStyles,
   Paper,
-  TextField,
   Theme,
 } from "@material-ui/core";
 import React from "react";
