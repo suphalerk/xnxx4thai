@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     Header:{
-      marginBottom:'10px !important',
+      marginBottom:'25px !important',
     },
     gridImg:{
       alignSelf:'center',
