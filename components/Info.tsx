@@ -103,7 +103,7 @@ export default function AutoGrid() {
                 width={20}
                 height={20}
               />
-             <span className={classes.textSpan}>ขั้นตอนง่ายๆ ใครก็ลงขายได้</span>
+             <span className={classes.textSpan}>ขั้นตอนง่าย ใครก็ลงขายได้</span>
             </Typography>
             <Typography className={classes.TextInfo} color={"primary"}>
               <Image
