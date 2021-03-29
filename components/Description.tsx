@@ -25,10 +25,10 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: "14px",
       },
     },
-    Typography: {
+    textDes: {
       color: "#000",
       width: "fit-content",
-      fontSize: "13px",
+      fontSize: "15px",
       textAlign: "left",
       ["@media (width:375px)"]: {
         display: "-webkit-box",
@@ -74,10 +74,8 @@ export default function AutoGrid() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <Typography
-              className={classes.Typography}
-              gutterBottom
-              variant="subtitle1"
+            <p
+            className={classes.textDes}
             >
               โลกออนไลน์ทุกวันนี้มีบทบาทสำคัญในการใช้ชีวิตหลายๆ ด้าน
               เวลาอยากรู้อะไร แค่ค้นหาบนออนไลน์แค่แป๊บเดียวก็ได้คำตอบ
@@ -92,7 +90,7 @@ export default function AutoGrid() {
               อุปกรณ์ไอที ของตกแต่งบ้าน เครื่องใช้ไฟฟ้า พระเครื่อง และอื่น ๆ
               อีกมากมาย เข้ามาพบกับประสบการณ์การซื้อง่าย ขายคล่อง สะดวก
               รวดเร็วได้ที่นี่เลย
-            </Typography>
+            </p>
           </Paper>
         </Grid>
       </Grid>
