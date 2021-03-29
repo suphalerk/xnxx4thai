@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     arrowPos: {
-      width: "10px",
-      Height: "10px",
+      width: "17px",
+      Height: "17px",
       marginTop: "-2px",
     },
   })
@@ -66,7 +66,7 @@ export default function AutoGrid() {
         <Link href="/productlist">
           <p className={classes.more}>
             ดูทั้งหมด
-            <ArrowForwardIcon />
+            <ArrowForwardIcon className={classes.arrowPos} />
           </p>
         </Link>
       </p>

@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Link } from "@material-ui/core";
@@ -53,6 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     Readmore: {
+      
       color: "#429EFE !important",
       width: "max-content",
       ["@media (width:375px)"]: {
@@ -85,14 +85,26 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     arrowPos: {
-      width: "10px",
-      Height: "10px",
-      marginTop: "-2px",
+      width: "17px",
+      height: "17px",
+     
     },
     textmore: {
       color: "#429EFE",
       textDecoration: "0",
+      textAlign: 'center',
+      margin: '-22px'
     },
+    textDes:{
+      fontSize: "13px",
+      color: "#7e7e7e",
+      width: "217",
+      display: "-webkit-box",
+      WebkitLineClamp: 5,
+      WebkitBoxOrient: "vertical",
+      overflow: "hidden",
+      textAlign: "left",
+    }
   })
 );
 
@@ -102,11 +114,11 @@ export default function ComplexGrid() {
   return (
     <div className={classes.root}>
       <p className={classes.textHeader}>
-        ประกาศมาใหม่ ในหมวดมือถือ แท็บเล็ต
+      ข่าวสารน่าสนใจ
         <Link href="/productlist">
           <p className={classes.more}>
             ดูทั้งหมด
-            <ArrowForwardIcon />
+            <ArrowForwardIcon className={classes.arrowPos} />
           </p>
         </Link>
       </p>
@@ -126,25 +138,21 @@ export default function ComplexGrid() {
               <Grid item xs={12} sm container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
-                    <Typography
-                      className={classes.Typography}
-                      gutterBottom
-                      variant="subtitle1"
+                  <p
+                    className={classes.textDes}
                     >
                       Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry
-                    </Typography>
+                    </p>
                   </Grid>
                   <Grid item>
-                    <Typography
-                      className={classes.Readmore}
-                      variant="body2"
-                      style={{ cursor: "pointer" }}
-                    >
+                    
                       <Link href="/#">
+                        {" "}
                         <p className={classes.textmore}>อ่านเพิ่มเติม</p>
                       </Link>
-                    </Typography>
+                   
                   </Grid>
                 </Grid>
               </Grid>
@@ -166,27 +174,22 @@ export default function ComplexGrid() {
               <Grid item xs={12} sm container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
-                    <Typography
-                      className={classes.Typography}
-                      gutterBottom
-                      variant="subtitle1"
+                    <p
+                    className={classes.textDes}
                     >
                       Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry
-                    </Typography>
+                    </p>
                   </Grid>
                   <Grid item>
-                    <Typography
-                      className={classes.Readmore}
-                      variant="body2"
-                      style={{ cursor: "pointer" }}
-                    >
-                      <Link href="/#">
-                        {" "}
-                        <p className={classes.textmore}>อ่านเพิ่มเติม</p>
-                      </Link>
-                    </Typography>
-                  </Grid>
+                    
+                    <Link href="/#">
+                      {" "}
+                      <p className={classes.textmore}>อ่านเพิ่มเติม</p>
+                    </Link>
+                 
+                </Grid>
                 </Grid>
               </Grid>
             </Grid>
@@ -207,26 +210,21 @@ export default function ComplexGrid() {
               <Grid item xs={12} sm container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
-                    <Typography
-                      className={classes.Typography}
-                      gutterBottom
-                      variant="subtitle1"
+                  <p
+                    className={classes.textDes}
                     >
                       Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry
-                    </Typography>
+                    </p>
                   </Grid>
                   <Grid item>
-                    <Typography
-                      className={classes.Readmore}
-                      variant="body2"
-                      style={{ cursor: "pointer" }}
-                    >
+                    
                       <Link href="/#">
                         {" "}
                         <p className={classes.textmore}>อ่านเพิ่มเติม</p>
                       </Link>
-                    </Typography>
+                   
                   </Grid>
                 </Grid>
               </Grid>

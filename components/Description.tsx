@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#000",
       width: "fit-content",
       fontSize: "13px",
+      textAlign:'left',
       ["@media (width:375px)"]: {
         
         display:'-webkit-box',
