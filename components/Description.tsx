@@ -4,7 +4,6 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { Typography } from "@material-ui/core";
 
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -14,36 +13,34 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      backgroundColor:'#fff',
-      boxShadow:'none',
+      backgroundColor: "#fff",
+      boxShadow: "none",
     },
     textHeader: {
       fontSize: "1.5em",
       color: "#213aa3",
-      fontWeight:'bold',
-      
+      fontWeight: "bold",
+
       ["@media (width:375px)"]: {
-        fontSize:'14px',
+        fontSize: "14px",
       },
     },
     Typography: {
       color: "#000",
       width: "fit-content",
       fontSize: "13px",
-      textAlign:'left',
+      textAlign: "left",
       ["@media (width:375px)"]: {
-        
-        display:'-webkit-box',
-        WebkitLineClamp:'3',
-        WebkitBoxOrient:'vertical',
-        overflow:'hidden',
+        display: "-webkit-box",
+        WebkitLineClamp: "3",
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
       },
       ["@media (max-width:500px)"]: {
-        
-        display:'-webkit-box',
-        WebkitLineClamp:'3',
-        WebkitBoxOrient:'vertical',
-        overflow:'hidden',
+        display: "-webkit-box",
+        WebkitLineClamp: "3",
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
       },
     },
     more: {
@@ -51,23 +48,20 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "fit-content",
       fontSize: "13px",
       float: "right",
-      margin:'0px',
-      display: 'flex',
+      margin: "0px",
+      display: "flex",
       ["@media (width:375px)"]: {
-        marginTop:'0px',
-        
+        marginTop: "0px",
       },
       ["@media (max-width:500px)"]: {
-        marginTop:'0px',
-        
+        marginTop: "0px",
       },
     },
     arrowPos: {
       width: "10px",
       Height: "10px",
-      marginTop: '-3px'
+      marginTop: "-3px",
     },
-    
   })
 );
 
@@ -76,11 +70,7 @@ export default function AutoGrid() {
 
   return (
     <div className={classes.root}>
-      <p className={classes.textHeader}>
-        ทำไมต้องซื้อของกับ Kaideewa
-        
-      
-      </p>
+      <p className={classes.textHeader}>ทำไมต้องซื้อของกับ Kaideewa</p>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
@@ -89,23 +79,19 @@ export default function AutoGrid() {
               gutterBottom
               variant="subtitle1"
             >
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular
-              during the Renaissance. The first line of Lorem Ipsum, "Lorem
-              ipsum dolor sit amet..", comes from a line in section 1.10.32. The
-              standard chunk of Lorem Ipsum used since the 1500s is reproduced
-              below for those interested. Sections 1.10.32 and 1.10.33 from "de
-              Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-              exact original form, accompanied by English versions from the 1914
-              translation by H. Rackham.
+              โลกออนไลน์ทุกวันนี้มีบทบาทสำคัญในการใช้ชีวิตหลายๆ ด้าน
+              เวลาอยากรู้อะไร แค่ค้นหาบนออนไลน์แค่แป๊บเดียวก็ได้คำตอบ
+              การซื้อขายสินค้าก็เช่นกัน ไม่ว่าเราจะอยากได้สินค้าประเภทไหน
+              ก็สามารถจับจองเป็นเจ้าของได้ในไม่กี่ขั้นตอน
+              ผู้ขายเองก็สามารถเข้าถึงลูกค้าจำนวนมากขึ้น
+              ไม่ว่าเราหรือลูกค้าจะอยู่ที่ไหน
+              ก็ซื้อขายสินค้ากันได้รวดเร็วทันใจเหมือนอยู่ใกล้แค่เอื้อม KaideeWa
+              คือแพลตฟอร์มที่คุณสามารถซื้อขายออนไลน์ได้อย่างใจ
+              มีหมวดหมู่สินค้าทั้งมือหนึ่งหรือมือสองมากกว่า 30
+              หมวดหมู่ให้เลือกซื้อและลงขาย ไม่ว่าจะเป็นเสื้อผ้า รองเท้า กระเป๋า
+              อุปกรณ์ไอที ของตกแต่งบ้าน เครื่องใช้ไฟฟ้า พระเครื่อง และอื่น ๆ
+              อีกมากมาย เข้ามาพบกับประสบการณ์การซื้อง่าย ขายคล่อง สะดวก
+              รวดเร็วได้ที่นี่เลย
             </Typography>
           </Paper>
         </Grid>

@@ -26,18 +26,16 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#fff",
 
       ["@media (width:375px)"]: {
-        
-        display:'-webkit-box',
-        WebkitLineClamp:'3',
-        WebkitBoxOrient:'vertical',
-        overflow:'hidden',
+        display: "-webkit-box",
+        WebkitLineClamp: "3",
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
       },
       ["@media (max-width:500px)"]: {
-        
-        display:'-webkit-box',
-        WebkitLineClamp:'3',
-        WebkitBoxOrient:'vertical',
-        overflow:'hidden',
+        display: "-webkit-box",
+        WebkitLineClamp: "3",
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
       },
     },
     logo1: {
@@ -45,9 +43,9 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: "5%",
       },
     },
-    centerlogo:{
-      alignSelf:'center'
-    }
+    centerlogo: {
+      alignSelf: "center",
+    },
   })
 );
 
@@ -61,16 +59,10 @@ export default function AutoGrid() {
         <Grid item xs={9}>
           <Paper className={classes.paper}>
             <p className={classes.p}>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-              Malorum"
+              เกี่ยวกับเรา | ติดต่อเรา | ติดต่อลงโฆษณา |
+              นโยบายความเป็นส่วนตัว | ข้อกำหนดและเงื่อนไขการใช้งาน
             </p>
+            <p className={classes.p}>© 2021 KAIDEEWA.COM</p>
           </Paper>
         </Grid>
         <Grid item xs={3} className={classes.centerlogo}>
