@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import { Typography } from "@material-ui/core";
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(2),
+      padding: '0px',
       textAlign: "center",
       color: theme.palette.text.secondary,
       backgroundColor: "#fff",
