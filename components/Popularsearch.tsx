@@ -63,6 +63,12 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     arrow: {
+
+        width: "17px",
+        height: "17px",
+        marginTop:'5px',
+       
+     
       ["@media (max-width:500px)"]: {
         width: "10px",
         height: "10px",
