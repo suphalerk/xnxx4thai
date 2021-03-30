@@ -173,7 +173,7 @@ export default function MediaCard(props: { contents: Content }) {
                 <p className={classes.textLocation}>
                   {item.content_description}
                 </p>
-                <p className={classes.textCost}>฿ {item.price}</p>
+                <p className={classes.textCost} >฿ {Intl.NumberFormat('th-TH', {minimumFractionDigits: 0}).format(item.price)}</p>
                 <Grid className={classes.gridFlex}>
                   <Grid item xs lg={6}>
                     <Image
