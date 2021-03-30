@@ -66,13 +66,18 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     searchIcon: {
-      padding: theme.spacing(0, 2),
+      padding: '13px 16px',
       height: "60%",
-      position: "absolute",
+      position: "initial",
       pointerEvents: "none",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      float:'right',
+      ["@media (max-width: 900px)"]: {
+        display:'none',
+        
+      },
     },
     inputRoot: {
       color: "inherit",      
@@ -85,6 +90,11 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100%",
       [theme.breakpoints.up("md")]: {
         width: "20ch",
+      },
+      ["@media (max-width:500px)"]: {
+        fontSize:'15px',
+        paddingLeft:'0px'
+        
       },
     },
     
@@ -127,9 +137,7 @@ function searchInput() {
             </Grid>
             <Grid item xs={6} md={6} sm={6} lg={6} style={{marginTop:'6%',}} >
               <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
-                </div>
+                
                 <InputBase
                   // style={{}}
                    placeholder="คุณกำลังมองาอะไร"
@@ -138,7 +146,9 @@ function searchInput() {
                     input: classes.inputInput,
                   }}
                   inputProps={{ "aria-label": "search" }}
-                />
+                /><div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
               </div>
             </Grid>
             <Grid item xs>
