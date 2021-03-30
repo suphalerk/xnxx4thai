@@ -88,6 +88,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     ptext: {
       color: "#d7dde1",
+      height: '31px',
     },
     gridMobile:{
       display: 'flex',
@@ -230,7 +231,7 @@ export default function AutoGrid() {
               </p>
             </Paper>
             <Paper className={classes.textHeader2}>
-              <p className={classes.ptext}>xxxxxx</p>
+              <p className={classes.ptext}></p>
             </Paper>
           </Grid>
         </Grid>
