@@ -5,6 +5,7 @@ import Image from "next/image";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { Content } from '../interfaces/product'
 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -164,7 +165,8 @@ export default function MediaCard(props: { contents: Content[] }) {
             </p>
             </Link>
             <p className={classes.textLocation}>{item.content_description}</p>
-            <p className={classes.textCost}>฿ {item.price}</p>
+            <p className={classes.textCost} >฿ {Intl.NumberFormat('th-TH', {minimumFractionDigits: 0}).format(item.price)}</p>
+            
             <Grid className={classes.gridFlex}>
               <Grid item xs lg={6}>
                 <Image
