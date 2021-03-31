@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: '11px',
+      padding: '17px 11px 11px 11px',
       color: theme.palette.text.secondary,
       backgroundColor: "#fff",
       boxShadow: "none",
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlignLast: "left",
       ["@media (max-width:800px)"]: {
         textAlignLast: "right",
-        padding: '11px',
+        padding: '18px 5px 0px 0px',
       },
     },
     paper5: {
