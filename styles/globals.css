@@ -61,6 +61,10 @@ hr {
   margin-right: 1em !important;
 
 }
+.MuiGridListTile-root{
+  height: 325px !important;
+}
+
 @media only screen and (max-width: 800px){
   .MuiOutlinedInput-root:hover{
   border-color: rgb(146 146 146) !important;
