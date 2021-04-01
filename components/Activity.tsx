@@ -56,10 +56,12 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+
 export default function AutoGrid() {
   const classes = useStyles();
 
   return (
+    
     <div className={classes.root}>
       <p className={classes.textHeader}>
         กิจกรรมที่หน้าสนใจ
