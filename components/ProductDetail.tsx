@@ -217,7 +217,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: "0px",
       backgroundColor: "#fff",
       boxShadow: "none",
-      padding: '10px',
+      padding: '5px',
 
     },
     favIcon: {
@@ -383,24 +383,6 @@ export default function FullWidthGrid(props: { data: any }) {
                   </p>
                 </Paper>
               </Grid> */}
-              <Image
-                  src="/images/Mobile_OK.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
-                <Image
-                  src="/images/Facebook.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
-                <Image
-                  src="/images/Mail_OK.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
             </Paper>
 
             <Paper className={classes.paper8}>
@@ -418,12 +400,15 @@ export default function FullWidthGrid(props: { data: any }) {
                   width={"20"}
                   height={"20"}
                 />
+                </Paper>
+                <Paper className={classes.paperx3}>
                 <Image
                   src="/images/Facebook.png"
                   alt=""
                   width={"20"}
                   height={"20"}
-                />
+                /></Paper>
+                 <Paper className={classes.paperx3}>
                 <Image
                   src="/images/Mail_OK.png"
                   alt=""
