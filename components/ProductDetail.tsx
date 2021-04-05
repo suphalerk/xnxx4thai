@@ -229,7 +229,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "3px",
     },
     favimg: {
-      padding: '3px',
+      padding: "3px",
       backgroundColor: "#fff",
       boxShadow: "none",
     },
@@ -392,7 +392,7 @@ export default function FullWidthGrid(props: { data: any }) {
                   เป็นสมาชิกแล้ว 6 เดือน{" "}
                 </span>
               </p>
-             
+
               <Grid item xs={12} md={12}>
                 <Paper className={classes.paperx3}>
                   <p
@@ -404,27 +404,35 @@ export default function FullWidthGrid(props: { data: any }) {
                       เป็นสมาชิกผ่านช่องทาง{" "}
                     </span>
                   </p>
-                  <Paper className={classes.favimg}> <Image
-                    src="/images/Mobile_OK.png"
-                    alt=""
-                    width={"20"}
-                    height={"20"}
-                  /></Paper>
-                 
-                  <Paper className={classes.favimg}> <Image
-                    src="/images/Facebook.png"
-                    alt=""
-                    width={"20"}
-                    height={"20"}
-                  /></Paper>
-                 
-                  <Paper className={classes.favimg}> <Image
-                    src="/images/Mail_OK.png"
-                    alt=""
-                    width={"20"}
-                    height={"20"}
-                  /></Paper>
-                 
+                  <Paper className={classes.favimg}>
+                    {" "}
+                    <Image
+                      src="/images/Mobile_OK.png"
+                      alt=""
+                      width={"20"}
+                      height={"20"}
+                    />
+                  </Paper>
+
+                  <Paper className={classes.favimg}>
+                    {" "}
+                    <Image
+                      src="/images/Facebook.png"
+                      alt=""
+                      width={"20"}
+                      height={"20"}
+                    />
+                  </Paper>
+
+                  <Paper className={classes.favimg}>
+                    {" "}
+                    <Image
+                      src="/images/Mail_OK.png"
+                      alt=""
+                      width={"20"}
+                      height={"20"}
+                    />
+                  </Paper>
                 </Paper>
               </Grid>
             </Paper>
@@ -486,8 +494,13 @@ export default function FullWidthGrid(props: { data: any }) {
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>
-                  {" "}
-                  {props.data.datas.created_date.substring(0, 10)}
+                  {/* {props.data.datas.created_date.substring(0, 10)} */}
+                  
+                  {new Intl.DateTimeFormat('th-GB', { 
+                month: 'long', 
+                day: '2-digit',
+                year: 'numeric', 
+            }).format(new Date(props.data.datas.created_date))}
                 </p>
               </Paper>
             </Grid>
