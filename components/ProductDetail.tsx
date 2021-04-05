@@ -212,6 +212,14 @@ const useStyles = makeStyles((theme: Theme) =>
       boxShadow: "none",
       color: "#868686",
     },
+    paperx3: {
+      display: "flex",
+      marginTop: "0px",
+      backgroundColor: "#fff",
+      boxShadow: "none",
+      padding: '10px',
+
+    },
     favIcon: {
       fill: "#429EFE",
     },
@@ -221,6 +229,10 @@ const useStyles = makeStyles((theme: Theme) =>
     textsell: {
       padding: "3px",
     },
+    favimg:{
+      display:'inline-flex'
+    }
+
   })
 );
 
@@ -371,15 +383,7 @@ export default function FullWidthGrid(props: { data: any }) {
                   </p>
                 </Paper>
               </Grid> */}
-            </Paper>
-
-            <Paper className={classes.paper8}>
-              <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
-              <p className={classes.productDetail3}>
-                เป็นสมาชิกผ่านช่องทาง
-
-                
-              </p><Image
+              <Image
                   src="/images/Mobile_OK.png"
                   alt=""
                   width={"20"}
@@ -397,6 +401,36 @@ export default function FullWidthGrid(props: { data: any }) {
                   width={"20"}
                   height={"20"}
                 />
+            </Paper>
+
+            <Paper className={classes.paper8}>
+              <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
+             <Grid item lg={6} className={classes.favimg}>
+             <span className={classes.productDetail3}>
+                เป็นสมาชิกผ่านช่องทาง
+              </span>
+             </Grid>
+             <Grid item lg={6} className={classes.favimg}>
+               <Paper className={classes.paperx3}>
+             <Image
+                  src="/images/Mobile_OK.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                />
+                <Image
+                  src="/images/Facebook.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                />
+                <Image
+                  src="/images/Mail_OK.png"
+                  alt=""
+                  width={"20"}
+                  height={"20"}
+                /></Paper>
+               </Grid>
             </Paper>
             <Grid className={classes.gridChat}>
               <Grid item xs={6} md={6} lg={12}>
