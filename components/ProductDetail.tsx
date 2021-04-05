@@ -213,12 +213,11 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#868686",
     },
     paperx3: {
-      display: "flex",
-      marginTop: "0px",
-      backgroundColor: "#fff",
+      textAlign: "left",
+      color: "#222",
       boxShadow: "none",
-      padding: '5px',
-
+      backgroundColor: "#fff",
+      display: "flex",
     },
     favIcon: {
       fill: "#429EFE",
@@ -229,10 +228,11 @@ const useStyles = makeStyles((theme: Theme) =>
     textsell: {
       padding: "3px",
     },
-    favimg:{
-      display:'inline-flex'
-    }
-
+    favimg: {
+      padding: '3px',
+      backgroundColor: "#fff",
+      boxShadow: "none",
+    },
   })
 );
 
@@ -386,36 +386,47 @@ export default function FullWidthGrid(props: { data: any }) {
             </Paper>
 
             <Paper className={classes.paper8}>
-              <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
-             <Grid item lg={6} className={classes.favimg}>
-             <span className={classes.productDetail3}>
-                เป็นสมาชิกผ่านช่องทาง
-              </span>
-             </Grid>
-             <Grid item lg={6} className={classes.favimg}>
-               <Paper className={classes.paperx3}>
-             <Image
-                  src="/images/Mobile_OK.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                />
-                </Paper>
+              <p className={classes.productDetail3} style={{ display: "flex" }}>
+                <span className={classes.textsell}>
+                  {" "}
+                  เป็นสมาชิกแล้ว 6 เดือน{" "}
+                </span>
+              </p>
+             
+              <Grid item xs={12} md={12}>
                 <Paper className={classes.paperx3}>
-                <Image
-                  src="/images/Facebook.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                /></Paper>
-                 <Paper className={classes.paperx3}>
-                <Image
-                  src="/images/Mail_OK.png"
-                  alt=""
-                  width={"20"}
-                  height={"20"}
-                /></Paper>
-               </Grid>
+                  <p
+                    className={classes.productDetail3}
+                    style={{ display: "flex" }}
+                  >
+                    <span className={classes.textsell}>
+                      {" "}
+                      เป็นสมาชิกผ่านช่องทาง{" "}
+                    </span>
+                  </p>
+                  <Paper className={classes.favimg}> <Image
+                    src="/images/Mobile_OK.png"
+                    alt=""
+                    width={"20"}
+                    height={"20"}
+                  /></Paper>
+                 
+                  <Paper className={classes.favimg}> <Image
+                    src="/images/Facebook.png"
+                    alt=""
+                    width={"20"}
+                    height={"20"}
+                  /></Paper>
+                 
+                  <Paper className={classes.favimg}> <Image
+                    src="/images/Mail_OK.png"
+                    alt=""
+                    width={"20"}
+                    height={"20"}
+                  /></Paper>
+                 
+                </Paper>
+              </Grid>
             </Paper>
             <Grid className={classes.gridChat}>
               <Grid item xs={6} md={6} lg={12}>
