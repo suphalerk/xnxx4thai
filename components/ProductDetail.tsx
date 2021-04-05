@@ -138,8 +138,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     btnActivate: {
       backgroundColor: "rgb(0 0 0 / 12%) !important",
-      padding: '6px 6px',
-      alignSelf:'center',
+      padding: "6px 6px",
+      alignSelf: "center",
     },
     textActivat: {
       color: "#00C900",
@@ -163,9 +163,9 @@ const useStyles = makeStyles((theme: Theme) =>
         marginTop: "0px",
       },
     },
-    gridDis:{
+    gridDis: {
       ["@media (max-width:1265px)"]: {
-        display:'none'
+        display: "none",
       },
     },
     Iconsize: {
@@ -190,15 +190,12 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: "10px",
     },
     gridChat: {
-     
       ["@media (max-width:1265px)"]: {
         display: "inline-flex",
       },
-
     },
   })
 );
-
 
 export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
@@ -221,7 +218,7 @@ export default function FullWidthGrid(props: { data: any }) {
           </Paper>
         </Grid>
         <Grid className={classes.gridDis} item xs={12} sm={6} lg={4}>
-{/*           
+          {/*           
           <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
@@ -231,7 +228,7 @@ export default function FullWidthGrid(props: { data: any }) {
           </Paper> */}
         </Grid>
         <Grid item xs={12} sm={6} lg={4}>
-        <Paper className={classes.paper}>
+          <Paper className={classes.paper}>
             <p className={classes.textTag}>
               {" "}
               {props.data.datas.scrape_keyword.keyword} |{" "}
@@ -243,19 +240,19 @@ export default function FullWidthGrid(props: { data: any }) {
             <p className={classes.textPrice2}>
               ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
             </p>
-            <Grid lg={6} className={classes.gridPos}>
-              <Paper className={classes.paper6}>
+            {/* <Grid lg={6} className={classes.gridPos}>
+           
                 <Image
                   src="/images/Addfavorite.png"
                   alt=""
                   width={"150"}
                   height={"30"}
                 />
-              </Paper>
+             
             </Grid>
 
             <Grid lg={6} className={classes.gridPos}>
-              <Paper className={classes.paper6}>
+             
                 <Image
                   src="/images/share.png"
                   alt=""
@@ -263,9 +260,21 @@ export default function FullWidthGrid(props: { data: any }) {
                   height={"20"}
                 />
                 <span className={classes.share}> แชร์ </span>
-              </Paper>
-            </Grid>
+             
+            </Grid> */}
           </Paper>
+          <Grid item lg={6} className={classes.gridPos}>
+            <Image
+              src="/images/Addfavorite.png"
+              alt=""
+              width={"150"}
+              height={"30"}
+            />
+          </Grid>
+          <Grid item lg={6} className={classes.gridPos}>
+            <Image src="/images/share.png" alt="" width={"20"} height={"20"} />
+            <span className={classes.share}> แชร์ </span>
+          </Grid>
           {/* <Paper className={classes.paper5}>
             <TableContainer component={Paper}>
               <Table className={classes.table} aria-label="simple table">
@@ -415,7 +424,7 @@ export default function FullWidthGrid(props: { data: any }) {
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>
                   {" "}
-                  {props.data.datas.created_date}
+                  {props.data.datas.created_date.substring(0,10)}
                 </p>
               </Paper>
             </Grid>
