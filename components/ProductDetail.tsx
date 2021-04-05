@@ -4,6 +4,9 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Image from "next/image";
 
+import { Button } from "@material-ui/core";
+import { CalendarToday, FavoriteBorder } from "@material-ui/icons";
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -132,6 +135,7 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: "right",
       fontSize: "15px",
       color: "#96A5BA",
+      marginLeft: "10px",
     },
     productImg: {
       padding: "20px !important",
@@ -193,6 +197,29 @@ const useStyles = makeStyles((theme: Theme) =>
       ["@media (max-width:1265px)"]: {
         display: "inline-flex",
       },
+    },
+    paperx: {
+      display: "flex",
+      marginTop: "0px",
+      backgroundColor: "#fff",
+      boxShadow: "none",
+      color: "#868686",
+    },
+    paperx2: {
+      display: "flex",
+      marginTop: "0px",
+      backgroundColor: "#fff",
+      boxShadow: "none",
+      color: "#868686",
+    },
+    favIcon: {
+      fill: "#429EFE",
+    },
+    btnFav: {
+      color: "#429EFE",
+    },
+    textsell: {
+      padding: "3px",
     },
   })
 );
@@ -263,17 +290,24 @@ export default function FullWidthGrid(props: { data: any }) {
              
             </Grid> */}
           </Paper>
-          <Grid item lg={6} className={classes.gridPos}>
-            <Image
-              src="/images/Addfavorite.png"
-              alt=""
-              width={"150"}
-              height={"30"}
-            />
+          <Grid item lg={7} className={classes.gridPos}>
+            <Paper className={classes.paperx}>
+              <Button className={classes.btnFav} variant="contained">
+                <FavoriteBorder className={classes.favIcon} />
+                เพิ่มเป็นรายการโปรด
+              </Button>
+            </Paper>
           </Grid>
-          <Grid item lg={6} className={classes.gridPos}>
-            <Image src="/images/share.png" alt="" width={"20"} height={"20"} />
-            <span className={classes.share}> แชร์ </span>
+          <Grid item lg={5} className={classes.gridPos}>
+            <Paper className={classes.paperx2}>
+              <Image
+                src="/images/share.png"
+                alt=""
+                width={"20"}
+                height={"20"}
+              />
+              <span className={classes.share}> แชร์ </span>
+            </Paper>
           </Grid>
           {/* <Paper className={classes.paper5}>
             <TableContainer component={Paper}>
@@ -343,7 +377,9 @@ export default function FullWidthGrid(props: { data: any }) {
               <p className={classes.productDetail3}>เป็นสมาชิกแล้ว 6 เดือน</p>
               <p className={classes.productDetail3}>
                 เป็นสมาชิกผ่านช่องทาง
-                <Image
+
+                
+              </p><Image
                   src="/images/Mobile_OK.png"
                   alt=""
                   width={"20"}
@@ -361,7 +397,6 @@ export default function FullWidthGrid(props: { data: any }) {
                   width={"20"}
                   height={"20"}
                 />
-              </p>
             </Paper>
             <Grid className={classes.gridChat}>
               <Grid item xs={6} md={6} lg={12}>
@@ -409,14 +444,12 @@ export default function FullWidthGrid(props: { data: any }) {
           <Grid container spacing={3}>
             <Grid item xs={6} md={6}>
               <Paper className={classes.paper4}>
-                <p className={classes.productDetail3}>
-                  <Image
-                    src="/images/Date.png"
-                    alt=""
-                    width={"15"}
-                    height={"15"}
-                  />
-                  ลงขายเมื่อ
+                <p
+                  className={classes.productDetail3}
+                  style={{ display: "flex" }}
+                >
+                  <CalendarToday />
+                  <span className={classes.textsell}> ลงขายเมื่อ </span>
                 </p>
               </Paper>
             </Grid>
@@ -424,7 +457,7 @@ export default function FullWidthGrid(props: { data: any }) {
               <Paper className={classes.paper4}>
                 <p className={classes.productDetail2}>
                   {" "}
-                  {props.data.datas.created_date.substring(0,10)}
+                  {props.data.datas.created_date.substring(0, 10)}
                 </p>
               </Paper>
             </Grid>
