@@ -238,7 +238,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function FullWidthGrid(props: { data: any }) {
   const classes = useStyles();
-  // console.log(props);
+  console.log('xxx ==>'+JSON.stringify(props))
 
   return (
     <div className={classes.root}>
