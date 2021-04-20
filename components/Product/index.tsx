@@ -91,7 +91,7 @@ const Product = (props: any) => {
   const contents: Content[] = data.contents.datas;
   
 // console.log(contents)
-// console.log(props.data.data.contents)
+ console.log(props.data.data.content)
   const classes = useStyles();
 
 

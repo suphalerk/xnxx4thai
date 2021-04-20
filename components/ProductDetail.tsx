@@ -246,8 +246,8 @@ export default function FullWidthGrid(props: { data: any }) {
         <Grid item xs={12} sm={6} lg={4}>
           <Paper className={classes.paper}>
             <p className={classes.productTitle}>
-             
-              {props.data.datas.content_title}
+              {" "}
+              {props.data.datas.content_title}{" "}
             </p>
 
             <p className={classes.spanText}> กิจกรรมที่หน้าสนใจ </p>
@@ -275,7 +275,8 @@ export default function FullWidthGrid(props: { data: any }) {
             </p>
           </Paper>
           <Paper className={classes.paper}>
-            <p className={classes.textPrice}>฿ {props.data.datas.price}</p>
+            {/* <p className={classes.textPrice}>฿ {props.data.datas.price}</p> */}
+            <p className={classes.textPrice} >฿ {Intl.NumberFormat('th-TH', {minimumFractionDigits: 0}).format(props.data.datas.price)}</p>
             <p className={classes.textPrice2}>
               ราคารวมมูลค่าของแถมแล้ว (ถ้ามี)
             </p>
@@ -388,7 +389,8 @@ export default function FullWidthGrid(props: { data: any }) {
             <Paper className={classes.paper8}>
               <p className={classes.productDetail3} style={{ display: "flex" }}>
                 <span className={classes.textsell}>
-                  เป็นสมาชิกแล้ว 6 เดือน
+                  {" "}
+                  เป็นสมาชิกแล้ว 6 เดือน{" "}
                 </span>
               </p>
 
