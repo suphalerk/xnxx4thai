@@ -134,8 +134,10 @@ const useStyles = makeStyles((theme: Theme) =>
  
 
 export default function MediaCard(props: { contents: Content[] }) {
-  const contents = props.contents
+  // const contents = props.contents
   const classes = useStyles();
+  // console.log('img'+JSON.stringify(props.contents))
+
   return (
     <div className={classes.root}>
       <p className={classes.textHeader}>
@@ -148,7 +150,7 @@ export default function MediaCard(props: { contents: Content[] }) {
         </Link>
       </p>
       <Grid container spacing={3} className={classes.gridMobile}> 
-      {contents.map((item : any,index) => {
+      {props.contents.map((item : any,index) => {
           if (index <=7) return  <></>
           return  <Grid item xs={12} lg={3} sm={3}>
             <Paper className={classes.paper}>
