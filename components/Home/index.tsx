@@ -22,18 +22,17 @@ const Home = (props: any) => {
     const { data } = props.data
     const contents: Content[] = data.contents.datas
     const keywords: Keyword[] = data.keywords.datas
-    const content = data.content;
+    // const content = data.content;
 
     const items = []
 
-    console.log("mobiledata ==>"+ content)
 
     // useEffect(() => {
     //     router.push('/Product')
  
     // })
 
-    // console.log(data.contents.datas)
+    console.log(data.contents.datas)
 
     for (const [index, value] of contents.entries()) {
         value.content_title
