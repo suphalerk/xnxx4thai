@@ -167,7 +167,7 @@ export default function MediaCard(props: { contents: Content }) {
                   width={"450"}
                   height={"300"}
                 />
-                <Link href="/product/name/1">
+                <Link href={`/product/name/${item.id}`}>
                   <p className={classes.mobileDetail}>{item.content_title}</p>
                 </Link>
                 <p className={classes.textLocation}>
