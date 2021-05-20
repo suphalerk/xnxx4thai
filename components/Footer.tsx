@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      backgroundColor: "#00CE00",
+      backgroundColor: "#010048",
 
       ["@media (width:375px)"]: {
         marginTop: "5%",
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
       textAlign: "center",
       color: theme.palette.text.secondary,
-      backgroundColor: "#00CE00 !important",
+      backgroundColor: "#010048 !important",
       boxShadow: "none",
     },
     p: {
