@@ -97,7 +97,7 @@ const Product = (props: any) => {
 
   return (
     <Layout title="Product | KaideeWa.com">
-      <Search2 />
+      {/* <Search2 /> */}
       <Container maxWidth="lg" className="container">
         <div className={classes.root}>
           <PicList data={content} />
