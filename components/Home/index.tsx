@@ -6,7 +6,7 @@ import Announcemobile from '../Announcemobile'
 
 // import React, { useEffect } from 'react'
 
-import Description from '../Description'
+
 import Footer from '../Footer'
 import React from 'react'
 
@@ -50,7 +50,6 @@ const Home = (props: any) => {
                
                 <Announcemobile contents={contents}/>
                 
-                <Description/>
                 
             </Container>
             <Footer/>

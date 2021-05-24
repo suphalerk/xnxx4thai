@@ -4,9 +4,9 @@ import Footer from "../Footer";
 import React from "react";
 import PicList from "../PicList";
 import ProductDetail from "../ProductDetail";
-import Search2 from "../Search2";
 import { Content } from '../../interfaces/product'
 import Announcemobile from "../Announcemobile";
+import Category from "../Category";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -97,7 +97,7 @@ const Product = (props: any) => {
 
   return (
     <Layout title="Product | KaideeWa.com">
-      {/* <Search2 /> */}
+      <Category/>
       <Container maxWidth="lg" className="container">
         <div className={classes.root}>
           <PicList data={content} />
