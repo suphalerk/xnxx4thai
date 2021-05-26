@@ -66,6 +66,9 @@ hr {
 .MuiGridListTile-root{
   height: 325px !important;
 }
+.MuiToolbar-root{
+  background-color: #001aab !important;
+}
 
 @media only screen and (max-width: 800px){
   .MuiOutlinedInput-root:hover{

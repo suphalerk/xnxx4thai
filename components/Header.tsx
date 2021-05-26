@@ -77,6 +77,11 @@ const useStyles = makeStyles((theme: Theme) =>
         display: 'none',
       },
     },
+    img:{
+      width :'240px',
+      height :'60px',
+      padding :'5px'
+    }
   }),
 );
 
@@ -167,9 +172,7 @@ export default function PrimarySearchAppBar() {
       <AppBar position="static">
         <Toolbar>
 
-          <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
-          </Typography>
+        <img className={classes.img} alt="complex" src="/images/logo.png" />
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
