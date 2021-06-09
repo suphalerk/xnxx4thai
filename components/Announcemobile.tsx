@@ -154,7 +154,7 @@ export default function MediaCard(props: { contents: Content[] }) {
           showLastButton
         />
       </p>
-      <Grid container spacing={3} className={classes.gridMobile}>
+      {/* <Grid container spacing={3} className={classes.gridMobile}>
         {props.contents.map((item: any, index) => {
           if (index <= 7) return <></>;
           return (
@@ -167,8 +167,6 @@ export default function MediaCard(props: { contents: Content[] }) {
                   width={"450"}
                   height={"300"}
                 />
-                {/* <Link href="/product/name/{id}"> */}
-                {/* <Link href="/product/name/{{item.id}}"> */}
                 <Link href={`/product/name/${item.id}`}>
                   <p className={classes.mobileDetail}>{item.content_title}</p>
                 </Link>
@@ -185,7 +183,7 @@ export default function MediaCard(props: { contents: Content[] }) {
             </Grid>
           );
         })}
-      </Grid>
+      </Grid> */}
     </div>
   );
 }

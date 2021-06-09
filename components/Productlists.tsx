@@ -155,7 +155,7 @@ export default function MediaCard(props: { contents: Content }) {
           </p>
         </Link>
       </p> */}
-      <Grid container spacing={3} className={classes.gridMobile}>
+      {/* <Grid container spacing={3} className={classes.gridMobile}>
         {props.contents.datas.map((item: any) => {
           return (
             <Grid item xs={12} lg={3} sm={3}>
@@ -198,7 +198,7 @@ export default function MediaCard(props: { contents: Content }) {
             </Grid>
           );
         })}
-      </Grid>
+      </Grid> */}
       {/* <Grid className={classes.btnCenter} item xs={12} md={12} sm={12} lg={12}>
         <Button className={classes.btnMore} variant="contained">
           ดูมือถือ แท็บเล็ตทั้งหมด <ArrowForwardIcon />{" "}

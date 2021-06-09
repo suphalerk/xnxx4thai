@@ -1,10 +1,11 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import redis from 'redis'
 
-const contentDudeyAPI = 'https://dudey.co/api/content/all'
+// const contentDudeyAPI = 'https://dudey.co/api/content/all'
+const contentDudeyAPI = 'https://dudey.co/api/porn'
 const contentByIdDudeyAPI = 'https://dudey.co/api/content/id'
 const keywordDudeyAPI = 'https://dudey.co/api/content/keywords'
-const asdddd = 'https://dudey.co/api/porns'
+
 
 interface DataRequest {
     page?: any
