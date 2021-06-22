@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function MediaCard(props: { contents: Content[] }) {
-  // const contents = props.contents
+  const contents = props.contents
   const classes = useStyles();
   // console.log('img'+JSON.stringify(props.contents))
 
